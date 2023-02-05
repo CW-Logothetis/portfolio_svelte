@@ -4,12 +4,12 @@
 
 <footer class="footer main-grid">        
     <a href="index.html" class="footer-text">Chris W. Logothetis</a>
-    <p class="footer-email"><a href="mailto:cwlogo@pm.me" class="footer-email">cwlogo@pm.me</a></p>
     <p class="footer-projects"><a href="index.html#projects" class="footer-projects">projects</a></p>
+    <p class="footer-email"><a href="mailto:cwlogo@pm.me" class="footer-email">cwlogo@pm.me</a></p>
 
     <ul class="social-list">
         <li class="social-item"><a href="https://www.linkedin.com/in/christopher-logothetis/" class="social-link"><i class="fab fa-linkedin"></i></a></li>
-        <li class="social-item"><a href="https://twitter.com/CW_Logothetis" class="social-link"><i class="fab fa-twitter"></i></a></li>
+        <!-- <li class="social-item"><a href="https://twitter.com/CW_Logothetis" class="social-link"><i class="fab fa-twitter"></i></a></li> -->
         <li class="social-item"><a href="https://github.com/CW-Logothetis" class="social-link"><i class="fab fa-github"></i></a></li>
     </ul>
 </footer>
@@ -39,7 +39,8 @@
 .footer-email,
 .footer-projects {
     color: var(--background-main);
-    opacity: .9;
+    font-weight: 600;
+    
     line-height: 100%;
 }
 
@@ -97,7 +98,7 @@
     color: var(--js-yellow);
 }
 
-@media (min-width: 700px) {
+@media (min-width: 900px) {
     .footer {
         align-items: center;
     }
@@ -109,7 +110,7 @@
         padding: 0;
     }
     
-    .footer-email {
+    .footer-projects {
         grid-column: 5/7;
         grid-row: 1;
         margin: 0;
@@ -117,7 +118,7 @@
         font-size: 1.6rem;
     }
 
-    .footer-projects {
+    .footer-email {
         grid-column: 7/9;
         grid-row: 1;
         margin: 0;
@@ -133,7 +134,7 @@
     }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1200px) {
     .footer-text {
         font-size: 2.4rem;
     }
