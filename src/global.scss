@@ -1,3 +1,5 @@
+@import './colours.scss';
+
 /*
   CSS Reset is a combo of
   - https://andy-bell.co.uk/a-modern-css-reset/
@@ -19,6 +21,7 @@
   
     html, body {
         height: 100%;
+        font-family: Segoe UI, Frutiger, Dejavu Sans, Helvetica Neue, Arial, sans-serif;
     }
     
     body {
@@ -68,3 +71,11 @@
       scroll-behavior: auto !important;
     }
   }
+
+  .main-grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    max-width: 1200px;
+    margin: 0 auto;
+}
+ 

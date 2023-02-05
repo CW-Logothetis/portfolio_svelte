@@ -26,6 +26,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"postcss": "^8.4.21"
+		"postcss": "^8.4.21",
+		"sass": "^1.58.0"
 	}
 }
