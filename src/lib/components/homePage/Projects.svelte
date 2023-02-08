@@ -58,7 +58,14 @@
     margin: 5em 0;
     padding: 5em;
     border-radius: 20px;
+    transition: transform .4s;
 }
+
+.projects--box:hover {
+    -ms-transform: scale(1.05); /* IE 9 */
+    -webkit-transform: scale(1.05); /* Safari 3-8 */
+    transform: scale(1.05); 
+  }
 
 .projects--box h3 {
     font-size: 2rem;

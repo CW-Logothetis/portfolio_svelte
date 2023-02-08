@@ -51,6 +51,10 @@
             </div>
             <div class="stack-flex">
                 <div class="skill-box">
+                    <i class="stack-link html5 fab fa-html5"></i>
+                    <p>HTML5</p>
+                </div>   
+                <div class="skill-box">
                     <i class="stack-link css3 fab fa-css3-alt"></i>
                     <p>CSS3</p>
                 </div>    
@@ -65,11 +69,7 @@
                 <div class="skill-box">
                     <i class="stack-link figma fab fa-figma"></i>
                     <p>Figma</p>
-                </div>    
-                <div class="skill-box">
-                    <i class="stack-link html5 fab fa-html5"></i>
-                    <p>HTML5</p>
-                </div>    
+                </div>     
             </div>
             <div class="stack-flex">
                 <div class="skill-box">
@@ -113,7 +113,7 @@
 <style lang="scss">
 
 .container-me {
-    background: linear-gradient(310deg, #DD4B25f9 0%, #EACD37d5 99%);
+    background: linear-gradient(310deg, #DD4B25f9 0%, #d9b504 99%);
     margin: 2em auto;
 }
 
