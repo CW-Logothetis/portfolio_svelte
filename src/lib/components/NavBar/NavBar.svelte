@@ -3,18 +3,28 @@
     <header class="header header-home main-grid">
         <div class="header-content">
             <!-- insert logo later, just text for MVP -->
-            <a href="index.html" class="logo-link">Chris W. Logothetis</a>
+            <a href="/" class="logo-link">Chris W. Logothetis</a>
             
             <button aria-label="Open navigation" class="open-nav">&#9776;</button>
 
             <nav class="nav">
                 <button aria-label="Close navigation" class="close-nav">&times;</button>
                 <ul class="nav-list">
-                    <li class="nav-item"><a href="index.html#about-me" class="nav-link">about me</a></li>
-                    <li class="nav-item"><a href="index.html#projects" class="nav-link">projects</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">about me</a></li>
+                    <!-- <li class="nav-item"><a href="#projects" class="nav-link">projects</a></li> -->
+
+                    <div class="dropdown nav-item">
+                        <li class="nav-link">projects</li>
+                        <div class="dropdown-content">
+                          <a href="#" class="nav-link">OpenAI</a>
+                          <a href="#" class="nav-link">Ancient Theatres</a>  
+                        </div>
+                    </div>
+
+
                     <li class="nav-item"><a href="mailto:cwlogo@pm.me" class="nav-link">cwlogo@pm.me</a></li>
                     <li class="nav-item"><a href="https://www.linkedin.com/in/christopher-logothetis/" class="nav-link"><i class="fab fa-linkedin"></i></a></li>
-                    <li class="nav-item"><a href="https://twitter.com/CW_Logothetis" class="nav-link"><i class="fab fa-twitter"></i></a></li>
+                    <!-- <li class="nav-item"><a href="https://twitter.com/CW_Logothetis" class="nav-link"><i class="fab fa-twitter"></i></a></li> -->
                     <li class="nav-item"><a href="https://github.com/CW-Logothetis" class="nav-link"><i class="fab fa-github"></i></a></li>
                 </ul>
             </nav>
@@ -124,9 +134,9 @@
 
     .nav-link:hover,
     .nav-link:focus {
-        color: var(--js-yellow);
+        color: var(--hero-css);
+        opacity: 0.9;
     }
-
 
     .close-nav {
         border: 0;
@@ -154,7 +164,7 @@
         border-bottom: 1px solid var(--js-yellow);
     }
 
-    @media (min-width: 600px) {
+    @media (min-width: 720px) {
         .logo-link {
             font-size: 1.6rem;
         }
@@ -192,5 +202,38 @@
             font-size: 1.8rem;
         }
     }
+
+/* Dropdown Button */
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  font-size: 1.6rem;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 
 </style>
