@@ -10,14 +10,14 @@
             <nav class="nav">
                 <button aria-label="Close navigation" class="close-nav">&times;</button>
                 <ul class="nav-list">
-                    <li class="nav-item"><a href="#about" class="nav-link">about me</a></li>
+                    <li class="nav-item"><a href="/#about" class="nav-link">about me</a></li>
                     <!-- <li class="nav-item"><a href="#projects" class="nav-link">projects</a></li> -->
 
                     <div class="dropdown nav-item">
                         <li class="nav-link">projects</li>
                         <div class="dropdown-content">
                           <a href="#" class="nav-link">OpenAI</a>
-                          <a href="#" class="nav-link">Ancient Theatres</a>  
+                          <a href="../ancient-theatres" class="nav-link">Ancient Theatres</a>  
                         </div>
                     </div>
 

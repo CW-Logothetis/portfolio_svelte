@@ -4,7 +4,7 @@
 
 <footer class="footer main-grid">        
     <a href="index.html" class="footer-text">Chris W. Logothetis</a>
-    <p class="footer-projects"><a href="index.html#projects" class="footer-projects">projects</a></p>
+    <p class="footer-projects"><a href="../#projects" class="footer-projects">projects</a></p>
     <p class="footer-email"><a href="mailto:cwlogo@pm.me" class="footer-email">cwlogo@pm.me</a></p>
 
     <ul class="social-list">

@@ -1,8 +1,8 @@
-<section id="about" class="container-me">
+<section class="container-me">
             
     <div class="main-grid">
 
-        <div class="about-me about-grid">
+        <div id="about" class="about-me about-grid">
             <div class="about-me--text">
                 <h2 class="about-me--heading">About Me</h2>
                 <p>I’m a front-end developer, specialising in Svelte/Kit, and up-to-date with ES6 JS and beyond.</p>

@@ -1,6 +1,6 @@
-<section id ="projects" class="projects main-grid">
+<section class="projects main-grid">
     <div class="projects--heading">
-        <h2 class="projects--h2">Projects</h2>
+        <h2 id ="projects" class="projects--h2">Projects</h2>
         <p>Each project has a page with more screenshots and information
             about how I built the site, what problems I had to solve and my future plans for it.</p>
     </div>  
@@ -21,7 +21,7 @@
         <p>A personal project to practice mobile-first web design. Vanilla JavaScript for switching tabs and a gallery. Working on a map API. </p>
         <div class="projects--flex-btm-row">
             <p><strong>Vanilla JS & CSS</strong></p>
-            <p><a href="ancient-theatres.html"><strong>READ MORE ></strong></a></p>
+            <p><a href="../ancient-theatres"><strong>READ MORE ></strong></a></p>
         </div>
     </div>
 
