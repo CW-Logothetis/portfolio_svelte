@@ -14,5 +14,4 @@
 <Footer />
 
 <style lang="scss">
-
 </style>

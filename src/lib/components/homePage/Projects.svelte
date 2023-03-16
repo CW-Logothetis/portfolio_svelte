@@ -11,7 +11,7 @@
         <p>All the array methods on one page, with OpenAI generated summaries, syntax and examples.</p>
         <div class="projects--flex-btm-row">
             <p><strong>SvelteKit</strong></p>
-            <p><a href="openAI-arrays.html"><strong>READ MORE ></strong></a></p>
+            <p><a href="../openai"><strong>READ MORE ></strong></a></p>
         </div>
     </div>
 

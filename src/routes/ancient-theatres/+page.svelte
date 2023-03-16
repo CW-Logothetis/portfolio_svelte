@@ -3,9 +3,9 @@
     import Hero from '../../lib/components/ancient-theatres/Hero.svelte';
     import Intro from '../../lib/components/ancient-theatres/Intro.svelte';
 	import Process from '../../lib/components/ancient-theatres/Process.svelte';
+    import NextSteps from '../../lib/components/ancient-theatres/NextSteps.svelte';
 
     import '../../global.scss'
-	import NextSteps from '../../lib/components/ancient-theatres/NextSteps.svelte';
 </script>
 
 <container class="template-bg body-colour-theatre">

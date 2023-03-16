@@ -16,7 +16,7 @@
                     <div class="dropdown nav-item">
                         <li class="nav-link">projects</li>
                         <div class="dropdown-content">
-                          <a href="#" class="nav-link">OpenAI</a>
+                          <a href="../openai" class="nav-link">OpenAI</a>
                           <a href="../ancient-theatres" class="nav-link">Ancient Theatres</a>  
                         </div>
                     </div>
