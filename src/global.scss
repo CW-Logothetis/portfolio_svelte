@@ -22,7 +22,9 @@
   
     html, body {
         height: 100%;
-        font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;    }
+        //font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
+        font-family: system-ui;
+    }
     
     body {
         font-size: 1rem;
