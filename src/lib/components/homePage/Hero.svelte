@@ -419,10 +419,10 @@ but warns that it's not standard. Have commented out text-stroke. I need to save
 
 
     h1 {
-        font-size: 5rem;
+        font-size: var(--step-7);
     }
     .hero-js, .hero-html, .hero-css {
-        font-size: 2rem;
+      font-size: var(--step-8);
     }
 
     
@@ -442,11 +442,11 @@ but warns that it's not standard. Have commented out text-stroke. I need to save
 
 @media (min-height: 650px) {
     h1 {
-        font-size: 5rem;
+        font-size: var(--step-7);
     }
     
     .hero-js, .hero-html, .hero-css {
-        font-size: 5.5rem;
+      font-size: var(--step-8);
     }
 
     
@@ -464,11 +464,11 @@ but warns that it's not standard. Have commented out text-stroke. I need to save
 }
 
 @media (min-width: 600px) {
-    h1 {
-        font-size: 10rem;
-    }
+  h1 {
+    font-size: var(--step-7);
+  }
     .hero-js, .hero-html, .hero-css {
-        font-size: 9rem;
+      font-size: var(--step-8);
     }
 
 }
@@ -476,12 +476,12 @@ but warns that it's not standard. Have commented out text-stroke. I need to save
 
 
 @media (min-width: 900px) {
-    h1 {
-        font-size: 9rem;
-    }
+  h1 {
+    font-size: var(--step-8);
+  }
 
     .hero-js, .hero-html, .hero-css {
-        font-size: 9rem;
+      font-size: var(--step-8);
     }
 
     .hero--name-flexbox {
@@ -529,12 +529,12 @@ but warns that it's not standard. Have commented out text-stroke. I need to save
 }
 
 @media (min-width: 1020px) {
-    h1 {
-        font-size: 11rem;
-    }
+  h1 {
+    font-size: var(--step-8);
+  }
 
     .hero-js, .hero-html, .hero-css {
-        font-size: 11rem;
+        font-size: var(--step-8);
     }
 
     .hero--stack-flexbox {
@@ -547,12 +547,12 @@ but warns that it's not standard. Have commented out text-stroke. I need to save
 }
 
 @media (min-width: 1020px) and (min-height: 1300px) {
-    h1 {
-        font-size: 11rem;
-    }
+  h1 {
+    font-size: var(--step-8);
+  }
 
     .hero-js, .hero-html, .hero-css {
-        font-size: 11rem;
+      font-size: var(--step-8);
     }
 
     .hero--stack-flexbox {
@@ -565,12 +565,12 @@ but warns that it's not standard. Have commented out text-stroke. I need to save
 }
 
 @media (min-width: 1200px) {
-    h1 {
-        font-size: 10.5rem;
-    }
+  h1 {
+    font-size: var(--step-8);
+  }
 
     .hero-js, .hero-html, .hero-css {
-        font-size: 10.5rem;
+      font-size: var(--step-8);
         letter-spacing: -0.75rem;
     }
     .hero-js {
@@ -588,12 +588,12 @@ but warns that it's not standard. Have commented out text-stroke. I need to save
 }
 
 @media (min-width: 1800px) {
-    h1 {
-        font-size: 11rem;
-    }
+  h1 {
+    font-size: var(--step-8);
+  }
 
     .hero-js, .hero-html, .hero-css {
-        font-size: 11rem;
+      font-size: var(--step-8);
         letter-spacing: -0.75rem;
     }
 
@@ -611,12 +611,12 @@ but warns that it's not standard. Have commented out text-stroke. I need to save
 }
 
 @media (min-width: 600px) and (max-height: 700px) {
-    h1 {
-        font-size: 8rem;
-    }
+  h1 {
+    font-size: var(--step-8);
+  }
 
     .hero-js, .hero-html, .hero-css {
-        font-size: 7rem;
+      font-size: var(--step-8);
         letter-spacing: -0.75rem;
     }
 

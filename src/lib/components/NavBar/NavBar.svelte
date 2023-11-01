@@ -90,7 +90,7 @@
     .logo-link {
         display: flex;
         align-items: center;
-        font-size: 1.4rem;
+      font-size: var(--step-0);
         font-weight: 700;
         text-decoration: none;
         min-width: 10em;
@@ -128,7 +128,7 @@
 
     .nav-link {
         text-decoration: none;
-        font-size: 2rem;
+        font-size: var(--step--1);
         font-weight: 700;
     }
 
@@ -165,9 +165,6 @@
     }
 
     @media (min-width: 720px) {
-        .logo-link {
-            font-size: 1.6rem;
-        }
         
         .open-nav,
         .close-nav {
@@ -187,21 +184,12 @@
         .nav-item {
             margin-left: 3.22em;
         }
-        
-        .nav-link {
-            font-size: 1.6rem;
-        }
 
         .header-home .nav {
             background: transparent;
         } 
     }
 
-    @media (min-width: 900px) {
-        .logo-link {
-            font-size: 1.8rem;
-        }
-    }
 
 /* Dropdown Button */
 

@@ -131,7 +131,6 @@
 }
 
 .about-me--text p {
-    font-size: 1.8rem;
     font-weight: 500;
     margin: 0.5em 0;
 }
@@ -139,12 +138,6 @@
 .about-me--heading {
     margin: 0 auto;
     padding: 0;
-}
-
-@media (min-width: 1000px) {
-    .about-me--text p {
-    font-size: 2.4rem;
-}
 }
 
 
@@ -169,7 +162,6 @@
 }
 
 .stack-flex p {
-    font-size: 1.8rem;
     font-weight: 500;
 }
 
@@ -183,7 +175,7 @@
 }
 
 .stack-link {
-    font-size: 4rem;
+    font-size: var(--step-0);
     opacity: 0.8;
     margin: 0 0 10px 0;
     padding: 0;
@@ -241,7 +233,7 @@
 
 .language {
     font-weight: 600;
-    font-size: 2.4rem;
+    font-size: var(--step--1)
 }
 
 .language-level {
@@ -323,7 +315,6 @@
 
     .language-level {
         font-weight: 400;
-        font-size: 1.6rem;
     }
 }
 
@@ -335,7 +326,7 @@
     }
 
     .about-me--heading {
-        font-size: 8rem;
+
     }
 
     .skills {
@@ -352,7 +343,7 @@
     }
 
     .stack-flex p {
-        font-size: 2rem;
+
         font-weight: 600;
     }
 
@@ -362,7 +353,7 @@
     }
 
     .stack-link {
-        font-size: 6rem;
+
         opacity: 0.8;  
     }
 
@@ -401,7 +392,7 @@
     }
 
     .language-level {
-        font-size: 1.8rem;
+
         padding: 0;
         margin:0;
     }
@@ -420,7 +411,7 @@
     }
 
     .about-me--heading {
-        font-size: 10rem;
+
     }
 
     .about-me--text p{
@@ -441,7 +432,7 @@
     }
 
     .stack-link {
-        font-size: 7rem;
+
         opacity: 0.8;
     }
 
@@ -470,7 +461,7 @@
     }
 
     .languages p {
-        font-size: 2rem;
+
         margin: 0;
     }
 
@@ -479,7 +470,7 @@
     }
 
     .language-level {
-        font-size: 1.8rem;
+
     }
 
 }
