@@ -2,45 +2,44 @@
 
 </script>
 
-<section class="hero main-grid">      
+    <section class="hero main-grid">
 
-    <div class="hero--name-flexbox">
-        <!-- <h1 class="hero-title hi">Hi,</h1>
-        <h1 class="hero-title chris">I'm</h1>
-        <h1 class="hero-title chris">Chris</h1>
-        <h1 class="hero-title logothetis">Logothetis</h1> -->
-        <h1 class="hero-title hi">Hi,<br>
-        I'm<br>
-        Chris<br>
-        Logothetis</h1>
-    </div>
+        <div class="hero--name-flexbox">
+            <!-- <h1 class="hero-title hi">Hi,</h1>
+            <h1 class="hero-title chris">I'm</h1>
+            <h1 class="hero-title chris">Chris</h1>
+            <h1 class="hero-title logothetis">Logothetis</h1> -->
+            <h1 class="hero-title hi">Hi,<br>
+                I'm<br>
+                Chris<br>
+                Logothetis</h1>
+        </div>
 
-    <div class="hero--stack-flexbox">
-        <p class="hero-js stroke-text front-animate fade-in-out"></p>
-        <p class="hero-html stroke-text end-animate fade-in-out"></p>
-        <p class="hero-css stroke-text dev-animate fade-in-out"></p>
-    </div>
+        <div class="hero--stack-flexbox">
+            <p class="hero-js stroke-text front-animate fade-in-out"></p>
+            <p class="hero-html stroke-text end-animate fade-in-out"></p>
+            <p class="hero-css stroke-text dev-animate fade-in-out"></p>
+        </div>
 
-</section>
+    </section>
 
 <style lang="scss">
 /* hero */
 /* --- !!! NOTE: Hero grid column and row details are in typography above !!! --- */
 
+
 .hero {
-    height: 100dvh;
+    min-height: calc(100dvh - 50px);
     /* margin: 3em auto 10em auto; */
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     align-items: center;
-    margin-top: 0em;
-    margin-bottom: 8em;
     overflow: hidden;
 }
 
 
 .hero--name-flexbox {
-    margin-top: 0em; 
+    margin-top: 0;
     grid-column: 2/-2;
     grid-row: 1/4;
     display: flex;
@@ -56,61 +55,61 @@
     align-items: flex-end;
 }
 
-@media (min-height: 500px) {
-    .hero--stack-flexbox {
-        margin-top: 0em;
-    }
-}
-
-@media (min-width: 700px) {
-    .hero--name-flexbox {
-        margin-top: 0em;
-    }
-}
-
-@media (min-height: 800px) {
-    .hero--stack-flexbox {
-        margin-top: 0em;
-    }
-}
-
-
-@media (min-width: 1020px) and (min-height: 1300px) {
-    .hero {
-        height: 70vh;
-        margin-top: 0;
-        /* margin-bottom: 10em; */
-        }
-        .hero--name-flexbox {
-            margin-top: 0em;
-        }
-        .hero--stack-flexbox {
-            margin-top: 0em;
-        }
-}
-
-@media (min-width: 1200px) {
-    .hero {
-    /* height: 90vh; */
-    margin-top: -2em;
-    margin-bottom: 10em;
-    }
-    .hero--name-flexbox {
-        margin-top: 0em;
-    }
-    .hero--stack-flexbox {
-        margin-top: 3em;
-    }
-}
-
-@media (min-width: 1800px) {
-    .hero--name-flexbox {
-        margin-top: 9em;
-    }
-    .hero--stack-flexbox {
-        margin-top: 0em;
-    }
-}
+//@media (min-height: 500px) {
+//    .hero--stack-flexbox {
+//        //margin-top: 1.5em;
+//    }
+//}
+//
+//@media (min-width: 700px) {
+//    .hero--name-flexbox {
+//        //margin-top: 0em;
+//    }
+//}
+//
+//@media (min-height: 800px) {
+//    .hero--stack-flexbox {
+//        //margin-top: 0em;
+//    }
+//}
+//
+//
+//@media (min-width: 1020px) and (min-height: 1300px) {
+//    .hero {
+//        height: 70vh;
+//        margin-top: 0;
+//        /* margin-bottom: 10em; */
+//        }
+//        .hero--name-flexbox {
+//            margin-top: 0em;
+//        }
+//        .hero--stack-flexbox {
+//            margin-top: 0em;
+//        }
+//}
+//
+//@media (min-width: 1200px) {
+//    .hero {
+//    /* height: 90vh; */
+//    //margin-top: -2em;
+//    //margin-bottom: 10em;
+//    }
+//    .hero--name-flexbox {
+//        margin-top: 0em;
+//    }
+//    .hero--stack-flexbox {
+//        //margin-top: 3em;
+//    }
+//}
+//
+//@media (min-width: 1800px) {
+//    .hero--name-flexbox {
+//        //margin-top: 9em;
+//    }
+//    .hero--stack-flexbox {
+//        margin-top: 0em;
+//    }
+//}
 
 /* ------------------------------------------------------------------------------------------------------  */
 /* -------------------------------------------   ANIMATIONS   -------------------------------------------- */
@@ -441,14 +440,6 @@ but warns that it's not standard. Have commented out text-stroke. I need to save
 
 
 @media (min-height: 650px) {
-    h1 {
-        font-size: var(--step-7);
-    }
-    
-    .hero-js, .hero-html, .hero-css {
-      font-size: var(--step-8);
-    }
-
     
     .hero-js {
         -webkit-text-stroke: 3px var(--js-yellow);
@@ -463,34 +454,9 @@ but warns that it's not standard. Have commented out text-stroke. I need to save
     }
 }
 
-@media (min-width: 600px) {
-  h1 {
-    font-size: var(--step-7);
-  }
-    .hero-js, .hero-html, .hero-css {
-      font-size: var(--step-8);
-    }
-
-}
-
-
 
 @media (min-width: 900px) {
-  h1 {
-    font-size: var(--step-8);
-  }
 
-    .hero-js, .hero-html, .hero-css {
-      font-size: var(--step-8);
-    }
-
-    .hero--name-flexbox {
-        grid-column: 3;
-    }
-
-    .hero--stack-flexbox {
-        grid-column: -4;
-    }
 
     /* .hero-js {
         -webkit-text-stroke: 5px var(--js-yellow);
@@ -529,13 +495,7 @@ but warns that it's not standard. Have commented out text-stroke. I need to save
 }
 
 @media (min-width: 1020px) {
-  h1 {
-    font-size: var(--step-8);
-  }
 
-    .hero-js, .hero-html, .hero-css {
-        font-size: var(--step-8);
-    }
 
     .hero--stack-flexbox {
         grid-column: -4;
@@ -547,13 +507,6 @@ but warns that it's not standard. Have commented out text-stroke. I need to save
 }
 
 @media (min-width: 1020px) and (min-height: 1300px) {
-  h1 {
-    font-size: var(--step-8);
-  }
-
-    .hero-js, .hero-html, .hero-css {
-      font-size: var(--step-8);
-    }
 
     .hero--stack-flexbox {
         grid-column: -4;
@@ -565,12 +518,8 @@ but warns that it's not standard. Have commented out text-stroke. I need to save
 }
 
 @media (min-width: 1200px) {
-  h1 {
-    font-size: var(--step-8);
-  }
 
     .hero-js, .hero-html, .hero-css {
-      font-size: var(--step-8);
         letter-spacing: -0.75rem;
     }
     .hero-js {
@@ -588,12 +537,8 @@ but warns that it's not standard. Have commented out text-stroke. I need to save
 }
 
 @media (min-width: 1800px) {
-  h1 {
-    font-size: var(--step-8);
-  }
 
     .hero-js, .hero-html, .hero-css {
-      font-size: var(--step-8);
         letter-spacing: -0.75rem;
     }
 
@@ -611,12 +556,7 @@ but warns that it's not standard. Have commented out text-stroke. I need to save
 }
 
 @media (min-width: 600px) and (max-height: 700px) {
-  h1 {
-    font-size: var(--step-8);
-  }
-
     .hero-js, .hero-html, .hero-css {
-      font-size: var(--step-8);
         letter-spacing: -0.75rem;
     }
 
