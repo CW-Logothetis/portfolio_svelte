@@ -114,7 +114,7 @@
 
 .container-me {
     background: linear-gradient(310deg, #DD4B25f9 0%, #d9b504 99%);
-    margin: 2em auto;
+    //margin: 2em auto;
 }
 
 .about-me {
