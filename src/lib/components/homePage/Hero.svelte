@@ -24,8 +24,55 @@
     </section>
 
 <style lang="scss">
-/* hero */
-/* --- !!! NOTE: Hero grid column and row details are in typography above !!! --- */
+
+  h1, .hero-js, .hero-html, .hero-css {
+    margin: 0;
+    padding: 0;
+  }
+
+  .hero-js, .hero-html, .hero-css {
+    font-size: var(--step-5);
+    font-weight: 900;
+    letter-spacing: -4px;
+    text-align: right;
+  }
+  /* transparent was for text-stroke. Not fully supported at the mo */
+  /* .stroke-text{
+      -webkit-text-fill-color: transparent;
+    } */
+
+  .hero-js {
+    color: var(--background-main);
+    grid-column: 5/-2;
+    grid-row: 1;
+  }
+
+  .hero-html {
+    color: var(--background-main);
+    grid-column: 8/-2;
+    grid-row: 2;
+  }
+
+  .hero-css{
+    color: var(--background-main);
+    grid-column: 8/-2;
+    grid-row: 3;
+  }
+
+  .hi {
+    grid-column: 2/-2;
+    grid-row: 2;
+  }
+
+  .chris {
+    grid-column: 2/-2;
+    grid-row: 3;
+  }
+
+  .logothetis {
+    grid-column: 2/-2;
+    grid-row: 4;
+  }
 
 
 .hero {

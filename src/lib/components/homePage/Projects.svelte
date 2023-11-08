@@ -1,4 +1,4 @@
-<section class="projects main-grid">
+<section class="projects main-grid stack">
     <div class="projects--heading">
         <h2 id ="projects" class="projects--h2">Projects</h2>
         <p>Each project has a page with more screenshots and information
@@ -47,10 +47,6 @@
     margin-bottom: 0.25em;
 }
 
-.projects > p {
-    font-size: 1.8rem;
-}
-
 .projects--box {
     display: flex;
     flex-direction: column;
@@ -68,7 +64,7 @@
   }
 
 .projects--box h3 {
-    font-size: 2rem;
+    //font-size: 2rem;
     margin: 0 0.5em 1em;
 }
 
@@ -116,10 +112,6 @@
     box-shadow: 6.7px 13.4px 13.4px hsl(0deg 0% 0% / 0.29);
 }
 
-.projects--box-stack-p {
-    font-size: 2rem;
-}
-
 .projects--flex-btm-row {
     display: flex;
     flex-direction: column;
@@ -130,10 +122,6 @@
     .projects--box {
         margin: 4em;
         border-radius: 20px;
-    }
-
-    .projects--box h3 {
-        font-size: 3rem;
     }
     
     .projects--box p {
@@ -155,7 +143,7 @@
     }
 
     .projects--h {
-        font-size: 6rem;
+        //font-size: 6rem;
         text-align: center;
     }
 
@@ -183,13 +171,11 @@
     }
 
     .projects--h2 {
-        font-size: 10rem;
         text-align: center;
         margin: 0.5em 0 0.25em 0;
     }
 
     .projects--heading p {
-        font-size: 2rem;
         margin-bottom: 1em;
     }
 
@@ -199,13 +185,11 @@
     }
 
     .projects--box h3 {
-        font-size: 3rem;
         margin: 0.5em 0;
     }
     
     .projects--box p {
         max-width: 80%;
-        font-size: 2rem;
     }
 
     .product-image {
