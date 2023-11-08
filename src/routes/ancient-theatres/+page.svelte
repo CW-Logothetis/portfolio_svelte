@@ -5,7 +5,7 @@
 	import Process from '../../lib/components/ancient-theatres/Process.svelte';
     import NextSteps from '../../lib/components/ancient-theatres/NextSteps.svelte';
 
-    import '../../global.scss'
+    import '../../lib/scss/global.scss'
 </script>
 
 <container class="template-bg body-colour-theatre">
