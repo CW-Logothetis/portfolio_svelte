@@ -2,6 +2,7 @@
 @import 'typography';
 @import 'center';
 @import 'stack';
+@import 'intro';
 
 /*
   CSS Reset is a combo of
@@ -29,7 +30,7 @@
     }
     
     body {
-        font-size: 1rem;
+        font-size: var(--step-0);
         line-height: 1.5;
         text-rendering: optimizeSpeed;
         -webkit-font-smoothing: antialiased;
@@ -106,258 +107,11 @@
     margin: 0 auto;
 }
 
-/* ============================================================================================================
-    HERO
-=============================================================================================================== */
-
-
-/* ============================================================================================================
-    ----------------------------------------------   ABOUT ME   ---------------------------------------------- 
-=============================================================================================================== */
-
-
-
-/* ============================================================================================================
-     ----------------------------------------------  PROJECTS    ----------------------------------------------
-=============================================================================================================== */
-
-
-
-/* ============================================================================================================
-============================================================================================================
-====================================    TEMPLATE for projects   ===============================================
-============================================================================================================
-=============================================================================================================== */
 
 .template-bg {
     background-color: var(--background-main);
 }
 
-
-/* ============================================================================================================
-   -------------------------------------------- Intro -------------------------------------------- 
-================================================================================================================ */
-
-.intro {
-    margin: 0em auto;
-}
-
-.intro--title {
-    grid-column: 2 / -2;
-    margin: 1em 0 0.6em 0;
-    padding: 0;
-    text-shadow: none;
-    text-align: center;
-}
-
-.intro--sm-title {
-    margin: 2em 0 1.6em 0;
-}
-
-.intro--stack {
-    margin: 3em auto 3em auto;
-}
-
-.intro--para {
-    grid-column: 2 / -2;
-    margin: 0 0 2em 0;
-    padding: 0;
-}
-
-.intro--para-col-1 {
-    grid-column: 2/5;
-    margin: 0.5em 0;
-}
-
-.intro--para-col-2 {
-    grid-column: 5/11;
-    margin: 0.5em 0;
-}
-
-.moveX-col-2 {
-    grid-column: 6/12;
-}
-@media (min-width: 370px) {
-    .intro--sm-title {
-        margin: 2em 0 1.6em 0;
-    }
-}
-
-
-@media (min-width: 700px) {
-    
-    .intro--title, .intro--sm-title {
-        grid-column: 3 / -3;
-        margin: 1.5em 0 0.6em 0;
-    }
-
-    .intro--stack {
-        margin: 3em auto 8em auto;
-    }
-
-    .intro--para {
-        grid-column: 3 / -3;
-    }
-
-    .intro--para-col-1 {
-        grid-column: 3/5;
-    }
-
-    .chingu-intro-note {
-        margin-top: -3em;
-        margin-bottom: 6em;
-    }
-}
-
-@media (min-width: 900px) {
-
-    .intro--para-col-1 {
-        grid-column: 3/4;
-        margin: 0.5em 0;
-    }
-
-    .intro--para-col-2 {
-        grid-column: 5/8;
-        margin: 0.5em 0;
-    }
-
-    .chingu-intro-note {
-        margin-top: -3em;
-        margin-bottom: 2em;
-    }
-}
-
-@media (min-width: 1050px) {
-    
-    .intro--title, .intro--sm-title{
-    grid-column: 3/-3;
-    margin: 0.75em 0 0.6em 0;
-    text-align: left;
-    }
-
-
-    .intro--para-col-2 {
-        grid-column: 5/9;
-    }
-
-    .intro--stack {
-        margin-bottom: 10em;
-    }
-
-    .chingu-intro-note {
-        margin-top: -3em;
-        margin-bottom: 8em;
-    }
-}
-
-
-/* ============================================================================================================
-    ========================================  Project Requirements  ===============================================
-============================================================================================================*/
-
-.p-req {
-    background: linear-gradient(302deg, var(--theatre-blue-5) 0%, var(--theatre-blue-4) 50%, var(--theatre-blue-3) 100%);
-    
-    margin-bottom: 5em;
-    padding-top: 7em;
-    padding-bottom: 10em;
-
-    color: #ecececf4;
-}
-
-.p-req--heading {
-    grid-column: 1 / -1;
-
-    margin: 0 0 0 0;
-    padding: 0;
-
-    font-size: 4rem;
-    text-shadow: none;
-    text-align: center;
-}
-
-.p-req--subheading {
-    margin: 2em 0 1em 0;
-}
-
-.p-req--para {
-    grid-column: 2 / -2;
-    margin: 0;
-    padding: 0;
-    background-color: transparent;
-}
-
-.p-req--image {
-    display: none;
-    width: 400px;
-    max-width: 900px;
-    margin: 0 auto;
-    box-shadow: 6.7px 13.4px 13.4px hsl(0deg 0% 0% / 0.29);
-}
-
-.p-req ul {
-    margin-left: 1.5em;
-    padding: 0;
-}
-
-    @media (min-width: 600px) {
-        .p-req ul {
-            margin-left: 2.5em;
-            padding-bottom: 1.5em;
-        }
-    }
-
-    @media (min-width: 700px) {
-        .p-req--para {
-           grid-column: 3/-3;
-        }
-    }
-
-    @media (min-width: 800px) {
-
-        .p-req--para {
-            grid-column: 3 / -3;
-        }
-
-        .p-req--para p {
-            font-size: 1.8rem;
-        }
-    }
-
-.p-req  li {
-    font-size: 1.6em;
-}
-
-.indent {
-    margin-left: 2em;
-}
-
-.img-l {
-    grid-row: 3;
-    grid-column: 8/9;
-    z-index: 1;
-}
-
-.img-c {
-    grid-row: 2;
-    grid-column: 8;
-    align-self: end;
-    z-index: 10;
-}
-
-.img-r {
-    grid-row: 3;
-    grid-column: 10/11;
-    z-index: 100;
-}
-
-/* ============================================================================================================
-    ------------------------------------   Stack and Tools   ------------------------------------ 
-============================================================================================================= */
-
-.stack-heading {
-    margin-bottom: 0.5em !important;
-}
 
 /* ============================================================================================================
    ------------------------------------        Process         ------------------------------------ 
@@ -382,7 +136,7 @@
     grid-column: 2 / -2;
     display: flex;
     flex-direction: column;
-    margin: 0 0 0em 0;
+    margin: 0 0 0 0;
     padding: 0;
 }
 
