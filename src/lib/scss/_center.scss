@@ -1,0 +1,7 @@
+.center {
+  box-sizing: content-box;
+  margin-inline: auto;
+  text-align: left;
+  max-inline-size: var(--center-max-inline-size, 140ch);
+  padding-inline: 5%;
+}
