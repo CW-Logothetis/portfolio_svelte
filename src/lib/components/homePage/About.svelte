@@ -1,6 +1,11 @@
-<section class="container-me">
+<script>
+    import { skillsJS, skillsCSS, skillsCollaboration } from "../../skillsData.js";
+    import Skill from "./Skill.svelte";
+</script>
+
+<section class="container-me center" style="--center-max-inline-size: 100%">
             
-    <div class="main-grid">
+    <div class="main-grid stack">
 
         <div id="about" class="about-me about-grid">
             <div class="about-me--text">
@@ -11,86 +16,30 @@
                 <p>And once upon a time, I spent seven years as a lawyer in London. But my love for building stuff meant that the law wasn’t for me.</p>
                 <p>So I first built and ran my own business, and it was there that I fell in love with web design and UX/UI, then code.</p>
             </div>
-            
-            <!-- Might put social profile photo in here on desktop-->
-            <!-- <div class="circle"></div> -->
-            <!-- <img class="about-me--image" src="" alt=""> -->
-
         </div>
 
         <div class="skills about-grid">
 
             <div class="stack-flex">
-                <div class="skill-box skill-box__js">
-                    <i class="stack-link js fab fa-js"></i>
-                    <p>JavaScript</p>
-                </div>
-                <div class="skill-box">
-                    <a
-                        title="Rich Harris, MIT &lt;http://opensource.org/licenses/mit-license.php&gt;, via Wikimedia Commons" 
-                        href="https://commons.wikimedia.org/wiki/File:Svelte_Logo.svg"
-                        class="stack-link">
-                        <img 
-                            class='svelte' 
-                            alt="Svelte Logo" 
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Svelte_Logo.svg/256px-Svelte_Logo.svg.png">
-                    </a>   
-                    <p>SvelteKit</p>
-                </div>    
-                <div class="skill-box">
-                    <a   
-                        title="Facebook, BSD &lt;http://opensource.org/licenses/bsd-license.php&gt;, via Wikimedia Commons" 
-                        href="https://commons.wikimedia.org/wiki/File:GraphQL_Logo.svg">
-                        <img
-                            class='graphQL stack-link'     
-                            alt="GraphQL Logo" 
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/GraphQL_Logo.svg/128px-GraphQL_Logo.svg.png">
-                    </a>   
-                    <p>GraphQL</p>
-                </div>  
+                {#each skillsJS as skill}
+                    <Skill
+                      {skill}
+                    />
+                {/each}
             </div>
             <div class="stack-flex">
-                <div class="skill-box">
-                    <i class="stack-link html5 fab fa-html5"></i>
-                    <p>HTML5</p>
-                </div>   
-                <div class="skill-box">
-                    <i class="stack-link css3 fab fa-css3-alt"></i>
-                    <p>CSS3</p>
-                </div>    
-                <div class="skill-box">
-                    <i class="stack-link fab fa-bootstrap"></i>
-                    <p>Bootstrap</p>
-                </div>    
-                <div class="skill-box">
-                    <i class="stack-link fab fa-sass"></i>
-                    <p>SASS/SCSS</p>
-                </div>    
-                <div class="skill-box">
-                    <i class="stack-link figma fab fa-figma"></i>
-                    <p>Figma</p>
-                </div>     
+                {#each skillsCSS as skill}
+                    <Skill
+                      {skill}
+                    />
+                {/each}
             </div>
             <div class="stack-flex">
-                <div class="skill-box">
-                    <i class="stack-link git fab fa-git-alt"></i>
-                    <p>Git</p>
-                </div>    
-                <div class="skill-box">
-                    <i class="stack-link fab fa-github"></i>
-                    <p>GitHub</p>
-                </div>   
-
-                <div class="skill-box">
-                    <img class='stack-link lens' src='/logo_lens.png' alt='lens logo'/>  
-                    <p>k8s Lens</p>
-                </div>  
-
-                
-                <div class="skill-box">
-                    <i class="stack-link fab fa-jira"></i>
-                    <p>Jira</p>
-                </div>    
+                {#each skillsCollaboration as skill}
+                    <Skill
+                      {skill}
+                    />
+                {/each}
             </div>
             <div class="languages">
                 <div class="en">
@@ -120,7 +69,7 @@
 .about-me {
     grid-column: 1 / -1;
     justify-items: end;
-    margin: 10em 5em 5em 5em;
+    //margin: 10em 5em 5em 5em;
     color:  var(--background-main);
 }
 
@@ -128,16 +77,22 @@
     display: flex;
     flex-direction: column;
     grid-column: 2 / -2;
+    text-align: center;
 }
 
 .about-me--text p {
     font-weight: 500;
-    margin: 0.5em 0;
+    line-height: 2;
+    text-align: left;
 }
 
 .about-me--heading {
-    margin: 0 auto;
+    //margin: 0 auto;
     padding: 0;
+}
+
+.about-grid {
+  margin-top: 5rem;
 }
 
 
@@ -157,64 +112,8 @@
     grid-column: 2 / -2;
     grid-row: 1;
     row-gap: 30px;
-    margin-bottom: 5em;
-    padding: 2em;
-}
-
-.stack-flex p {
-    font-weight: 500;
-}
-
-.skill-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0 2em;
-    width: 70px;
-}
-
-.stack-link {
-    font-size: var(--step-0);
-    opacity: 0.8;
-    margin: 0 0 10px 0;
-    padding: 0;
-}
-
-.js {
-    color: var(--js-yellow);  
-}
-
-.svelte {
-    width: 35px;
-}
-
-.graphQL {
-    width: 42px;
-}
-
-.html5 {
-    color: var(--hero-html);
-}
-
-.css3 {
-    color: var(--hero-css);
-}
-
-.figma {
-    color: var(--hero-css);
-}
-
-.fa-sass {
-    height: 43px;
-}
-
-.git {
-    color: #DD4B25;
-}
-
-.lens {
-    width: 40px;
+    //margin-bottom: 5em;
+    padding-block: 2em;
 }
 
 .languages {
@@ -223,7 +122,7 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin-bottom: 7em;
+    //margin-bottom: 7em;
 }
 
 .languages p{
@@ -233,12 +132,12 @@
 
 .language {
     font-weight: 600;
-    font-size: var(--step--1)
+    font-size: var(--step-2)
 }
 
 .language-level {
     font-weight: 400;
-    font-size: 1.8rem;
+    font-size: var(--step-1)
 }
 
 .en, .gr, .jp {
@@ -262,32 +161,28 @@
 
 @media (min-width:600px) {
     .skills {
-        margin: 1em 0 2em 0;
+        //margin: 1em 0 2em 0;
     }
 }
 
 @media (min-width: 700px) {
     .container-me {
-        margin: 2em auto;
-        padding-bottom: 7em;
-    }
-    
-    .about-grid {
-        display: block;
+        //margin: 2em auto;
+        //padding-bottom: 7em;
     }
 
     .about-me {
         grid-column: 3 / -3;
         
-        margin: 5em 0 3em 0;
-        padding: 2em 0;
+        //margin: 5em 0 3em 0;
+        //padding: 2em 0;
     
         color:  var(--background-main);
     }
 
     .skills {
         grid-column: 2 / -2;
-        margin: 0;
+        //margin: 0;
     }
 
     .stack-link {
@@ -322,7 +217,7 @@
 
     .about-me {
         grid-column: 3 / -3;
-        margin: 7em 0 4em 0;   
+        //margin: 7em 0 4em 0;
     }
 
     .about-me--heading {
@@ -331,7 +226,7 @@
 
     .skills {
         grid-column: 3 / -3;
-        margin: 0 0 5em 0;
+        //margin: 0 0 5em 0;
         padding: 0;
     }
 
@@ -406,12 +301,8 @@
     }
 
     .about-me {
-        grid-column: 3 / -3;   
-        margin: 10em 0 5em 0;   
-    }
-
-    .about-me--heading {
-
+        grid-column: 3 / -3;
+        //margin: 10em 0 5em 0;
     }
 
     .about-me--text p{
