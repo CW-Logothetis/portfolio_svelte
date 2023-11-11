@@ -78,15 +78,6 @@ export const skillsCSS = [
 
 export const skillsCollaboration = [
 	{
-		skillName: 'Figma',
-		image: {
-			width: '44px',
-			title: 'Figma, Public domain, via Wikimedia Commons',
-			alt: 'Figma Logo',
-			src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/64px-Figma-logo.svg.png'
-		}
-	},
-	{
 		skillName: 'Git',
 		image: {
 			width: '64',
@@ -111,6 +102,15 @@ export const skillsCollaboration = [
 			title: "Atlassian, Public domain, via Wikimedia Commons",
 			alt: 'Jira Logo',
 			src: 'https://upload.wikimedia.org/wikipedia/commons/8/8a/Jira_Logo.svg'
+		}
+	},
+	{
+		skillName: 'Figma',
+		image: {
+			width: '44px',
+			title: 'Figma, Public domain, via Wikimedia Commons',
+			alt: 'Figma Logo',
+			src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/64px-Figma-logo.svg.png'
 		}
 	}
 ];

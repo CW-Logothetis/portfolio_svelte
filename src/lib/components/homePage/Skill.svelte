@@ -29,7 +29,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-grow: 1;
+		flex-grow: 1;
   }
 
   .text-container {
@@ -37,5 +37,17 @@
     justify-content: center;
     align-items: flex-end;
   }
+
+
+	img {
+		max-width: 70%;
+	}
+
+	@media (min-width: 700px) {
+
+		img {
+			max-width: 100%;
+		}
+	}
 
 </style>
