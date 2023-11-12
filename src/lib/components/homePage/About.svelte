@@ -7,7 +7,7 @@
             
     <div class="main-grid stack">
 
-        <div id="about" class="about-me about-grid center" style="--center-max-inline-size: 65ch">
+        <div id="about" class="about-me about-grid center" style="--center-max-inline-size: 70ch">
             <div class="about-me--text">
                 <h2 class="about-me--heading">About Me</h2>
                 <p>I’m a front-end developer, specialising in Svelte/Kit, and up-to-date with modern JavaScript and responsive CSS.</p>
