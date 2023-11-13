@@ -8,21 +8,25 @@
     <div class="flex-grid">
         <div class="projects--box openai">
             <img src="/array_homescreen.png" class="product-image" alt="">
-            <h3>Array reference with OpenAI</h3>
-            <p>All the array methods on one page, with OpenAI generated summaries, syntax and examples.</p>
-            <div class="projects--flex-btm-row">
-                <p><strong>SvelteKit</strong></p>
-                <p><a href="../openai"><strong>READ MORE ></strong></a></p>
+            <div class="projects--box__text">
+                <h3>Array reference with OpenAI</h3>
+                <p>All the array methods on one page, with OpenAI generated summaries, syntax and examples.</p>
+                <div class="projects--flex-btm-row">
+                    <p><strong>SvelteKit</strong></p>
+                    <p><a href="../openai"><strong>READ MORE ></strong></a></p>
+                </div>
             </div>
         </div>
 
         <div class="projects--box theatres">
             <img src="/theatres-landscape.png" class="product-image" alt="">
-            <h3>Ancient Greek Theatres</h3>
-            <p>A personal project to practice mobile-first web design. Vanilla JavaScript for switching tabs and a gallery. Working on a map API. </p>
-            <div class="projects--flex-btm-row">
-                <p><strong>Vanilla JS & CSS</strong></p>
-                <p><a href="../ancient-theatres"><strong>READ MORE ></strong></a></p>
+            <div class="projects--box__text">
+                <h3>Ancient Greek Theatres</h3>
+                <p>Practicing mobile-first web design. Vanilla JS for switching tabs and a gallery.</p>
+                <div class="projects--flex-btm-row">
+                    <p><strong>Vanilla JS & CSS</strong></p>
+                    <p><a href="../ancient-theatres"><strong>READ MORE ></strong></a></p>
+                </div>
             </div>
         </div>
 
@@ -45,17 +49,21 @@
 .flex-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--step-6);
+    justify-content: center;
+    //gap: var(--step-6);
+    --threshold: 80ch;
 }
 
 .flex-grid > * {
     flex: 1 1 30ch;
+    flex-basis: calc((var(--threshold) - 100%) * 999);
+    max-width: 50ch;
 }
 
 .projects {
     padding: 0 0.5em;
     display: flex;
-}    
+}
 
 .projects--h {
     margin-bottom: 0.25em;
@@ -65,7 +73,7 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin: var(--step-5) 0;
+    margin: var(--step-5) 5%;
     padding: var(--step-5);
     border-radius: 20px;
     transition: transform .4s;
@@ -74,15 +82,15 @@
 .projects--box:hover {
     -ms-transform: scale(1.01); /* IE 9 */
     -webkit-transform: scale(1.01); /* Safari 3-8 */
-    transform: scale(1.05); 
+    transform: scale(1.05);
   }
 
-.projects--box h3 {
-    margin: 0 0.5em 1em;
+.projects--box > * + * {
+    margin-top: 3rem;
 }
 
-.projects--box p {
-    margin: 0 auto 1em;
+.projects--box__text > * + * {
+    margin-top: 1.5rem;
 }
 
 .projects--heading {
@@ -111,9 +119,7 @@
 
 .product-image {
     // screenshots should be same dimension so that max-height isn't needed
-    max-height: 300px;
-
-    margin: 0 auto 3em auto;
+    max-height: 260px;
     border-radius: 7px;
     box-shadow: 6.7px 13.4px 13.4px hsl(0deg 0% 0% / 0.29);
 }
