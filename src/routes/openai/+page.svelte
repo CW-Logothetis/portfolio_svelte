@@ -1,7 +1,7 @@
 <script>
     import Intro from '../../lib/components/openai/Intro.svelte';
 
-    import '../../global.scss'
+    import '../../lib/scss/global.scss'
 
 </script>
 

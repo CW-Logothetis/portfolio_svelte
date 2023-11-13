@@ -27,14 +27,14 @@
     grid-column: 2 / -2;
     margin: 1em 0 0.6em 0;
     padding: 0;
-    font-size: 4rem;
+    font-size: var(--step-4);
     text-shadow: none;
     text-align: center;
 }
 
 .intro--sm-title {
     margin: 2em 0 1.6em 0;
-    font-size: 2.5rem;
+    font-size: var(--step-3);
 }
 
 .intro--stack {
@@ -63,13 +63,6 @@
 @media (min-width: 370px) {
     .intro--sm-title {
         margin: 2em 0 1.6em 0;
-        font-size: 3.5rem;
-    }
-}
-@media (min-width: 400px) {
-    
-    .intro--title, .intro--sm-title{
-        font-size: 4rem;
     }
 }
 
@@ -78,7 +71,6 @@
     .intro--title, .intro--sm-title {
         grid-column: 3 / -3;
         margin: 1.5em 0 0.6em 0;
-        font-size: 4rem;
     }
 
     .intro--stack {
@@ -100,10 +92,6 @@
 }
 
 @media (min-width: 900px) {
-    
-    .intro--title{
-    font-size: 6.5rem;
-    }
 
     .intro--para-col-1 {
         grid-column: 3/4;
@@ -126,25 +114,11 @@
     .intro--title, .intro--sm-title{
     grid-column: 3/-3;
     margin: 0.75em 0 0.6em 0;
-    font-size: 7rem;
     text-align: left;
-    }
-
-    .intro--sm-title {
-        font-size: 4rem;
-    }
-
-    .intro--para {
-        font-size: 1.8rem;
-    }
-
-    .intro--para-col-1 {
-        font-size: 2rem;
     }
 
     .intro--para-col-2 {
         grid-column: 5/9;
-        font-size: 2rem;
     }
 
     .intro--stack {
@@ -156,13 +130,5 @@
         margin-bottom: 8em;
     }
 }
-
-@media (min-width: 1800px) {
-    
-    .intro--title, .intro--sm-title{
-    font-size: 9rem;
-    }
-}
-
 
 </style>

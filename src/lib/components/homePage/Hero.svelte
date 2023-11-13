@@ -2,45 +2,91 @@
 
 </script>
 
-<section class="hero main-grid">      
+    <section class="hero main-grid">
 
-    <div class="hero--name-flexbox">
-        <!-- <h1 class="hero-title hi">Hi,</h1>
-        <h1 class="hero-title chris">I'm</h1>
-        <h1 class="hero-title chris">Chris</h1>
-        <h1 class="hero-title logothetis">Logothetis</h1> -->
-        <h1 class="hero-title hi">Hi,<br>
-        I'm<br>
-        Chris<br>
-        Logothetis</h1>
-    </div>
+        <div class="hero--name-flexbox">
+            <!-- <h1 class="hero-title hi">Hi,</h1>
+            <h1 class="hero-title chris">I'm</h1>
+            <h1 class="hero-title chris">Chris</h1>
+            <h1 class="hero-title logothetis">Logothetis</h1> -->
+            <h1 class="hero-title hi">Hi,<br>
+                I'm<br>
+                Chris<br>
+                Logothetis</h1>
+        </div>
 
-    <div class="hero--stack-flexbox">
-        <p class="hero-js stroke-text front-animate fade-in-out"></p>
-        <p class="hero-html stroke-text end-animate fade-in-out"></p>
-        <p class="hero-css stroke-text dev-animate fade-in-out"></p>
-    </div>
+        <div class="hero--stack-flexbox">
+            <p class="hero-js stroke-text front-animate fade-in-out"></p>
+            <p class="hero-html stroke-text end-animate fade-in-out"></p>
+            <p class="hero-css stroke-text dev-animate fade-in-out"></p>
+        </div>
 
-</section>
+    </section>
 
 <style lang="scss">
-/* hero */
-/* --- !!! NOTE: Hero grid column and row details are in typography above !!! --- */
+
+  h1, .hero-js, .hero-html, .hero-css {
+    margin: 0;
+    padding: 0;
+  }
+
+  .hero-js, .hero-html, .hero-css {
+    font-size: var(--step-5);
+    font-weight: 900;
+    letter-spacing: -4px;
+    text-align: right;
+  }
+  /* transparent was for text-stroke. Not fully supported at the mo */
+  /* .stroke-text{
+      -webkit-text-fill-color: transparent;
+    } */
+
+  .hero-js {
+    color: var(--background-main);
+    grid-column: 5/-2;
+    grid-row: 1;
+  }
+
+  .hero-html {
+    color: var(--background-main);
+    grid-column: 8/-2;
+    grid-row: 2;
+  }
+
+  .hero-css{
+    color: var(--background-main);
+    grid-column: 8/-2;
+    grid-row: 3;
+  }
+
+  .hi {
+    grid-column: 2/-2;
+    grid-row: 2;
+  }
+
+  .chris {
+    grid-column: 2/-2;
+    grid-row: 3;
+  }
+
+  .logothetis {
+    grid-column: 2/-2;
+    grid-row: 4;
+  }
+
 
 .hero {
-    height: 100dvh;
+    min-height: calc(100dvh - 50px);
     /* margin: 3em auto 10em auto; */
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     align-items: center;
-    margin-top: 0em;
-    margin-bottom: 8em;
     overflow: hidden;
 }
 
 
 .hero--name-flexbox {
-    margin-top: 0em; 
+    margin-top: 0;
     grid-column: 2/-2;
     grid-row: 1/4;
     display: flex;
@@ -56,61 +102,61 @@
     align-items: flex-end;
 }
 
-@media (min-height: 500px) {
-    .hero--stack-flexbox {
-        margin-top: 0em;
-    }
-}
-
-@media (min-width: 700px) {
-    .hero--name-flexbox {
-        margin-top: 0em;
-    }
-}
-
-@media (min-height: 800px) {
-    .hero--stack-flexbox {
-        margin-top: 0em;
-    }
-}
-
-
-@media (min-width: 1020px) and (min-height: 1300px) {
-    .hero {
-        height: 70vh;
-        margin-top: 0;
-        /* margin-bottom: 10em; */
-        }
-        .hero--name-flexbox {
-            margin-top: 0em;
-        }
-        .hero--stack-flexbox {
-            margin-top: 0em;
-        }
-}
-
-@media (min-width: 1200px) {
-    .hero {
-    /* height: 90vh; */
-    margin-top: -2em;
-    margin-bottom: 10em;
-    }
-    .hero--name-flexbox {
-        margin-top: 0em;
-    }
-    .hero--stack-flexbox {
-        margin-top: 3em;
-    }
-}
-
-@media (min-width: 1800px) {
-    .hero--name-flexbox {
-        margin-top: 9em;
-    }
-    .hero--stack-flexbox {
-        margin-top: 0em;
-    }
-}
+//@media (min-height: 500px) {
+//    .hero--stack-flexbox {
+//        //margin-top: 1.5em;
+//    }
+//}
+//
+//@media (min-width: 700px) {
+//    .hero--name-flexbox {
+//        //margin-top: 0em;
+//    }
+//}
+//
+//@media (min-height: 800px) {
+//    .hero--stack-flexbox {
+//        //margin-top: 0em;
+//    }
+//}
+//
+//
+//@media (min-width: 1020px) and (min-height: 1300px) {
+//    .hero {
+//        height: 70vh;
+//        margin-top: 0;
+//        /* margin-bottom: 10em; */
+//        }
+//        .hero--name-flexbox {
+//            margin-top: 0em;
+//        }
+//        .hero--stack-flexbox {
+//            margin-top: 0em;
+//        }
+//}
+//
+//@media (min-width: 1200px) {
+//    .hero {
+//    /* height: 90vh; */
+//    //margin-top: -2em;
+//    //margin-bottom: 10em;
+//    }
+//    .hero--name-flexbox {
+//        margin-top: 0em;
+//    }
+//    .hero--stack-flexbox {
+//        //margin-top: 3em;
+//    }
+//}
+//
+//@media (min-width: 1800px) {
+//    .hero--name-flexbox {
+//        //margin-top: 9em;
+//    }
+//    .hero--stack-flexbox {
+//        margin-top: 0em;
+//    }
+//}
 
 /* ------------------------------------------------------------------------------------------------------  */
 /* -------------------------------------------   ANIMATIONS   -------------------------------------------- */
@@ -419,10 +465,10 @@ but warns that it's not standard. Have commented out text-stroke. I need to save
 
 
     h1 {
-        font-size: 5rem;
+        font-size: var(--step-7);
     }
     .hero-js, .hero-html, .hero-css {
-        font-size: 2rem;
+      font-size: var(--step-8);
     }
 
     
@@ -441,14 +487,6 @@ but warns that it's not standard. Have commented out text-stroke. I need to save
 
 
 @media (min-height: 650px) {
-    h1 {
-        font-size: 5rem;
-    }
-    
-    .hero-js, .hero-html, .hero-css {
-        font-size: 5.5rem;
-    }
-
     
     .hero-js {
         -webkit-text-stroke: 3px var(--js-yellow);
@@ -463,34 +501,9 @@ but warns that it's not standard. Have commented out text-stroke. I need to save
     }
 }
 
-@media (min-width: 600px) {
-    h1 {
-        font-size: 10rem;
-    }
-    .hero-js, .hero-html, .hero-css {
-        font-size: 9rem;
-    }
-
-}
-
-
 
 @media (min-width: 900px) {
-    h1 {
-        font-size: 9rem;
-    }
 
-    .hero-js, .hero-html, .hero-css {
-        font-size: 9rem;
-    }
-
-    .hero--name-flexbox {
-        grid-column: 3;
-    }
-
-    .hero--stack-flexbox {
-        grid-column: -4;
-    }
 
     /* .hero-js {
         -webkit-text-stroke: 5px var(--js-yellow);
@@ -529,13 +542,7 @@ but warns that it's not standard. Have commented out text-stroke. I need to save
 }
 
 @media (min-width: 1020px) {
-    h1 {
-        font-size: 11rem;
-    }
 
-    .hero-js, .hero-html, .hero-css {
-        font-size: 11rem;
-    }
 
     .hero--stack-flexbox {
         grid-column: -4;
@@ -547,13 +554,6 @@ but warns that it's not standard. Have commented out text-stroke. I need to save
 }
 
 @media (min-width: 1020px) and (min-height: 1300px) {
-    h1 {
-        font-size: 11rem;
-    }
-
-    .hero-js, .hero-html, .hero-css {
-        font-size: 11rem;
-    }
 
     .hero--stack-flexbox {
         grid-column: -4;
@@ -565,12 +565,8 @@ but warns that it's not standard. Have commented out text-stroke. I need to save
 }
 
 @media (min-width: 1200px) {
-    h1 {
-        font-size: 10.5rem;
-    }
 
     .hero-js, .hero-html, .hero-css {
-        font-size: 10.5rem;
         letter-spacing: -0.75rem;
     }
     .hero-js {
@@ -588,12 +584,8 @@ but warns that it's not standard. Have commented out text-stroke. I need to save
 }
 
 @media (min-width: 1800px) {
-    h1 {
-        font-size: 11rem;
-    }
 
     .hero-js, .hero-html, .hero-css {
-        font-size: 11rem;
         letter-spacing: -0.75rem;
     }
 
@@ -611,12 +603,7 @@ but warns that it's not standard. Have commented out text-stroke. I need to save
 }
 
 @media (min-width: 600px) and (max-height: 700px) {
-    h1 {
-        font-size: 8rem;
-    }
-
     .hero-js, .hero-html, .hero-css {
-        font-size: 7rem;
         letter-spacing: -0.75rem;
     }
 

@@ -40,14 +40,13 @@
 .footer-projects {
     color: var(--background-main);
     font-weight: 600;
-    
     line-height: 100%;
 }
 
 .footer-text {
     grid-column: 2/-2;
     grid-row: 1;
-    font-size: 1.8rem;
+    font-size: var(--step--1);
     margin-bottom: 1em;
     text-decoration: none;
 }
@@ -55,7 +54,7 @@
 .footer-email {
     grid-column: 2/-2;
     grid-row: 2;
-    font-size: 1.4rem;
+    font-size: var(--step--2);
     text-decoration: none;
     margin: 0 0 3em 0;
     padding: 0;
@@ -64,7 +63,7 @@
 .footer-projects {
     grid-column: 2/-2;
     grid-row: 3;
-    font-size: 1.4rem;
+    font-size: var(--step--1);
     text-decoration: none;
     margin: 0 0 3em 0;
     padding: 0;
@@ -90,7 +89,7 @@
 .social-link {
     color: var(--background-main);
     opacity: .9;
-    font-size: 2.8rem;
+    font-size: var(--step-0);
     margin: 0 .8em;
 }
 
@@ -115,7 +114,6 @@
         grid-row: 1;
         margin: 0;
         padding: 0;
-        font-size: 1.6rem;
     }
 
     .footer-email {
@@ -123,7 +121,6 @@
         grid-row: 1;
         margin: 0;
         padding: 0;
-        font-size: 1.6rem;
     }
 
     .social-list {
@@ -134,14 +131,4 @@
     }
 }
 
-@media (min-width: 1200px) {
-    .footer-text {
-        font-size: 2.4rem;
-    }
-    
-    .footer-email, .footer-projects {
-        font-size: 1.8rem;
-    }
-
-}
 </style>

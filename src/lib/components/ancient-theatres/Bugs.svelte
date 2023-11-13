@@ -41,7 +41,7 @@
 }
 
 .bugs li {
-    font-size: 1.6em;
+  font-size: var(--step-0);
     padding-bottom: 1em;
 }
 
@@ -57,9 +57,6 @@
             grid-column: 2 / -2;
         }
 
-        .bugs--para p {
-            font-size: 1.8rem;
-        }
     }
 
     @media (min-width: 800px) {
@@ -74,11 +71,9 @@
 
         .bugs--para p {
             margin-bottom: 3em;
-            font-size: 1.8rem;
         }
 
         .bugs--para li {
-            font-size: 1.8em;
             padding-bottom: 2em;
         }
 
@@ -91,7 +86,6 @@
 
         .bugs--para p {
             margin-bottom: 3em;
-            font-size: 2.4rem;
         }
 
     }
