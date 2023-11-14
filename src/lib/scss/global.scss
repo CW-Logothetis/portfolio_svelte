@@ -89,6 +89,18 @@
     border: 0;
 }
 
+a:hover,
+a:focus, a:hover, a:focus {
+    color: var(--hero-css);
+    opacity: 0.9;
+    outline: #254BDDD4 solid 2px;
+    outline-offset: 4px;
+}
+
+a:focus, a:focus {
+    outline-style: dashed;
+}
+
 
 /* ============================================================================================
 ===============================================================================================

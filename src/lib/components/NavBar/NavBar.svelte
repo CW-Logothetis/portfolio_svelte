@@ -1,33 +1,37 @@
-<header class="center">
-    <div class="with-sidebar">
-        <div>
-            <a href="/" class="logo-link">Chris W. Logothetis</a>
-            <nav class="navigation">
-                <a href="/#about" class="nav-link">about me</a>
-                <a href="/#projects" class="nav-link">projects</a>
-            </nav>
-        </div>
+<div class="nav-bar">
+    <div class="center">
+        <div class="with-sidebar">
+            <div>
+                <a href="/" class="logo-link">Chris W. Logothetis</a>
+                <nav class="navigation">
+                    <a href="/#about" class="nav-link">about me</a>
+                    <a href="/#projects" class="nav-link">projects</a>
+                </nav>
+            </div>
 
-        <div class="contact">
-            <a href="mailto:cwlogo@pm.me" class="nav-link">  <span class="visually-hidden">Email:</span> cwlogo@pm.me</a>
-            <a href="https://www.linkedin.com/in/christopher-logothetis" class="nav-link">
-                <span class="visually-hidden">LinkedIn:</span>
-                <i class="fab fa-linkedin" aria-hidden="true"></i>
-            </a>
-            <a href="https://github.com/CW-Logothetis" class="nav-link">
-                <span class="visually-hidden">GitHub:</span>
-                <i class="fab fa-github" aria-hidden="true"></i>
-            </a>
+            <div class="contact">
+                <a href="mailto:cwlogo@pm.me" class="nav-link">  <span class="visually-hidden">Email:</span> cwlogo@pm.me</a>
+                <a href="https://www.linkedin.com/in/christopher-logothetis" class="nav-link">
+                    <span class="visually-hidden">LinkedIn:</span>
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="https://github.com/CW-Logothetis" class="nav-link">
+                    <span class="visually-hidden">GitHub:</span>
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
+            </div>
         </div>
     </div>
-</header>
+
+</div>
 
 <style lang="scss">
 
   /* LAYOUT */
-  header {
-    padding-block-start: 1rem;
-    min-height: 50px;
+  .nav-bar {
+    background-color: var(--bg-color, transparent);
+    padding-block-start: 3dvh;
+    min-height: var(--min-height, 50px);
   }
 
   .center {
@@ -42,7 +46,7 @@
     display: flex;
     flex-wrap: wrap-reverse;
     column-gap: 1rem;
-    row-gap: 0.5rem;
+    row-gap: 1rem;
   }
 
   .with-sidebar > :first-child {
@@ -52,6 +56,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     column-gap: 2rem;
+    row-gap: 1rem;
   }
 
   .with-sidebar > :last-child {
@@ -78,8 +83,12 @@
 
   /* Styles for links */
 
+  a {
+      opacity: 0.8;
+  }
+
   .logo-link, .nav-link {
-    color: var(--nav-link);
+    color: var(--color, var(--nav-link));
     text-decoration: none;
   }
 
@@ -94,16 +103,16 @@
   .contact > .nav-link {
     font-size: var(--step--2);
     font-weight: 500;
-    color: #08438BFF;
+    color: var(--color, var(--hero-css));
   }
 
   .logo-link:hover,
   .logo-link:focus,
   .nav-link:hover,
   .nav-link:focus {
-    color: var(--hero-css);
-    opacity: 0.9;
-    outline: #254BDDD4 solid 2px;
+    color: var(--color, var(--hero-css));
+    opacity: 1;
+    outline: var(--color, var(--hero-css)) solid 2px;
     outline-offset: 4px;
   }
 
