@@ -4,8 +4,9 @@
 </script>
 
 <!--
-    Because NavBar is reused for Header and Footer, for accessibility & semantic reasons,
-    the HTML elements are best in this layout file as wrappers.
+    NavBar is reused for Header and Footer so, for accessibility & semantic reasons,
+    the header and footer HTML elements are best written in this layout file as wrappers.
+    Otherwise, the NavBar component would have <header> used in the footer.
 -->
 <header>
     <NavBar />
