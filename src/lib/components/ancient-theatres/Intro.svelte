@@ -1,15 +1,15 @@
 <script>
-  export let introPara, introTitle, techStack
+  export let introData
 </script>
 
 <section id="introduction">
 
   <div class="center stack-intro" style="--center-max-inline-size: 70ch">
     <h1 class="intro--title">
-      {introTitle}
+      {introData.title}
     </h1>
     <div class="intro--para">
-      {#each introPara as para }
+      {#each introData.para as para }
         <p>{para}</p>
       {/each}
     </div>
@@ -19,7 +19,7 @@
     class="intro-container center"
     style="--center-max-inline-size: 70ch"
   >
-    {#each techStack as { title, description }}
+    {#each introData.techStack as { title, description }}
       <div class="line">
         <div class="title">{title}</div>
         <div class="description">{@html description}</div>
