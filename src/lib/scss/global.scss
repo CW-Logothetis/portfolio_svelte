@@ -2,7 +2,7 @@
 @import 'typography';
 @import 'center';
 @import 'stack';
-@import 'intro';
+@import 'flow';
 
 /*
   CSS Reset is a combo of
@@ -116,7 +116,7 @@ a:focus, a:focus {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
     max-width: 1200px;
-    margin: 0 auto;
+    margin-inline: auto;
 }
 
 .template-bg {
