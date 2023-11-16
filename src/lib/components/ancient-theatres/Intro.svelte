@@ -37,7 +37,6 @@
 
   .intro--title {
     padding: 0;
-    font-size: var(--step-4);
     text-shadow: none;
     text-align: center;
   }
