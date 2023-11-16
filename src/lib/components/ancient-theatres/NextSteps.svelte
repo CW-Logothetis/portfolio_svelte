@@ -1,14 +1,12 @@
+<script>
+    import Step from "../UI/Step.svelte";
+</script>
+
 <section class="next-steps">
     <div class="main-grid">
         <h2 class="process--heading">Next Steps</h2>
 
-        <div class="border-grid">
-            <div class="empty-box empty-box1 color-theatre"></div>
-            <div class="empty-box empty-box3 color-theatre"></div>
-            <div class="step-number color-theatre">Idea 1</div>
-            <div class="empty-box empty-box5 color-theatre"></div>
-            <div class="empty-box empty-box7 color-theatre"></div>
-        </div>
+      <Step text = "Idea 1" colorClass = "color-theatre" />
 
         <div class="process--step process--grid">
             <div class="step-bubble-l bubble-white">
@@ -20,13 +18,7 @@
             </div>
         </div>
 
-        <div class="border-grid">
-            <div class="empty-box empty-box1 color-theatre"></div>
-            <div class="empty-box empty-box3 color-theatre"></div>
-            <div class="step-number color-theatre">Idea 2</div>
-            <div class="empty-box empty-box5 color-theatre"></div>
-            <div class="empty-box empty-box7 color-theatre"></div>
-        </div>
+        <Step text = "Idea 2" colorClass = "color-theatre" />
         
         <div class="process--step process--grid">
             <div class="step-bubble-l bubble-4-green">
@@ -44,7 +36,6 @@
 
 
 .next-steps {
-    padding: 10em 0;
     background: linear-gradient(180deg, rgba(223, 223, 221, 0.3) 0%, rgba(62, 63, 62, 0.3) 25%, rgba(208, 209, 208, 0.3) 100%);
 }
 
@@ -52,36 +43,14 @@
 @media (min-width: 700px) {
     .next-steps {
         background: linear-gradient(180deg, rgba(223, 223, 221, 0.3) 0%, rgba(62, 63, 62, 0.3) 25%, rgba(208, 209, 208, 0.3) 100%);
-        padding-bottom: 15em;
     }
 }
-
-@media (min-width: 1000px) {
-    .next-steps {
-        padding-bottom: 20em;
-    }
-}
-
-@media (min-width: 750px) {
-    .p-req p, .process--para p, .stretch--para p, .bugs--para p, .ul-18px {
-        font-size: 1.8rem !important;
-    }
-}
-
-@media (min-width: 1050px) {
-    .p-req p, .process--para p, .stretch--para p, .bugs--para p, .ul-18px {
-        font-size: 2rem !important;
-    }
-}
-
 
 p {
     font-size: var(--step-0);
 }
 
 .process {
-    //margin: 5em 0 0em 0;
-    padding-bottom: 10em;
     background: linear-gradient(180deg, rgba(223, 223, 221, 0.3) 0%, rgba(62, 63, 62, 0.3) 25%, rgba(208, 209, 208, 0.3) 100%);
 }
 
@@ -96,18 +65,6 @@ p {
     display: flex;
     flex-direction: column;
 }
-
-/* grid in grid instead of flexbox? */
-/* .process--grid {
-    display: grid;
-    grid-template-columns: repeat(12, minmax(0, 1fr));
-    max-width: 1200px;
-    margin: 0 auto;
-    align-items: stretch;
-    justify-items: start;
-    justify-content: end;
-    align-content: space-evenly;
-} */
 
 .step-bubble-l {
     display: flex;
@@ -192,7 +149,7 @@ p {
 }
 
 .process--image {
-    width: 75%;
+    width: 90%;
     margin: 4em auto;
     border-radius: 7px;
     box-shadow: 6.7px 13.4px 13.4px hsl(0deg 0% 0% / 0.29);
@@ -219,71 +176,13 @@ p {
     grid-column: 1 / -1;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-}
-
-/* -------------------    EMPTY BOXES for dotted border lines between process steps ------------------------ */
-
-.empty-box {
-    height: 3em;
-    margin-top: 0.2em;
-}
-
-.empty-box1 {
-    grid-column: 1/4;
-    grid-row: 1;
-    border-right: dashed 1px;
-}
-
-.empty-box3 {
-    grid-column: 1/4;
-    grid-row: 2;
-    border-right: dashed 1px;
-}
-
-.step-number {
-    grid-column: 3/5;
-    grid-row: 3;
-    margin: 0 auto;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 7em;
-
-    font-weight: 600;
-
-    border: 2px solid;
-    border-radius: 20px;
-}
-
-.empty-box5 {
-    grid-column: 1/4;
-    grid-row: 4;
-    border-right: dashed 1px;
-}
-
-.empty-box7 {
-    grid-column: 1/4;
-    grid-row: 5;
-    border-right: dashed 1px;
-}
-
-.color-theatre, .color-theatre {
-    border-color: var(--theatre-green-3);
-    color: var(--theatre-green-3);
-}
-
-.color-chingu, .color-chingu {
-    border-color: var(--theatre-blue-3);
-    color: var(--theatre-blue-3);
+    grid-template-rows: repeat(3, 1fr);
 }
 
 
 @media (min-width: 700px) {
 
     .process {
-        padding-bottom: 20em;
         background: linear-gradient(180deg, rgba(250, 250, 249, 0.1) 0%, rgba(41, 54, 34, 0.2) 50%, rgba(15, 23, 11, 0.2) 100%);
     }
 
@@ -311,34 +210,6 @@ p {
         min-height: 0;
         padding: 2em;
         border-radius: 0 20px 20px 0;
-    }
-
-
-
-    .empty-box {
-        height: 3.5em;
-    }
-
-}
-
-@media (min-width: 1050px) {
-
-    .step-bubble-r {
-        padding-top: 4em;
-        padding-bottom: 4em;
-    }
-
-    .step-bubble-l {
-        padding-top: 4em;
-        padding-bottom: 4em;
-    }
-
-    .process--image {
-        width: 85%;
-    }
-
-    .empty-box {
-        height: 5em;
     }
 
 }

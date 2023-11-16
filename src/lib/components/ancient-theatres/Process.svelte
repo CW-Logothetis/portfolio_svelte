@@ -1,16 +1,14 @@
+<script>
+import Step from "../UI/Step.svelte";
+</script>
+
 <section class="process">
 
   <div class="main-grid">
 
     <h2 class="process--heading">Process</h2>
 
-    <div class="border-grid">
-<!--      <div class="empty-box empty-box1 color-theatre"></div>-->
-      <div class="empty-box empty-box3 color-theatre"></div>
-      <div class="step-number color-theatre">Step 1</div>
-      <div class="empty-box empty-box5 color-theatre"></div>
-<!--      <div class="empty-box empty-box7 color-theatre"></div>-->
-    </div>
+    <Step text = "Step 1" colorClass = "color-theatre" />
 
     <div class="process--step process--grid">
       <div class="step-bubble-l bubble-white">
@@ -24,13 +22,7 @@
       </div>
     </div>
 
-    <div class="border-grid">
-<!--      <div class="empty-box empty-box1 color-theatre"></div>-->
-      <div class="empty-box empty-box3 color-theatre"></div>
-      <div class="step-number color-theatre">Step 2</div>
-      <div class="empty-box empty-box5 color-theatre"></div>
-<!--      <div class="empty-box empty-box7 color-theatre"></div>-->
-    </div>
+    <Step text = "Step 2" colorClass = "color-theatre" />
 
     <div class="process--step process--grid">
       <div class="step-bubble-l bubble-4-green">
@@ -46,13 +38,7 @@
       </div>
     </div>
 
-    <div class="border-grid">
-<!--      <div class="empty-box empty-box1 color-theatre"></div>-->
-      <div class="empty-box empty-box3 color-theatre"></div>
-      <div class="step-number">Step 3</div>
-      <div class="empty-box empty-box5 color-theatre"></div>
-<!--      <div class="empty-box empty-box7 color-theatre"></div>-->
-    </div>
+    <Step text = "Step 3" colorClass = "color-theatre" />
 
     <div class="process--step process--grid">
       <div class="step-bubble-l bubble-white">
@@ -64,13 +50,7 @@
       </div>
     </div>
 
-    <div class="border-grid">
-<!--      <div class="empty-box empty-box1 color-theatre"></div>-->
-      <div class="empty-box empty-box3 color-theatre"></div>
-      <div class="step-number color-theatre">Step 4</div>
-      <div class="empty-box empty-box5 color-theatre"></div>
-<!--      <div class="empty-box empty-box7 color-theatre"></div>-->
-    </div>
+    <Step text = "Step 4" colorClass = "color-theatre" />
 
     <div class="process--step process--grid">
       <div class="step-bubble-l bubble-2-green">
@@ -205,7 +185,7 @@
   }
 
   .process--image {
-    width: 75%;
+    width: 90%;
     margin: 4em auto;
     border-radius: 7px;
     box-shadow: 6.7px 13.4px 13.4px hsl(0deg 0% 0% / 0.29);
@@ -234,64 +214,6 @@
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(3, 1fr);
   }
-
-  /* -------------------    EMPTY BOXES for dotted border lines between process steps ------------------------ */
-
-  .empty-box {
-    height: 3em;
-    margin-top: 0.2em;
-  }
-
-  .empty-box1 {
-    grid-column: 1/4;
-    grid-row: 1;
-    border-right: dashed 1px;
-  }
-
-  .empty-box3 {
-    grid-column: 1/4;
-    grid-row: 1;
-    border-right: dashed 1px;
-  }
-
-  .step-number {
-    grid-column: 3/5;
-    grid-row: 2;
-    margin: 0 auto;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 7em;
-
-    font-weight: 600;
-
-    border: 2px solid;
-    border-radius: 20px;
-  }
-
-  .empty-box5 {
-    grid-column: 1/4;
-    grid-row: 3;
-    border-right: dashed 1px;
-  }
-
-  .empty-box7 {
-    grid-column: 1/4;
-    grid-row: 5;
-    border-right: dashed 1px;
-  }
-
-  .color-theatre, .color-theatre {
-    border-color: var(--theatre-green-3);
-    color: var(--theatre-green-3);
-  }
-
-  .color-chingu, .color-chingu {
-    border-color: var(--theatre-blue-3);
-    color: var(--theatre-blue-3);
-  }
-
 
   @media (min-width: 700px) {
 
@@ -325,12 +247,6 @@
       border-radius: 0 20px 20px 0;
     }
 
-
-
-    .empty-box {
-      height: 3.5em;
-    }
-
   }
 
   @media (min-width: 1050px) {
@@ -343,14 +259,6 @@
     .step-bubble-l {
       padding-top: 4em;
       padding-bottom: 4em;
-    }
-
-    .process--image {
-      width: 85%;
-    }
-
-    .empty-box {
-      height: 5em;
     }
 
   }
