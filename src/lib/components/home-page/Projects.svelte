@@ -25,7 +25,7 @@
                 <p>Practicing mobile-first web design. Vanilla JS for switching tabs and a gallery.</p>
                 <div class="projects--flex-btm-row">
                     <p><strong>Vanilla JS & CSS</strong></p>
-                    <p><a href="../ancient-theatres"><strong>READ MORE ></strong></a></p>
+                    <p><a href="../project-page"><strong>READ MORE ></strong></a></p>
                 </div>
             </div>
         </div>
