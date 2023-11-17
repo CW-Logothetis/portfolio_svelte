@@ -1,9 +1,9 @@
-<section class="projects stack center" >
+<section class="projects stack center">
     <div class="projects--heading center" style="max-inline-size: 70ch">
-        <h2 id ="projects" class="projects--h2">Projects</h2>
+        <h2 id="projects" class="projects--h2">Projects</h2>
         <p>Each project has a page with more screenshots and information
             about how I built the site, what problems I had to solve and my future plans for it.</p>
-    </div>  
+    </div>
 
     <div class="flex-grid">
         <div class="projects--box openai">
@@ -46,30 +46,34 @@
 
 <style lang="scss">
 
-.flex-grid {
+  h3 {
+    font-size: var(--step-2);
+  }
+
+  .flex-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     //gap: var(--step-6);
     --threshold: 80ch;
-}
+  }
 
-.flex-grid > * {
+  .flex-grid > * {
     flex: 1 1 30ch;
     flex-basis: calc((var(--threshold) - 100%) * 999);
     max-width: 50ch;
-}
+  }
 
-.projects {
+  .projects {
     padding: 0 0.5em;
     display: flex;
-}
+  }
 
-.projects--h {
+  .projects--h {
     margin-bottom: 0.25em;
-}
+  }
 
-.projects--box {
+  .projects--box {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -77,57 +81,57 @@
     padding: var(--step-5);
     border-radius: 20px;
     transition: transform .4s;
-}
+  }
 
-.projects--box:hover {
+  .projects--box:hover {
     -ms-transform: scale(1.01); /* IE 9 */
     -webkit-transform: scale(1.01); /* Safari 3-8 */
     transform: scale(1.05);
   }
 
-.projects--box > * + * {
+  .projects--box > * + * {
     margin-top: 3rem;
-}
+  }
 
-.projects--box__text > * + * {
+  .projects--box__text > * + * {
     margin-top: 1.5rem;
-}
+  }
 
-.projects--heading {
+  .projects--heading {
     text-align: center;
-}
+  }
 
-.projects--heading p {
+  .projects--heading p {
     margin: 0;
     padding: 0;
-}
+  }
 
-.openai {
+  .openai {
     box-shadow: 6.7px 13.4px 13.4px hsl(0deg 0% 0% / 0.29);
     background: linear-gradient(180deg, rgba(132, 146, 202, 0.2) 0%, rgba(37, 75, 221, 0) 100%);
-}
+  }
 
-.theatres {
+  .theatres {
     box-shadow: 6.7px 13.4px 13.4px hsl(0deg 0% 0% / 0.29);
     background: linear-gradient(180deg, rgba(206, 198, 156, 0.2) 0%, rgba(234, 205, 55, 0) 100%);
-}
+  }
 
-.snake {
+  .snake {
     box-shadow: 6.7px 13.4px 13.4px hsl(0deg 0% 0% / 0.29);
     background: linear-gradient(180deg, rgba(201, 167, 160, 0.2) 0%, rgba(221, 75, 37, 0) 100%);
-}
+  }
 
-.product-image {
+  .product-image {
     // screenshots should be same dimension so that max-height isn't needed
     max-height: 260px;
     border-radius: 7px;
     box-shadow: 6.7px 13.4px 13.4px hsl(0deg 0% 0% / 0.29);
-}
+  }
 
-.projects--flex-btm-row {
+  .projects--flex-btm-row {
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
+  }
 
 </style>
