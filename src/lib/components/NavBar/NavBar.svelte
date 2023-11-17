@@ -1,5 +1,5 @@
 <div class="nav-bar">
-    <div class="center">
+    <div class="l: center | u: text-center ">
         <div class="with-sidebar">
             <div>
                 <a href="/" class="logo-link">Chris W. Logothetis</a>
@@ -37,7 +37,6 @@
   .center {
     box-sizing: content-box;
     margin-inline: auto;
-    text-align: center;
     max-inline-size: 120ch;
     padding-inline: 5%;
   }

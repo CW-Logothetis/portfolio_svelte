@@ -4,7 +4,7 @@
 
 <section class="next-steps">
   <div class="main-grid">
-    <h2 class="process--heading">Next Steps</h2>
+    <h2 class="u: text-center | process--heading">Next Steps</h2>
 
     <Step text="Idea 1" colorClass="color-theatre" />
 
@@ -62,8 +62,6 @@
 
   .process--heading {
     grid-column: 2 / -2;
-    text-shadow: none;
-    text-align: center;
   }
 
   .border-grid {

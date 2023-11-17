@@ -5,7 +5,7 @@
 <section id="introduction">
 
   <div class="center stack-intro" style="--center-max-inline-size: 70ch">
-    <h1 class="intro--title">
+    <h1 class="u: text-center | intro--title">
       {introData.title}
     </h1>
     <div class="intro--para">
@@ -38,7 +38,6 @@
   .intro--title {
     padding: 0;
     text-shadow: none;
-    text-align: center;
   }
 
   .intro--para p {

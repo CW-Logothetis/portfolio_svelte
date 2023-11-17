@@ -1,12 +1,12 @@
 <section class="projects stack center">
-    <div class="projects--heading center" style="max-inline-size: 70ch">
+    <div class="u: text-center | projects--heading center" style="max-inline-size: 70ch">
         <h2 id="projects" class="projects--h2">Projects</h2>
         <p>Each project has a page with more screenshots and information
             about how I built the site, what problems I had to solve and my future plans for it.</p>
     </div>
 
     <div class="flex-grid">
-        <div class="projects--box openai">
+        <div class="u: text-center | projects--box openai">
             <img src="/array_homescreen.png" class="product-image" alt="">
             <div class="projects--box__text">
                 <h3>Array reference with OpenAI</h3>
@@ -18,7 +18,7 @@
             </div>
         </div>
 
-        <div class="projects--box theatres">
+        <div class="u: text-center | projects--box theatres">
             <img src="/theatres-landscape.png" class="product-image" alt="">
             <div class="projects--box__text">
                 <h3>Ancient Greek Theatres</h3>
@@ -76,7 +76,6 @@
   .projects--box {
     display: flex;
     flex-direction: column;
-    text-align: center;
     margin: var(--step-5) 5%;
     padding: var(--step-5);
     border-radius: 20px;
@@ -95,10 +94,6 @@
 
   .projects--box__text > * + * {
     margin-top: 1.5rem;
-  }
-
-  .projects--heading {
-    text-align: center;
   }
 
   .projects--heading p {

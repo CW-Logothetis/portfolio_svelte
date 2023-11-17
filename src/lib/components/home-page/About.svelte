@@ -8,7 +8,7 @@
     <div class="main-grid stack">
 
         <div id="about" class="about-me about-grid center" style="--center-max-inline-size: 70ch">
-            <div class="about-me--text">
+            <div class="u: text-center | about-me--text">
                 <h2 class="about-me--heading">About Me</h2>
                 <p>I’m a front-end developer, specialising in Svelte/Kit, and up-to-date with modern JavaScript and responsive CSS.</p>
                 <p>JavaScript aside, I enjoy keeping up-to-date with modern CSS, working with UX/UI teams and designing myself with Figma. I've worked in Agile teams, with sprints, point estimation and backlog groomings, collaborating in GitHub and Jira.</p>
@@ -39,7 +39,7 @@
                     />
                 {/each}
             </div>
-            <div class="languages">
+            <div class="u: text-center | languages">
                 <div class="en">
                     <p class="language">ENGLISH</p>
                     <p class="language-level">Native Speaker</p>
@@ -73,7 +73,6 @@
     display: flex;
     flex-direction: column;
     grid-column: 2 / -2;
-    text-align: center;
 }
 
 .about-me--text p {
@@ -117,7 +116,6 @@
     //grid-row: 2;
     display: flex;
     flex-wrap: wrap;
-    text-align: center;
     --threshold: 40rem;
     column-gap: 0.5rem;
     margin-block: 3rem;
