@@ -1,5 +1,9 @@
+<script>
+    export let heroImage
+</script>
+
 <section class="center">
-    <img src="/theatres-hero.png" class="project-hero" alt="">
+    <img src="{heroImage}" class="project-hero" alt="">
 </section>
 
 <style lang="scss">

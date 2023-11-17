@@ -14,3 +14,5 @@ export let introData = {
     }
   ]
 };
+
+export let heroImage = "/array_homescreen.png"

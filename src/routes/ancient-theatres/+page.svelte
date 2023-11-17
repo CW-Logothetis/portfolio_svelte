@@ -1,10 +1,10 @@
 <script>
-  import Bugs from "$lib/components/ancient-theatres/Bugs.svelte";
-  import Hero from "$lib/components/ancient-theatres/Hero.svelte";
-  import Intro from "$lib/components/ancient-theatres/Intro.svelte";
-  import Process from "$lib/components/ancient-theatres/Process.svelte";
-  import NextSteps from "$lib/components/ancient-theatres/NextSteps.svelte";
-  import { introData } from "$lib/page-text/ancient-theatres.js";
+  import Bugs from "$lib/components/project-page/Bugs.svelte";
+  import Hero from "$lib/components/project-page/Hero.svelte";
+  import Intro from "$lib/components/project-page/Intro.svelte";
+  import Process from "$lib/components/project-page/Process.svelte";
+  import NextSteps from "$lib/components/project-page/NextSteps.svelte";
+  import { introData, heroImage } from "$lib/page-text/ancient-theatres.js";
   import "$lib/scss/global.scss";
 
 
@@ -12,7 +12,7 @@
 
 <div class="flow">
   <Intro {introData} />
-  <Hero />
+  <Hero {heroImage}/>
   <Process />
   <Bugs />
   <NextSteps />

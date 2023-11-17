@@ -1,12 +1,13 @@
 <script>
-    import Intro from "$lib/components/ancient-theatres/Intro.svelte";
-    import { introData } from "$lib/page-text/openai.js";
+    import Intro from "$lib/components/project-page/Intro.svelte";
+    import Hero from "$lib/components/project-page/Hero.svelte";
+    import { introData, heroImage } from "$lib/page-text/openai.js";
     import "$lib/scss/global.scss";
 </script>
 
 <div class="flow">
     <Intro {introData} />
-<!--    <Hero />-->
+    <Hero {heroImage}/>
 <!--    <Process />-->
 <!--    <Bugs />-->
 <!--    <NextSteps />-->
