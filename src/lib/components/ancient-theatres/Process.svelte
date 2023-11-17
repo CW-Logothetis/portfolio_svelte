@@ -74,10 +74,6 @@
 
 <style lang="scss">
 
-  p {
-    font-size: var(--step-0);
-  }
-
   .process {
     background: linear-gradient(180deg, rgba(223, 223, 221, 0.3) 0%, rgba(62, 63, 62, 0.3) 25%, rgba(208, 209, 208, 0.3) 100%);
   }
@@ -85,20 +81,5 @@
   .process--heading {
     grid-column: 2 / -2;
   }
-
-  .border-grid {
-    grid-column: 1 / -1;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-  }
-
-  @media (min-width: 750px) {
-
-    .process {
-      background: linear-gradient(0deg, rgba(250, 250, 249, 0.4) 0%, rgba(41, 54, 34, 0.2) 50%, rgba(15, 23, 11, 0.1) 100%);
-    }
-  }
-
 
 </style>

@@ -69,10 +69,6 @@
     display: flex;
   }
 
-  .projects--h {
-    margin-bottom: 0.25em;
-  }
-
   .projects--box {
     display: flex;
     flex-direction: column;
@@ -109,11 +105,6 @@
   .theatres {
     box-shadow: 6.7px 13.4px 13.4px hsl(0deg 0% 0% / 0.29);
     background: linear-gradient(180deg, rgba(206, 198, 156, 0.2) 0%, rgba(234, 205, 55, 0) 100%);
-  }
-
-  .snake {
-    box-shadow: 6.7px 13.4px 13.4px hsl(0deg 0% 0% / 0.29);
-    background: linear-gradient(180deg, rgba(201, 167, 160, 0.2) 0%, rgba(221, 75, 37, 0) 100%);
   }
 
   .product-image {

@@ -2,26 +2,24 @@
 
 </script>
 
-    <section class="hero main-grid">
+<section class="hero main-grid">
 
-        <div class="hero--name-flexbox">
-            <!-- <h1 class="hero-title hi">Hi,</h1>
-            <h1 class="hero-title chris">I'm</h1>
-            <h1 class="hero-title chris">Chris</h1>
-            <h1 class="hero-title logothetis">Logothetis</h1> -->
-            <h1 class="hero-title hi">Hi,<br>
-                I'm<br>
-                Chris<br>
-                Logothetis</h1>
-        </div>
+  <div class="hero--name-flexbox">
+      <h1 class="hero-title hi">
+          Hi,<br>
+          I'm<br>
+          Chris<br>
+          Logothetis
+      </h1>
+  </div>
 
-        <div class="hero--stack-flexbox">
-            <p class="hero-js stroke-text front-animate fade-in-out"></p>
-            <p class="hero-html stroke-text end-animate fade-in-out"></p>
-            <p class="hero-css stroke-text dev-animate fade-in-out"></p>
-        </div>
+  <div class="hero--stack-flexbox">
+    <p class="hero-js stroke-text front-animate fade-in-out"></p>
+    <p class="hero-html stroke-text end-animate fade-in-out"></p>
+    <p class="hero-css stroke-text dev-animate fade-in-out"></p>
+  </div>
 
-    </section>
+</section>
 
 <style lang="scss">
 
@@ -36,10 +34,6 @@
     letter-spacing: -4px;
     text-align: right;
   }
-  /* transparent was for text-stroke. Not fully supported at the mo */
-  /* .stroke-text{
-      -webkit-text-fill-color: transparent;
-    } */
 
   .hero-js {
     color: var(--background-main);
@@ -53,7 +47,7 @@
     grid-row: 2;
   }
 
-  .hero-css{
+  .hero-css {
     color: var(--background-main);
     grid-column: 8/-2;
     grid-row: 3;
@@ -64,159 +58,81 @@
     grid-row: 2;
   }
 
-  .chris {
-    grid-column: 2/-2;
-    grid-row: 3;
-  }
-
-  .logothetis {
-    grid-column: 2/-2;
-    grid-row: 4;
-  }
-
-
-.hero {
+  .hero {
     min-height: calc(100dvh - 50px);
-    /* margin: 3em auto 10em auto; */
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     align-items: center;
     overflow: hidden;
-}
+  }
 
-
-.hero--name-flexbox {
+  .hero--name-flexbox {
     margin-top: 0;
     grid-column: 2/-2;
     grid-row: 1/4;
     display: flex;
     flex-direction: column;
     text-align: left;
-}
+  }
 
-.hero--stack-flexbox {
+  .hero--stack-flexbox {
     grid-column: 2/-2;
     grid-row: 1/3;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-}
+  }
 
-//@media (min-height: 500px) {
-//    .hero--stack-flexbox {
-//        //margin-top: 1.5em;
-//    }
-//}
-//
-//@media (min-width: 700px) {
-//    .hero--name-flexbox {
-//        //margin-top: 0em;
-//    }
-//}
-//
-//@media (min-height: 800px) {
-//    .hero--stack-flexbox {
-//        //margin-top: 0em;
-//    }
-//}
-//
-//
-//@media (min-width: 1020px) and (min-height: 1300px) {
-//    .hero {
-//        height: 70vh;
-//        margin-top: 0;
-//        /* margin-bottom: 10em; */
-//        }
-//        .hero--name-flexbox {
-//            margin-top: 0em;
-//        }
-//        .hero--stack-flexbox {
-//            margin-top: 0em;
-//        }
-//}
-//
-//@media (min-width: 1200px) {
-//    .hero {
-//    /* height: 90vh; */
-//    //margin-top: -2em;
-//    //margin-bottom: 10em;
-//    }
-//    .hero--name-flexbox {
-//        margin-top: 0em;
-//    }
-//    .hero--stack-flexbox {
-//        //margin-top: 3em;
-//    }
-//}
-//
-//@media (min-width: 1800px) {
-//    .hero--name-flexbox {
-//        //margin-top: 9em;
-//    }
-//    .hero--stack-flexbox {
-//        margin-top: 0em;
-//    }
-//}
-
-/* ------------------------------------------------------------------------------------------------------  */
-/* -------------------------------------------   ANIMATIONS   -------------------------------------------- */
-/* ------------------------------------------------------------------------------------------------------  */
+  /* ------------------------------------------------------------------------------------------------------  */
+  /* -------------------------------------------   ANIMATIONS   -------------------------------------------- */
+  /* ------------------------------------------------------------------------------------------------------  */
 
 
-/* Looks great with text-stroke, and I tested it on chrome and safari on MacBook, where it worked. 
-But a friend tried it on Chrome and it didn't work. Nor on old iPhone. MDN shows all modern browsers ok with it,
-but warns that it's not standard. Have commented out text-stroke. I need to save it in a branch and clean up main. */
+  /* Looks great with text-stroke, and I tested it on chrome and safari on MacBook, where it worked.
+  But a friend tried it on Chrome and it didn't work. Nor on old iPhone. MDN shows all modern browsers ok with it,
+  but warns that it's not standard. Have commented out text-stroke. I need to save it in a branch and clean up main. */
 
-.fade-in-out {
+  .fade-in-out {
     opacity: 1;
     -webkit-opacity: 1;
     animation: fadein 4s linear 0s infinite;
     -webkit-animation: fadein 4s linear 0s infinite;
     animation-delay: 2s;
     -webkit-animation-delay: 2s;
-}
+  }
 
-.hero-js {
+  .hero-js {
     -webkit-text-stroke: 4px var(--js-yellow);
-}
+  }
 
-.hero-html {
+  .hero-html {
     -webkit-text-stroke: 4px var(--hero-html);
-    }
+  }
 
-.hero-css{
+  .hero-css {
     -webkit-text-stroke: 4px var(--hero-css);
-}
+  }
 
-/* .hero-js {
-    color: var(--js-yellow);
-}
-
-.hero-html {
-    color: var(--hero-html);
+  @keyframes fadein {
+    0%, 100% {
+      opacity: 1
     }
+    50% {
+      opacity: 0
+    }
+  }
 
-.hero-css{
-    color: var(--hero-css);
-} */
-
-@keyframes fadein {
-  0%,100% { opacity: 1 }
-  50% { opacity: 0 }
-}
-
-.front-animate {
+  .front-animate {
     display: inline;
     margin: 0;
     padding: 0;
     border: 0;
-}
+  }
 
-.front-animate:before {
+  .front-animate:before {
     content: 'FRONT';
     letter-spacing: -4px;
     -webkit-text-stroke: 4px var(--js-yellow);
-    /* color: var(--js-yellow); */
     -webkit-animation-name: front-animate;
     animation-name: front-animate;
     -webkit-animation-duration: 8s;
@@ -225,84 +141,51 @@ but warns that it's not standard. Have commented out text-stroke. I need to save
     -webkit-animation-delay: 2.7s;
     animation-iteration-count: infinite;
     -webkit-animation-iteration-count: infinite;
-}
+  }
 
-@keyframes front-animate {
+  @keyframes front-animate {
     0% {
-        content: 'FRONT';
-        -webkit-text-stroke: 5px var(--js-yellow)
+      content: 'FRONT';
+      -webkit-text-stroke: 5px var(--js-yellow)
     }
     50% {
-        content: 'JavaScript';
-        letter-spacing: -3px;
-        -webkit-text-stroke: 5px var(--js-yellow)
+      content: 'JavaScript';
+      letter-spacing: -3px;
+      -webkit-text-stroke: 5px var(--js-yellow)
     }
     100% {
-        content: 'FRONT';
-        -webkit-text-stroke: 5px var(--js-yellow)
+      content: 'FRONT';
+      -webkit-text-stroke: 5px var(--js-yellow)
     }
-}
+  }
 
-/* @keyframes front-animate {
+  @-webkit-keyframes front-animate {
     0% {
-        content: 'FRONT';
-        color: var(--js-yellow)
+      content: 'FRONT';
+      -webkit-text-stroke: 5px var(--js-yellow)
     }
     50% {
-        content: 'JavaScript';
-        letter-spacing: -6px;
-        color: var(--js-yellow)
+      content: 'JavaScript';
+      letter-spacing: -3px;
+      -webkit-text-stroke: 5px var(--js-yellow)
     }
     100% {
-        content: 'FRONT';
-        color: var(--js-yellow)
+      content: 'FRONT';
+      -webkit-text-stroke: 5px var(--js-yellow)
     }
-} */
+  }
 
-@-webkit-keyframes front-animate {
-    0% {
-        content: 'FRONT';
-        -webkit-text-stroke: 5px var(--js-yellow)
-    }
-    50% {
-        content: 'JavaScript';
-        letter-spacing: -3px;
-        -webkit-text-stroke: 5px var(--js-yellow)
-    }
-    100% {
-        content: 'FRONT';
-        -webkit-text-stroke: 5px var(--js-yellow)
-    }
-}
-
-/* @-webkit-keyframes front-animate {
-    0% {
-        content: 'FRONT';
-        color: var(--js-yellow)
-    }
-    50% {
-        content: 'JavaScript';
-        letter-spacing: -6px;
-        color: var(--js-yellow)
-    }
-    100% {
-        content: 'FRONT';
-        color: var(--js-yellow)
-    }
-} */
-
-.end-animate {
+  .end-animate {
     display: inline;
     margin: 0;
     padding: 0;
     border: 0;
-}
+  }
 
-.end-animate:before {
+  .end-animate:before {
     content: 'END';
     letter-spacing: -4px;
     -webkit-text-stroke: 5px var(--hero-html);
-    /* color: var(--hero-html); */
     -webkit-animation-name: end-animate;
     -webkit-animation-duration: 8s;
     animation-name: end-animate;
@@ -311,84 +194,51 @@ but warns that it's not standard. Have commented out text-stroke. I need to save
     -webkit-animation-delay: 2.7s;
     animation-iteration-count: infinite;
     -webkit-animation-iteration-count: infinite;
-}
+  }
 
-@keyframes end-animate {
+  @keyframes end-animate {
     0% {
-        content: 'END';
-        -webkit-text-stroke: 5px var(--hero-html)
+      content: 'END';
+      -webkit-text-stroke: 5px var(--hero-html)
     }
     50% {
-        content: 'HTML5';
-        letter-spacing: -3px;
-        -webkit-text-stroke: 5px var(--hero-html)
+      content: 'HTML5';
+      letter-spacing: -3px;
+      -webkit-text-stroke: 5px var(--hero-html)
     }
     100% {
-        content: 'END';
-        -webkit-text-stroke: 5px var(--hero-html)
+      content: 'END';
+      -webkit-text-stroke: 5px var(--hero-html)
     }
-}
+  }
 
-@-webkit-keyframes end-animate {
+  @-webkit-keyframes end-animate {
     0% {
-        content: 'END';
-        -webkit-text-stroke: 5px var(--hero-html)
+      content: 'END';
+      -webkit-text-stroke: 5px var(--hero-html)
     }
     50% {
-        content: 'HTML5';
-        letter-spacing: -3px;
-        -webkit-text-stroke: 5px var(--hero-html)
+      content: 'HTML5';
+      letter-spacing: -3px;
+      -webkit-text-stroke: 5px var(--hero-html)
     }
     100% {
-        content: 'END';
-        -webkit-text-stroke: 5px var(--hero-html)
+      content: 'END';
+      -webkit-text-stroke: 5px var(--hero-html)
     }
-}
+  }
 
-/* @keyframes end-animate {
-    0% {
-        content: 'END';
-        color: var(--hero-html)
-    }
-    50% {
-        content: 'HTML5';
-        letter-spacing: -6px;
-        color: var(--hero-html)
-    }
-    100% {
-        content: 'END';
-        color: var(--hero-html)
-    }
-}
-
-@-webkit-keyframes end-animate {
-    0% {
-        content: 'END';
-        color: var(--hero-html)
-    }
-    50% {
-        content: 'HTML5';
-        letter-spacing: -6px;
-        color: var(--hero-html)
-    }
-    100% {
-        content: 'END';
-        color: var(--hero-html)
-    }
-} */
-
-.dev-animate {
+  .dev-animate {
     display: inline;
     margin: 0;
     padding: 0;
     border: 0;
-}
+  }
 
-.dev-animate:before {
+  .dev-animate:before {
     content: 'dev';
     letter-spacing: -4px;
     -webkit-text-stroke: 5px var(--hero-css);
-    /* color: var(--hero-css); */
     -webkit-animation-name: dev-animate;
     -webkit-animation-duration: 8s;
     animation-name: dev-animate;
@@ -397,251 +247,179 @@ but warns that it's not standard. Have commented out text-stroke. I need to save
     -webkit-animation-delay: 2.7s;
     animation-iteration-count: infinite;
     -webkit-animation-iteration-count: infinite;
-}
+  }
 
-@keyframes dev-animate {
+  @keyframes dev-animate {
     0% {
-        content: 'dev';
-        -webkit-text-stroke: 5px var(--hero-css)
+      content: 'dev';
+      -webkit-text-stroke: 5px var(--hero-css)
     }
     50% {
-        content: 'CSS3';
-        letter-spacing: -3px;
-        -webkit-text-stroke: 5px var(--hero-css)
+      content: 'CSS3';
+      letter-spacing: -3px;
+      -webkit-text-stroke: 5px var(--hero-css)
     }
     100% {
-        content: 'dev';
-        -webkit-text-stroke: 5px var(--hero-css)
+      content: 'dev';
+      -webkit-text-stroke: 5px var(--hero-css)
     }
-}
+  }
 
-@-webkit-keyframes dev-animate {
+  @-webkit-keyframes dev-animate {
     0% {
-        content: 'dev';
-        -webkit-text-stroke: 5px var(--hero-css)    
+      content: 'dev';
+      -webkit-text-stroke: 5px var(--hero-css)
     }
     50% {
-        content: 'CSS3';
-        letter-spacing: -3px;
-        -webkit-text-stroke: 5px var(--hero-css) 
+      content: 'CSS3';
+      letter-spacing: -3px;
+      -webkit-text-stroke: 5px var(--hero-css)
     }
     100% {
-        content: 'dev';
-        -webkit-text-stroke: 5px var(--hero-css) 
+      content: 'dev';
+      -webkit-text-stroke: 5px var(--hero-css)
     }
-}
-
-/* @keyframes dev-animate {
-    0% {
-        content: 'dev';
-        color: var(--hero-css)
-    }
-    50% {
-        content: 'CSS3';
-        letter-spacing: -6px;
-        color: var(--hero-css)
-    }
-    100% {
-        content: 'dev';
-        color: var(--hero-css)
-    }
-}
-
-@-webkit-keyframes dev-animate {
-    0% {
-        content: 'dev';
-        color: var(--hero-css)    
-    }
-    50% {
-        content: 'CSS3';
-        letter-spacing: -6px;
-        color: var(--hero-css) 
-    }
-    100% {
-        content: 'dev';
-        color: var(--hero-css) 
-    }
-} */
+  }
 
 
-    h1 {
-        font-size: var(--step-7);
-    }
-    .hero-js, .hero-html, .hero-css {
-      font-size: var(--step-8);
-    }
+  h1 {
+    font-size: var(--step-7);
+  }
 
-    
+  .hero-js, .hero-html, .hero-css {
+    font-size: var(--step-8);
+  }
+
+
+  .hero-js {
+    -webkit-text-stroke: 3px var(--js-yellow);
+  }
+
+  .hero-html {
+    -webkit-text-stroke: 3px var(--hero-html);
+  }
+
+  .hero-css {
+    -webkit-text-stroke: 3px var(--hero-css);
+  }
+
+
+  @media (min-height: 650px) {
+
     .hero-js {
-        -webkit-text-stroke: 3px var(--js-yellow);
+      -webkit-text-stroke: 3px var(--js-yellow);
     }
-    
+
     .hero-html {
-        -webkit-text-stroke: 3px var(--hero-html);
-    }
-    
-    .hero-css{
-        -webkit-text-stroke: 3px var(--hero-css);
+      -webkit-text-stroke: 3px var(--hero-html);
     }
 
-
-
-@media (min-height: 650px) {
-    
-    .hero-js {
-        -webkit-text-stroke: 3px var(--js-yellow);
+    .hero-css {
+      -webkit-text-stroke: 3px var(--hero-css);
     }
-    
-    .hero-html {
-        -webkit-text-stroke: 3px var(--hero-html);
-    }
-    
-    .hero-css{
-        -webkit-text-stroke: 3px var(--hero-css);
-    }
-}
+  }
 
-
-@media (min-width: 900px) {
-
-
-    /* .hero-js {
-        -webkit-text-stroke: 5px var(--js-yellow);
-        grid-column: 5/-3;
-    }
-    
-    .hero-html {
-        -webkit-text-stroke: 5px var(--hero-html);
-        grid-column: 8/-3;
-        
-    }
-    
-    .hero-css{
-        -webkit-text-stroke: 5px var(--hero-css);
-        grid-column: 8/-3;
-        
-    } */
-
-    /* .hero-js {
-        
-        grid-column: 5/-3;
-      
-    }
-    
-    .hero-html {
-        
-        grid-column: 8/-3;
-      
-    }
-    
-    .hero-css{
-       
-        grid-column: 8/-3;
-        
-    } */
-}
-
-@media (min-width: 1020px) {
+  @media (min-width: 1020px) {
 
 
     .hero--stack-flexbox {
-        grid-column: -4;
+      grid-column: -4;
     }
 
     .hero--name-flexbox {
-        grid-column: 3;
+      grid-column: 3;
     }
-}
+  }
 
-@media (min-width: 1020px) and (min-height: 1300px) {
+  @media (min-width: 1020px) and (min-height: 1300px) {
 
     .hero--stack-flexbox {
-        grid-column: -4;
+      grid-column: -4;
     }
 
     .hero--name-flexbox {
-        grid-column: 3;
+      grid-column: 3;
     }
-}
+  }
 
-@media (min-width: 1200px) {
-
-    .hero-js, .hero-html, .hero-css {
-        letter-spacing: -0.75rem;
-    }
-    .hero-js {
-        -webkit-text-stroke: 6px var(--js-yellow);
-    }
-    
-    .hero-html {
-        -webkit-text-stroke: 6px var(--hero-html);
-        }
-    
-    .hero-css{
-        -webkit-text-stroke: 6px var(--hero-css);
-    }
- 
-}
-
-@media (min-width: 1800px) {
+  @media (min-width: 1200px) {
 
     .hero-js, .hero-html, .hero-css {
-        letter-spacing: -0.75rem;
+      letter-spacing: -0.75rem;
     }
-
     .hero-js {
-        grid-column: 5/-3;
+      -webkit-text-stroke: 6px var(--js-yellow);
     }
-    
-    .hero-html {      
-        grid-column: 8/-3;
-    }
-    
-    .hero-css{      
-        grid-column: 8/-3;
-    }
-}
 
-@media (min-width: 600px) and (max-height: 700px) {
+    .hero-html {
+      -webkit-text-stroke: 6px var(--hero-html);
+    }
+
+    .hero-css {
+      -webkit-text-stroke: 6px var(--hero-css);
+    }
+
+  }
+
+  @media (min-width: 1800px) {
+
     .hero-js, .hero-html, .hero-css {
-        letter-spacing: -0.75rem;
+      letter-spacing: -0.75rem;
     }
 
     .hero-js {
-        -webkit-text-stroke: 8px var(--js-yellow);
-        grid-column: 5/-3;
-        
+      grid-column: 5/-3;
     }
-    
+
     .hero-html {
-        -webkit-text-stroke: 8px var(--hero-html);
-        grid-column: 8/-3;
-        
+      grid-column: 8/-3;
     }
-    
-    .hero-css{
-        -webkit-text-stroke: 8px var(--hero-css);
-        grid-column: 8/-3;
-        
+
+    .hero-css {
+      grid-column: 8/-3;
+    }
+  }
+
+  @media (min-width: 600px) and (max-height: 700px) {
+    .hero-js, .hero-html, .hero-css {
+      letter-spacing: -0.75rem;
+    }
+
+    .hero-js {
+      -webkit-text-stroke: 8px var(--js-yellow);
+      grid-column: 5/-3;
+
+    }
+
+    .hero-html {
+      -webkit-text-stroke: 8px var(--hero-html);
+      grid-column: 8/-3;
+
+    }
+
+    .hero-css {
+      -webkit-text-stroke: 8px var(--hero-css);
+      grid-column: 8/-3;
+
     }
     .hero-js {
-        grid-column: 5/-3;
+      grid-column: 5/-3;
     }
-    
+
     .hero-html {
-        grid-column: 8/-3;    
+      grid-column: 8/-3;
     }
-    
-    .hero-css{
-        grid-column: 8/-3;
+
+    .hero-css {
+      grid-column: 8/-3;
     }
 
     .hero--name-flexbox {
-        margin-top: 1em;
+      margin-top: 1em;
     }
 
     .hero--stack-flexbox {
-        margin-top: -4em;
+      margin-top: -4em;
     }
-}
+  }
 </style>
