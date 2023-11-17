@@ -4,71 +4,71 @@
 
 <section class="process">
 
-    <div class="main-grid">
+  <div class="main-grid">
 
-        <h2 class="process--heading">Process</h2>
+    <h2 class="process--heading">Process</h2>
 
-        <Step text="Step 1" colorClass="color-theatre" />
+    <Step text="Step 1" colorClass="color-theatre" />
 
-        <div class="process--step process--grid">
-            <div class="step-bubble-l bubble-white">
-                <p class="process--para">With Figma, I laid out detailed plans for the home page and then a template to
-                    be used
-                    for each of the theatres.</p>
-                <p class="process--para">I started mobile first, then adjusted sizes and also layout of element for
-                    tablet and
-                    laptop/desktop with landscape orientation.</p>
-            </div>
-            <div class="step-bubble-r bubble-5-green">
-                <img src="/theatres-figma.png" class="process--image" alt="">
-            </div>
-        </div>
-
-        <Step text="Step 2" colorClass="color-theatre" />
-
-        <div class="process--step process--grid">
-            <div class="step-bubble-l bubble-4-green">
-                <img src="/theatres-grid.png" class="process--image" alt="">
-            </div>
-            <div class="step-bubble-r bubble-white">
-                <p class="process--para">The home page was relatively straightforward, with a hero image, some
-                    introductory text
-                    and then a timeline.</p>
-                <p class="process--para">Everything is set out with CSS Grid, with empty columns for margins and easy
-                    alignment.</p>
-                <p class="process--para">The timeline’s dividing line is a border to the right of the dates. It needed a
-                    little
-                    adjustment with different media queries.</p>
-            </div>
-        </div>
-
-        <Step text="Step 3" colorClass="color-theatre" />
-
-        <div class="process--step process--grid">
-            <div class="step-bubble-l bubble-white">
-                <p class="process--para">The template for the theatre could have had a long scroll, but to use a little
-                    JavaScript I added a tab menu.</p>
-            </div>
-            <div class="step-bubble-r bubble-3-green">
-                <img src="/theatres-tabs.png" class="process--image" alt="">
-            </div>
-        </div>
-
-        <Step text="Step 4" colorClass="color-theatre" />
-
-        <div class="process--step process--grid">
-            <div class="step-bubble-l bubble-2-green">
-                <img src="/theatres-photos.png" class="process--image" alt="">
-            </div>
-            <div class="step-bubble-r bubble-white">
-                <p class="process--para">The photo gallery allowed me to use a little more JavaScript. And in the future
-                    I’ll
-                    add a lightbox to enlarge the photos; on mobile they’re too small.</p>
-                <p class="process--para">The thumbnails are in a grid so that they’ll wrap on smaller screens.</p>
-            </div>
-        </div>
-
+    <div class="flex-grid process--step process--grid">
+      <div class="step-bubble-l bubble-white">
+        <p class="process--para">With Figma, I laid out detailed plans for the home page and then a template to
+          be used
+          for each of the theatres.</p>
+        <p class="process--para">I started mobile first, then adjusted sizes and also layout of element for
+          tablet and
+          laptop/desktop with landscape orientation.</p>
+      </div>
+      <div class="step-bubble-r bubble-5-green">
+        <img src="/theatres-figma.png" class="process--image" alt="">
+      </div>
     </div>
+
+    <Step text="Step 2" colorClass="color-theatre" />
+
+    <div class="process--step process--grid">
+      <div class="step-bubble-l bubble-4-green">
+        <img src="/theatres-grid.png" class="process--image" alt="">
+      </div>
+      <div class="step-bubble-r bubble-white">
+        <p class="process--para">The home page was relatively straightforward, with a hero image, some
+          introductory text
+          and then a timeline.</p>
+        <p class="process--para">Everything is set out with CSS Grid, with empty columns for margins and easy
+          alignment.</p>
+        <p class="process--para">The timeline’s dividing line is a border to the right of the dates. It needed a
+          little
+          adjustment with different media queries.</p>
+      </div>
+    </div>
+
+    <Step text="Step 3" colorClass="color-theatre" />
+
+    <div class="process--step process--grid">
+      <div class="step-bubble-l bubble-white">
+        <p class="process--para">The template for the theatre could have had a long scroll, but I added a vanilla
+          JavaScript tab menu.</p>
+      </div>
+      <div class="step-bubble-r bubble-3-green">
+        <img src="/theatres-tabs.png" class="process--image" alt="">
+      </div>
+    </div>
+
+    <Step text="Step 4" colorClass="color-theatre" />
+
+    <div class="process--step">
+      <div class="step-bubble-l bubble-2-green">
+        <img src="/theatres-photos.png" class="process--image" alt="">
+      </div>
+      <div class="step-bubble-r bubble-white">
+        <p class="process--para">The photo gallery allowed me to use a little more JavaScript. And in the future
+          I’ll
+          add a lightbox to enlarge the photos; on mobile they’re too small.</p>
+        <p class="process--para">The thumbnails are in a grid so that they’ll wrap on smaller screens.</p>
+      </div>
+    </div>
+
+  </div>
 </section>
 
 
@@ -79,7 +79,6 @@
   }
 
   .process {
-    //padding-bottom: 10em;
     background: linear-gradient(180deg, rgba(223, 223, 221, 0.3) 0%, rgba(62, 63, 62, 0.3) 25%, rgba(208, 209, 208, 0.3) 100%);
   }
 
@@ -89,133 +88,6 @@
     text-align: center;
   }
 
-  .process--step {
-    grid-column: 2 / -2;
-    display: flex;
-    flex-direction: column;
-
-  }
-
-  /* grid in grid instead of flexbox? */
-  /* .process--grid {
-      display: grid;
-      grid-template-columns: repeat(12, minmax(0, 1fr));
-      max-width: 1200px;
-      margin: 0 auto;
-      align-items: stretch;
-      justify-items: start;
-      justify-content: end;
-      align-content: space-evenly;
-  } */
-
-  .step-bubble-l {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 25em;
-    padding: 0.75em;
-    background-color: var(--background-main);
-    border-radius: 20px 20px 0 0;
-    box-shadow: 6.7px 13.4px 13.4px hsl(0deg 0% 0% / 0.29);
-  }
-
-  .step-bubble-r {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    min-height: 25em;
-    padding: 1em;
-    background-color: var(--background-main);
-    border-radius: 0 0 20px 20px;
-    box-shadow: 6.7px 13.4px 13.4px hsl(0deg 0% 0% / 0.29);
-  }
-
-  .bubble-5-green {
-    background-color: var(--theatre-green-5)
-  }
-
-  .bubble-4-green {
-    background-color: var(--theatre-green-4)
-  }
-
-  .bubble-3-green {
-    background-color: var(--theatre-green-3)
-  }
-
-  .bubble-2-green {
-    background-color: var(--theatre-green-2)
-  }
-
-  .bubble-1-green {
-    background-color: var(--theatre-green-1)
-  }
-
-  .bubble-5-blue {
-    background-color: var(--theatre-blue-5)
-  }
-
-  .bubble-4-blue {
-    background-color: var(--theatre-blue-4)
-  }
-
-  .bubble-3-blue {
-    background-color: var(--theatre-blue-3)
-  }
-
-  .bubble-2-blue {
-    background-color: var(--theatre-blue-2)
-  }
-
-  .bubble-1-blue {
-    background-color: var(--theatre-blue-1)
-  }
-
-  .bubble-yellow {
-    background-color: var(--js-yellow);
-  }
-
-  .bubble-orange {
-    background-color: #DD4B25;
-  }
-
-  .bubble-blue {
-    background-color: #254BDD;
-  }
-
-  .bubble-pink {
-    background-color: #ba7dc5;
-  }
-
-  .process--para {
-    margin: 0 2em;
-    padding: 1em 0;
-  }
-
-  .process--image {
-    width: 90%;
-    margin: 4em auto;
-    border-radius: 7px;
-    box-shadow: 6.7px 13.4px 13.4px hsl(0deg 0% 0% / 0.29);
-    transition: transform .4s;
-  }
-
-  .process--image:hover {
-    -ms-transform: scale(2); /* IE 9 */
-    -webkit-transform: scale(2); /* Safari 3-8 */
-    transform: scale(2);
-  }
-
-  .enlarge-image {
-    width: 100% !important;
-  }
-
-  .no-zoom:hover {
-    -ms-transform: scale(1); /* IE 9 */
-    -webkit-transform: scale(1); /* Safari 3-8 */
-    transform: scale(1);
-  }
-
   .border-grid {
     grid-column: 1 / -1;
     display: grid;
@@ -223,52 +95,12 @@
     grid-template-rows: repeat(3, 1fr);
   }
 
-  @media (min-width: 700px) {
+  @media (min-width: 750px) {
 
     .process {
       background: linear-gradient(0deg, rgba(250, 250, 249, 0.4) 0%, rgba(41, 54, 34, 0.2) 50%, rgba(15, 23, 11, 0.1) 100%);
     }
-
-    .process--step {
-      flex-direction: row;
-    }
-
-    .step-bubble-l {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      width: 50%;
-      min-height: 0;
-      padding: 2em;
-      border-radius: 20px 0 0 20px;
-    }
-
-    .step-bubble-r {
-      grid-column: 7/13;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-content: center;
-      width: 50%;
-      min-height: 0;
-      padding: 2em;
-      border-radius: 0 20px 20px 0;
-    }
-
   }
 
-  @media (min-width: 1050px) {
-
-    .step-bubble-r {
-      padding-top: 4em;
-      padding-bottom: 4em;
-    }
-
-    .step-bubble-l {
-      padding-top: 4em;
-      padding-bottom: 4em;
-    }
-
-  }
 
 </style>
