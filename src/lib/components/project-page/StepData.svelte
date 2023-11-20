@@ -1,13 +1,12 @@
 <script>
-  import Step from "../UI/Step.svelte";
-  export let processData;
+  import StepCounter from "../UI/StepCounter.svelte";
+  export let data;
 
   // Helper function to determine Process content based on the step index
   // Note: as the content is static, @html is used, allowing for more readable markdown.
   // if it was dynamic, Svelte's {#if} ... {:else} in the markdown would allow easy reactivity.
   function getStepContent(text, colorClass, image, stepIndex) {
     const isOddStep = (stepIndex + 1) % 2 !== 0;
-
     if (isOddStep) {
       return `
         <div class="step-bubble-l 'bubble-white'">
@@ -35,10 +34,10 @@
 
 <section class="process">
   <div class="main-grid">
-    <h2 class="u: text-center | process--heading">Process</h2>
+    <h2 class="u: text-center | process--heading">{data.sectionHeader}</h2>
 
-    {#each processData as { text, colorClass, image }, stepIndex (stepIndex)}
-      <Step text={`Step ${stepIndex + 1}`} />
+    {#each data.steps as { text, colorClass, image }, stepIndex (stepIndex)}
+      <StepCounter text={`Step ${stepIndex + 1}`} />
       <div class="flex-grid process--step process--grid">
         {@html getStepContent(text, colorClass, image, stepIndex)}
       </div>
