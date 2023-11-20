@@ -1,5 +1,7 @@
 <script>
   import Step from "../UI/Step.svelte";
+
+  export let processData
 </script>
 
 <section class="process">
@@ -7,6 +9,16 @@
   <div class="main-grid">
 
     <h2 class="u: text-center | process--heading">Process</h2>
+
+    {#each processData as { text, colorClass }, i (i)}
+      <Step text={`Step ${i + 1}`} colorClass={colorClass} stepNumber={i + 1} />
+      <div class="step-bubble-r bubble-5-green">
+        <!-- Render image for odd steps -->
+        {#if (i + 1) % 2 !== 0}
+          <img src={`/theatres-${i + 1}.png`} class="process--image" alt="">
+        {/if}
+      </div>
+    {/each}
 
     <Step text="Step 1" colorClass="color-theatre" />
 

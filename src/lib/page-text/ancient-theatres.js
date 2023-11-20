@@ -16,3 +16,15 @@ export let introData = {
 };
 
 export let heroImage = "/theatres-hero.png"
+
+export let processData = [
+  {
+    "text": "With Figma, I laid out detailed plans...",
+    "colorClass": "bubble-white"
+  },
+  {
+    "text": "The home page was relatively straightforward...",
+    "colorClass": "bubble-4-green"
+  }
+  // Add more steps as needed
+]
