@@ -19,12 +19,35 @@ export let heroImage = "/theatres-hero.png"
 
 export let processData = [
   {
-    "text": "With Figma, I laid out detailed plans...",
-    "colorClass": "bubble-white"
+    "text": [
+      "With Figma, I laid out detailed plans for the home page and then a template to be used for each of the theatres.",
+      "I started mobile first, then adjusted sizes and also layout of element for tablet and laptop/desktop with landscape orientation."
+    ],
+    "colorClass": "bubble-5-green",
+    "image": "theatres-figma"
   },
   {
-    "text": "The home page was relatively straightforward...",
-    "colorClass": "bubble-4-green"
+    "text": [
+      "The home page was relatively straightforward, with a hero image, some introductory text and then a timeline.",
+      "Everything is set out with CSS Grid, with empty columns for margins and easy alignment.",
+      "The timeline’s dividing line is a border to the right of the dates. It needed a little adjustment with different media queries."
+    ],
+    "colorClass": "bubble-4-green",
+    "image": "theatres-grid"
+  },
+  {
+    "text": [
+    "The template for the theatre could have had a long scroll, but I added a vanilla JavaScript tab menu."    ],
+    "colorClass": "bubble-3-green",
+    "image": "theatres-tabs"
+  },
+  {
+    "text": [
+      "The photo gallery allowed me to use a little more JavaScript. And in the future I’ll add a lightbox to enlarge the photos; on mobile they’re too small.",
+      "The thumbnails are in a grid so that they’ll wrap on smaller screens."
+     ],
+    "colorClass": "bubble-2-green",
+    "image": "theatres-tabs"
   }
-  // Add more steps as needed
+
 ]
