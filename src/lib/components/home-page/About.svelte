@@ -1,5 +1,6 @@
 <script>
-    import { skillsJS, skillsCSS, skillsCollaboration } from "../../skillsData.js";
+    import {aboutText, languageText } from "../../page-text/home-page/about.js";
+    import { skillsJS, skillsCSS, skillsCollaboration } from "../../page-text/home-page/skillsData.js";
     import Skill from "./Skill.svelte";
 </script>
 
@@ -9,10 +10,10 @@
 
         <div id="about" class="about-me about-grid center" style="--center-max-inline-size: 70ch">
             <div class="u: text-center | about-me--text">
-                <h2 class="about-me--heading">About Me</h2>
-                <p>I’m a front-end developer, specialising in Svelte/Kit, and up-to-date with modern JavaScript and responsive CSS.</p>
-                <p>JavaScript aside, I enjoy keeping up-to-date with modern CSS, working with UX/UI teams and designing myself with Figma. I've worked in Agile teams, with sprints, point estimation and backlog groomings, collaborating in GitHub and Jira.</p>
-                <p>And once upon a time, I spent seven years as a lawyer in London. But my love for building stuff meant that the law wasn’t for me. So I first built and ran my own business, and it was there that I fell in love with web design and UX/UI, then code.</p>
+                <h2>{aboutText.header}</h2>
+                {#each aboutText.paragraphs as paragraph (paragraph)}
+                    <p>{paragraph}</p>
+                {/each}
             </div>
         </div>
 
@@ -40,18 +41,12 @@
                 {/each}
             </div>
             <div class="u: text-center | languages">
-                <div class="en">
-                    <p class="language">ENGLISH</p>
-                    <p class="language-level">Native Speaker</p>
-                </div>
-                <div class="gr">
-                    <p class="language">GREEK</p>
-                    <p class="language-level">Intermediate<br>Conversational</p>
-                </div>
-                <div class="jp">
-                    <p class="language">JAPANESE</p>
-                    <p class="language-level">Once conversational;<br>it’s been a long time</p>
-                </div>
+                {#each languageText as language}
+                    <div class="language">
+                        <p class="language-name">{language.name}</p>
+                        <p class="language-level">{language.level}</p>
+                    </div>
+                {/each}
             </div>
         </div>
     </div>
@@ -112,8 +107,6 @@
 }
 
 .languages {
-    //grid-column: 3 / -3;
-    //grid-row: 2;
     display: flex;
     flex-wrap: wrap;
     --threshold: 40rem;
@@ -126,12 +119,13 @@
     flex-basis: calc((var(--threshold) - 100%) * 999);
 }
 
-.languages p {
-    margin: 0;
-    padding: 0 0 10px 0;
+.language {
+    margin-block: 1em;
+    display: flex;
+    flex-direction: column;
 }
 
-.language {
+.language-name {
     font-weight: 600;
     font-size: var(--step-2)
 }
@@ -139,12 +133,6 @@
 .language-level {
     font-weight: 400;
     font-size: var(--step-0)
-}
-
-.en, .gr, .jp {
-    margin-block: 1em;
-    display: flex;
-    flex-direction: column;
 }
 
 
