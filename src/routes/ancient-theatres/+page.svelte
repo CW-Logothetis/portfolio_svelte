@@ -1,24 +1,18 @@
 <script>
-    import Bugs from '../../lib/components/ancient-theatres/Bugs.svelte';
-    import Hero from '../../lib/components/ancient-theatres/Hero.svelte';
-    import Intro from '../../lib/components/ancient-theatres/Intro.svelte';
-	import Process from '../../lib/components/ancient-theatres/Process.svelte';
-    import NextSteps from '../../lib/components/ancient-theatres/NextSteps.svelte';
+  import Bugs from "$lib/components/project-page/Bugs.svelte";
+  import Hero from "$lib/components/project-page/Hero.svelte";
+  import Intro from "$lib/components/project-page/Intro.svelte";
+  import StepData from "$lib/components/project-page/StepData.svelte";
+  import { introData, heroImage, processData, nextStepsData } from "$lib/page-text/ancient-theatres.js";
+  import "$lib/scss/global.scss";
 
-    import '../../lib/scss/global.scss'
+
 </script>
 
-<container class="template-bg body-colour-theatre">
-
-    <Intro />
-    <Hero />
-    <Process />
-    <Bugs />
-    <NextSteps />
-
-</container>
-
-
-<style lang="scss">
-
-</style>
+<div class="flow">
+  <Intro {introData} />
+  <Hero {heroImage} />
+  <StepData data = {processData} />
+  <Bugs />
+  <StepData data = {nextStepsData} />
+</div>

@@ -1,0 +1,13 @@
+.switcher {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var( --gap, var(--step-6) );
+  --threshold: 80ch;
+}
+
+.switcher > * {
+  flex: 1 1 30ch;
+  flex-basis: calc( (var(--threshold) - 100% ) * 999 );
+  max-width: 50ch;
+}

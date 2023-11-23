@@ -1,0 +1,9 @@
+.flow > * {
+  padding-block-start: 7vh;
+  padding-block-end: 10vh;
+}
+
+.flow > :first-child {
+  padding-block-start: 7vh;
+  padding-block-end: 1vh;
+}
