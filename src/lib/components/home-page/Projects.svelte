@@ -1,47 +1,28 @@
+<script>
+    import { projectsText } from "$lib/page-text/home-page/projects.js";
+</script>
+
 <section class="projects stack center">
     <div class="u: text-center | projects--heading center" style="max-inline-size: 70ch">
-        <h2 id="projects" class="projects--h2">Projects</h2>
-        <p>Each project has a page with more screenshots and information
-            about how I built the site, what problems I had to solve and my future plans for it.</p>
+        <h2 id="projects" class="projects--h2">{projectsText.heading}</h2>
+        <p>{projectsText.intro}</p>
     </div>
 
     <div class="flex-grid">
-        <div class="u: text-center | projects--box openai">
-            <img src="/array_homescreen.png" class="product-image" alt="">
-            <div class="projects--box__text">
-                <h3>Array reference with OpenAI</h3>
-                <p>All the array methods on one page, with OpenAI generated summaries, syntax and examples.</p>
-                <div class="projects--flex-btm-row">
-                    <p><strong>SvelteKit</strong></p>
-                    <p><a href="../openai"><strong>READ MORE ></strong></a></p>
+        {#each projectsText.projects as project (project)}
+            <div class="u: text-center | projects--box openai">
+                <img src={project.image} class="product-image" alt="">
+                <div class="projects--box__text">
+                    <h3>{project.title}</h3>
+                    <p>{project.description}</p>
+                    <div class="projects--flex-btm-row">
+                        <p><strong>{project.stack}</strong></p>
+                        <p><a href={project.link}><strong>READ MORE ></strong></a></p>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <div class="u: text-center | projects--box theatres">
-            <img src="/theatres-landscape.png" class="product-image" alt="">
-            <div class="projects--box__text">
-                <h3>Ancient Greek Theatres</h3>
-                <p>Practicing mobile-first web design. Vanilla JS for switching tabs and a gallery.</p>
-                <div class="projects--flex-btm-row">
-                    <p><strong>Vanilla JS & CSS</strong></p>
-                    <p><a href="../ancient-theatres"><strong>READ MORE ></strong></a></p>
-                </div>
-            </div>
-        </div>
-
-        <!-- <div class="projects--box snake">
-            <img src="img/snake-mistake.png" class="product-image" alt="">
-            <h3>Snake on the Nokia 5510</h3>
-            <p>As a kid I really wanted the Nokia 5510 with removable covers and snake. I wasn’t allowed it, so built it myself. </p>
-            <div class="projects--flex-btm-row">
-                <p><strong>Vanilla JS & CSS</strong></p>
-                <p><a href="snake.html"><strong>READ MORE ></strong></a></p>
-            </div>
-        </div> -->
+        {/each}
     </div>
-
-
 </section>
 
 <style lang="scss">

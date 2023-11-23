@@ -1,7 +1,3 @@
-<script>
-
-</script>
-
 <section class="hero main-grid">
 
   <div class="hero--name-flexbox">
