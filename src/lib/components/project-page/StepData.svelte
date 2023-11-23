@@ -49,7 +49,7 @@
 <style lang="scss">
 
   .process {
-    background: linear-gradient(180deg, rgba(223, 223, 221, 0.3) 0%, rgba(62, 63, 62, 0.3) 25%, rgba(208, 209, 208, 0.3) 100%);
+    background: linear-gradient(180deg, rgba(223, 223, 221, 0.3) 0%, rgba(208, 209, 208, 0.1) 100%);
   }
 
   .process--heading {
