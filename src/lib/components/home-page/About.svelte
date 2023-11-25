@@ -4,7 +4,7 @@
   import Skill from "./Skill.svelte";
 </script>
 
-<section class="bg">
+<section class="bg" id="about">
 
   <div class="l: stack | u: color-light">
 
@@ -15,23 +15,23 @@
       {/each}
     </div>
 
-    <div class="l: center | c: skills" style="--center-max-inline-size: 120ch">
+    <div class="l: center" style="--center-max-inline-size: 120ch">
 
-      <div class="stack-flex">
+      <div class="c: stack-flex">
         {#each skillsJS as skill}
           <Skill
             {skill}
           />
         {/each}
       </div>
-      <div class="stack-flex">
+      <div class="c: stack-flex">
         {#each skillsCSS as skill}
           <Skill
             {skill}
           />
         {/each}
       </div>
-      <div class="stack-flex">
+      <div class="c: stack-flex">
         {#each skillsCollaboration as skill}
           <Skill
             {skill}
@@ -39,9 +39,9 @@
         {/each}
       </div>
 
-      <div class="u: text-center | languages">
+      <div class="u: text-center | c: languages">
         {#each languageText as language}
-          <div class="language">
+          <div class="c: language">
             <p class="u: text-step-2 w-600">{language.name}</p>
             <p class="u: w-400">{language.level}</p>
           </div>
@@ -81,7 +81,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     row-gap: 2rem;
-    column-gap: 7rem;
+    column-gap: 5rem;
     padding-block: 2em;
     max-width: 900px;
   }
@@ -92,11 +92,11 @@
     --threshold: 40rem;
     column-gap: 0.5rem;
     margin-block: 3rem;
-  }
 
-  .languages > * {
-    flex-grow: 1;
-    flex-basis: calc((var(--threshold) - 100%) * 999);
+    & > * {
+      flex-grow: 1;
+      flex-basis: calc((var(--threshold) - 100%) * 999);
+    }
   }
 
   .language {

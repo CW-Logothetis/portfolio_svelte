@@ -7,14 +7,16 @@ const projectsText = {
       title: "Array reference with OpenAI",
       description: "All the array methods on one page, with OpenAI generated summaries, syntax and examples.",
       stack: "SvelteKit",
-      link: "../openai"
+      link: "../openai",
+      bg: "openai"
     },
     {
       image: "/theatres-landscape.png",
       title: "Ancient Greek Theatres",
       description: "Practicing mobile-first web design. Vanilla JS for switching tabs and a gallery.",
       stack: "Vanilla JS & CSS",
-      link: "../ancient-theatres"
+      link: "../ancient-theatres",
+      bg: "theatres"
     }
     // Add more projects as needed
   ]
