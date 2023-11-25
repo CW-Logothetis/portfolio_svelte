@@ -49,7 +49,7 @@ html, body {
 }
 
 body {
-  font-size: get-size('step-0');
+  font-size: var(--step-0);
   line-height: 1.5;
   text-rendering: optimizeSpeed;
   -webkit-font-smoothing: antialiased;

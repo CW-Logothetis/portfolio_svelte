@@ -1,14 +1,16 @@
 // Pull in modern reset
 @import 'reset';
 
-@import 'colours';
-@import 'typography';
-@import 'center';
-@import 'stack';
-@import 'flow';
-@import 'visually-hidden';
-@import 'process-step';
-@import 'text-align-center';
+@import '1_Layout/center';
+@import '1_Layout/flow';
+@import '1_Layout/stack';
+@import '2_Utilities/border-radius';
+@import '2_Utilities/box-shadow';
+@import '2_Utilities/colours';
+@import '2_Utilities/text-align-center';
+@import '2_Utilities/typography';
+@import '2_Utilities/visually-hidden';
+@import '3_Components/process-step';
 
 body {
     line-height: 1.5;
@@ -22,20 +24,21 @@ h3 {
     line-height: 1.2;
 }
 
-a:hover,
-a:focus, a:hover, a:focus {
-    color: var(--hero-css);
-    opacity: 0.9;
-    outline: #254BDDD4 solid 2px;
-    outline-offset: 4px;
+a {
     text-decoration: none;
-    cursor: pointer;
 }
 
-a:focus, a:focus {
+a:hover,
+a:focus {
+    color: var(--color, var(--hero-css));
+    opacity: 1;
+    outline: var(--color, var(--hero-css)) solid 2px;
+    outline-offset: 4px;
+}
+
+a:focus {
     outline-style: dashed;
 }
-
 
 /* ============================================================================================
 ===============================================================================================

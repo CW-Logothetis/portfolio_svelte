@@ -1,0 +1,12 @@
+:root {
+  --radius-l: 1rem;
+  --radius-s: 0.5rem;
+}
+
+.radius-l {
+  border-radius: var(--radius-l);
+}
+
+.radius-s {
+  border-radius: var(--radius-s);
+}
