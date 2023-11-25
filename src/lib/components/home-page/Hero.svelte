@@ -1,58 +1,23 @@
 <section class="hero main-grid">
 
-  <div class="hero--name-flexbox">
-      <h1 class="hero-title hi">
-          Hi,<br>
-          I'm<br>
-          Chris<br>
-          Logothetis
-      </h1>
+  <div class="name-flexbox">
+    <h1>
+      Hi,<br>
+      I'm<br>
+      Chris<br>
+      Logothetis
+    </h1>
   </div>
 
-  <div class="hero--stack-flexbox">
-    <p class="hero-js stroke-text front-animate fade-in-out"></p>
-    <p class="hero-html stroke-text end-animate fade-in-out"></p>
-    <p class="hero-css stroke-text dev-animate fade-in-out"></p>
+  <div class="tech-flexbox">
+    <p class="hero-js front-animate fade-in-out"></p>
+    <p class="hero-html end-animate fade-in-out"></p>
+    <p class="hero-css dev-animate fade-in-out"></p>
   </div>
 
 </section>
 
 <style lang="scss">
-
-  h1, .hero-js, .hero-html, .hero-css {
-    margin: 0;
-    padding: 0;
-  }
-
-  .hero-js, .hero-html, .hero-css {
-    font-size: var(--step-5);
-    font-weight: 900;
-    letter-spacing: -4px;
-    text-align: right;
-  }
-
-  .hero-js {
-    color: var(--background-main);
-    grid-column: 5/-2;
-    grid-row: 1;
-  }
-
-  .hero-html {
-    color: var(--background-main);
-    grid-column: 8/-2;
-    grid-row: 2;
-  }
-
-  .hero-css {
-    color: var(--background-main);
-    grid-column: 8/-2;
-    grid-row: 3;
-  }
-
-  .hi {
-    grid-column: 2/-2;
-    grid-row: 2;
-  }
 
   .hero {
     min-height: calc(100dvh - 50px);
@@ -62,22 +27,60 @@
     overflow: hidden;
   }
 
-  .hero--name-flexbox {
+  .name-flexbox {
     margin-top: 0;
     grid-column: 2/-2;
     grid-row: 1/4;
     display: flex;
     flex-direction: column;
     text-align: left;
+
+    h1 {
+      font-size: var(--step-7);
+      grid-column: 2/-2;
+      grid-row: 2;
+    }
   }
 
-  .hero--stack-flexbox {
+  .tech-flexbox {
     grid-column: 2/-2;
     grid-row: 1/3;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+
+    p {
+      font-size: var(--step-8);
+    }
   }
+
+  h1, .hero-js, .hero-html, .hero-css {
+    margin: 0;
+    padding: 0;
+  }
+
+  .hero-js, .hero-html, .hero-css {
+    color: var(--background-main);
+    font-weight: 900;
+    letter-spacing: -4px;
+    text-align: right;
+  }
+
+  .hero-js {
+    grid-column: 5/-2;
+    grid-row: 1;
+  }
+
+  .hero-html {
+    grid-column: 8/-2;
+    grid-row: 2;
+  }
+
+  .hero-css {
+    grid-column: 8/-2;
+    grid-row: 3;
+  }
+
 
   /* ------------------------------------------------------------------------------------------------------  */
   /* -------------------------------------------   ANIMATIONS   -------------------------------------------- */
@@ -278,15 +281,6 @@
   }
 
 
-  h1 {
-    font-size: var(--step-7);
-  }
-
-  .hero-js, .hero-html, .hero-css {
-    font-size: var(--step-8);
-  }
-
-
   .hero-js {
     -webkit-text-stroke: 3px var(--js-yellow);
   }
@@ -317,23 +311,22 @@
 
   @media (min-width: 1020px) {
 
-
-    .hero--stack-flexbox {
+    .tech-flexbox {
       grid-column: -4;
     }
 
-    .hero--name-flexbox {
+    .name-flexbox {
       grid-column: 3;
     }
   }
 
   @media (min-width: 1020px) and (min-height: 1300px) {
 
-    .hero--stack-flexbox {
+    .tech-flexbox {
       grid-column: -4;
     }
 
-    .hero--name-flexbox {
+    .name-flexbox {
       grid-column: 3;
     }
   }
@@ -384,20 +377,18 @@
     .hero-js {
       -webkit-text-stroke: 8px var(--js-yellow);
       grid-column: 5/-3;
-
     }
 
     .hero-html {
       -webkit-text-stroke: 8px var(--hero-html);
       grid-column: 8/-3;
-
     }
 
     .hero-css {
       -webkit-text-stroke: 8px var(--hero-css);
       grid-column: 8/-3;
-
     }
+
     .hero-js {
       grid-column: 5/-3;
     }
@@ -410,11 +401,11 @@
       grid-column: 8/-3;
     }
 
-    .hero--name-flexbox {
+    .name-flexbox {
       margin-top: 1em;
     }
 
-    .hero--stack-flexbox {
+    .tech-flexbox {
       margin-top: -4em;
     }
   }
