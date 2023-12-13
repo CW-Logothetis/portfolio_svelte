@@ -4,8 +4,7 @@
     <h1>
       Hi,<br>
       I'm<br>
-      Chris<br>
-      Logothetis
+      Chris
     </h1>
   </div>
 
