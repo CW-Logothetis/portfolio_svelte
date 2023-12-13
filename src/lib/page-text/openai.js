@@ -2,15 +2,15 @@ export let introData = {
   title: "Array Methods & OpenAI",
   para: [
     "Since I was first learning to code, I wanted a quick reference for array methods.",
-    "MDN docs were far too advanced for a beginner. And there are a thousand blogs and tutorials and cheatsheets online doing some methods. But I couldn't remember which methods were even available.",
-    "So I had the idea to summarise MDN docs for each method, then allow me to select methods for comparison.",
-    "I never got around to it - too much content to write. But now OpenAI can do the content for me."
+    "So I had the idea to summarise MDN docs for each method, then write a couple of short examples.",
+    "I never got around to it - too much content to write. But now an LLM can do explanations, syntax and examples for me.",
+    "For a comparison, I built the app in React and Svelte, deploying to Netlify and Vercel."
   ],
   techStack: [
-    { title: "Stack:", description: "SvelteKit (FE and server) - GitHub" },
+    { title: "Stack:", description: "React || SvelteKit (FE and server)" },
     {
       title: "Demo:",
-      description: "<a href=\"https://openai-arrays.netlify.app/\" class=\"intro--para-col-2\" target=\"_blank\" rel=\"noreferrer\">Netlify</a>\n"
+      description: "<a href=\"https://array-openai-react.vercel.app/\" class=\"intro--para-col-2\" target=\"_blank\" rel=\"noreferrer\">React & Vercel</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href=\"https://openai-arrays.netlify.app/\" class=\"intro--para-col-2\" target=\"_blank\" rel=\"noreferrer\">Svelte & Netlify</a>\n"
     }
   ]
 };

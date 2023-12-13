@@ -6,7 +6,7 @@ const projectsText = {
       image: "/array_homescreen.png",
       title: "Array reference with OpenAI",
       description: "All the array methods on one page, with OpenAI generated summaries, syntax and examples.",
-      stack: "SvelteKit",
+      stack: "React | SvelteKit",
       link: "../openai",
       bg: "openai"
     },
