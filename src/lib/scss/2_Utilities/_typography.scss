@@ -41,6 +41,88 @@
     --step-10: clamp(6.1919rem, 4.2964rem + 9.4772vw, 11.6413rem);
 }
 
+/* Font Sizes */
+.text-step--2 {
+    font-size: var(--step--2);
+}
+
+.text-step--1 {
+    font-size: var(--step--1);
+}
+
+.text-step-0 {
+    font-size: var(--step-0);
+}
+
+.text-step-1 {
+    font-size: var(--step-1);
+}
+
+.text-step-2 {
+    font-size: var(--step-2);
+}
+
+.text-step-3 {
+    font-size: var(--step-3);
+}
+
+.text-step-4 {
+    font-size: var(--step-4);
+}
+
+.text-step-5 {
+    font-size: var(--step-5);
+}
+
+.text-step-6 {
+    font-size: var(--step-6);
+}
+
+.text-step-7 {
+    font-size: var(--step-7);
+}
+
+.text-step-8 {
+    font-size: var(--step-8);
+}
+
+.text-step-9 {
+    font-size: var(--step-9);
+}
+
+.text-step-10 {
+    font-size: var(--step-10);
+}
+
+/* Font Weights */
+.w-300 {
+    font-weight: 300;
+}
+
+.w-400 {
+    font-weight: 400;
+}
+
+.w-500 {
+    font-weight: 500;
+}
+
+.w-600 {
+    font-weight: 600;
+}
+
+.w-700 {
+    font-weight: 700;
+}
+
+.w-800 {
+    font-weight: 800;
+}
+
+.w-900 {
+    font-weight: 900;
+}
+
 h1, h2,  strong, .lingo {
     font-weight: 700;
 }
@@ -65,15 +147,4 @@ h3 {
 p {
     font-size: var(--step-0);
     line-height: 140%;
-}
-
-a {
-    color: var(--anchor);
-    text-decoration: none;
-    cursor: pointer;
-}
-
-a:hover,
-a:focus {
-    color: var(--anchor-hover);
 }

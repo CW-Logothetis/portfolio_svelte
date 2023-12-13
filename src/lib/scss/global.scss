@@ -1,97 +1,44 @@
-@import 'colours';
-@import 'typography';
-@import 'center';
-@import 'stack';
-@import 'flow';
-@import 'visually-hidden';
-@import 'process-step';
-@import 'text-align-center';
+// Pull in modern reset
+@import 'reset';
 
-/*
-  CSS Reset is a combo of
-  - https://andy-bell.co.uk/a-modern-css-reset/
-  - https://www.joshwcomeau.com/css/custom-css-reset/
-*/
+@import '1_Layout/center';
+@import '1_Layout/flow';
+@import '1_Layout/stack';
+@import '2_Utilities/border-radius';
+@import '2_Utilities/box-shadow';
+@import '2_Utilities/colours';
+@import '2_Utilities/text-align-center';
+@import '2_Utilities/typography';
+@import '2_Utilities/visually-hidden';
+@import '3_Components/process-step';
 
-    *, *::before, *::after {
-        box-sizing: border-box;
-    }
+body {
+    line-height: 1.5;
+    overflow-x: hidden;
+    padding-block-end: var(--step-5);
+}
 
-    * {
-        margin: 0;
-    }
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+}
 
-/* Set core root defaults */
-    html:focus-within {
-    scroll-behavior: smooth;
-    }
-  
-    html, body {
-        height: 100%;
-        font-family: system-ui;
-    }
-    
-    body {
-        font-size: var(--step-0);
-        line-height: 1.5;
-        text-rendering: optimizeSpeed;
-        -webkit-font-smoothing: antialiased;
-    }
-
-    /* Make images easier to work with */
-    img, picture, video, canvas, svg {
-        display: block;
-        max-width: 100%;
-    }
-
-    /* Inherit fonts for inputs and buttons */
-    input, button, textarea, select {
-        font: inherit;
-    }
-
-/* Remove default margin */
-    body, h1, h2, h3, h4, p, figure, blockquote, dl, dd {
-        margin: 0;
-    }
-
-    p, h2, h3, h4, h5, h6 {
-        overflow-wrap: break-word;
-    }
-
-
-/* A elements that don't have a class get default styles */
-    a:not([class]) {
-        text-decoration-skip-ink: auto;
-    }
-
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-// @media (prefers-reduced-motion: reduce) {
-//     html:focus-within {
-//      scroll-behavior: auto;
-//     }
-    
-//     *,
-//     *::before,
-//     *::after {
-//       animation-duration: 0.01ms !important;
-//       animation-iteration-count: 1 !important;
-//       transition-duration: 0.01ms !important;
-//       scroll-behavior: auto !important;
-//     }
-//   }
+a {
+    text-decoration: none;
+}
 
 a:hover,
-a:focus, a:hover, a:focus {
-    color: var(--hero-css);
-    opacity: 0.9;
-    outline: #254BDDD4 solid 2px;
+a:focus {
+    color: var(--color, var(--hero-css));
+    opacity: 1;
+    outline: var(--color, var(--hero-css)) solid 2px;
     outline-offset: 4px;
 }
 
-a:focus, a:focus {
+a:focus {
     outline-style: dashed;
 }
-
 
 /* ============================================================================================
 ===============================================================================================

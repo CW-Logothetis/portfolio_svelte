@@ -1,139 +1,108 @@
 <script>
-    import {aboutText, languageText } from "$lib/page-text/home-page/about.js";
-    import { skillsJS, skillsCSS, skillsCollaboration } from "$lib/page-text/home-page/skillsData.js";
-    import Skill from "./Skill.svelte";
+  import { aboutText, languageText } from "$lib/page-text/home-page/about.js";
+  import { skillsJS, skillsCSS, skillsCollaboration } from "$lib/page-text/home-page/skillsData.js";
+  import Skill from "./Skill.svelte";
 </script>
 
-<section class="container-me">
-            
-    <div class="main-grid stack">
+<section class="bg" id="about">
 
-        <div id="about" class="about-me about-grid center" style="--center-max-inline-size: 70ch">
-            <div class="u: text-center | about-me--text">
-                <h2>{aboutText.header}</h2>
-                {#each aboutText.paragraphs as paragraph (paragraph)}
-                    <p>{paragraph}</p>
-                {/each}
-            </div>
-        </div>
+  <div class="l: stack | u: color-light">
 
-        <div class="skills about-grid">
-
-            <div class="stack-flex">
-                {#each skillsJS as skill}
-                    <Skill
-                      {skill}
-                    />
-                {/each}
-            </div>
-            <div class="stack-flex">
-                {#each skillsCSS as skill}
-                    <Skill
-                      {skill}
-                    />
-                {/each}
-            </div>
-            <div class="stack-flex">
-                {#each skillsCollaboration as skill}
-                    <Skill
-                      {skill}
-                    />
-                {/each}
-            </div>
-            <div class="u: text-center | languages">
-                {#each languageText as language}
-                    <div class="language">
-                        <p class="language-name">{language.name}</p>
-                        <p class="language-level">{language.level}</p>
-                    </div>
-                {/each}
-            </div>
-        </div>
+    <div class="l: center | u: text-center | c: about-me__text" style="--center-max-inline-size: 70ch">
+      <h2>{aboutText.header}</h2>
+      {#each aboutText.paragraphs as paragraph (paragraph)}
+        <p>{paragraph}</p>
+      {/each}
     </div>
-</section>    
+
+    <div class="l: center" style="--center-max-inline-size: 120ch">
+
+      <div class="c: stack-flex">
+        {#each skillsJS as skill}
+          <Skill
+            {skill}
+          />
+        {/each}
+      </div>
+      <div class="c: stack-flex">
+        {#each skillsCSS as skill}
+          <Skill
+            {skill}
+          />
+        {/each}
+      </div>
+      <div class="c: stack-flex">
+        {#each skillsCollaboration as skill}
+          <Skill
+            {skill}
+          />
+        {/each}
+      </div>
+
+      <div class="u: text-center | c: languages">
+        {#each languageText as language}
+          <div class="c: language">
+            <p class="u: text-step-2 w-600">{language.name}</p>
+            <p class="u: w-400">{language.level}</p>
+          </div>
+        {/each}
+      </div>
+    </div>
+  </div>
+</section>
 
 <style lang="scss">
 
-.container-me {
+  .bg {
     background: linear-gradient(310deg, #DD4B25f9 0%, #d9b504 99%);
-}
+  }
 
-.about-me {
-    grid-column: 1 / -1;
-    justify-items: end;
-    color:  var(--background-main);
-}
-
-.about-me--text {
-    display: flex;
-    flex-direction: column;
-    grid-column: 2 / -2;
-}
-
-.about-me--text p {
-    font-weight: 500;
-    line-height: 2;
-    text-align: left;
-}
-
-.about-me--heading {
-    padding: 0;
-}
-
-.about-grid {
-  margin-top: 3rem;
-}
-
-
-/* ============================================================================================================
-     ----------------------------------------------   Skills    ----------------------------------------------
+  /* ============================================================================================================
+     ----------------------------------------------  Intro    ----------------------------------------------
 =============================================================================================================== */
 
-.skills {
-    grid-column: 1 / -1;
-    padding-inline: 2rem;
-    color:  var(--background-main);
-}
+  .about-me__text {
+      display: flex;
+      flex-direction: column;
 
-.stack-flex {
+      p {
+          font-weight: 500;
+          line-height: 1.6;
+          text-align: left;
+      }
+  }
+
+  /* ============================================================================================================
+       ----------------------------------------------   Skills    ----------------------------------------------
+  =============================================================================================================== */
+
+  .stack-flex {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    grid-column: 2 / -2;
-    grid-row: 1;
-    row-gap: 30px;
-    column-gap: 20px;
+    row-gap: 2rem;
+    column-gap: 5rem;
     padding-block: 2em;
-}
+    max-width: 900px;
+  }
 
-.languages {
+  .languages {
     display: flex;
     flex-wrap: wrap;
     --threshold: 40rem;
     column-gap: 0.5rem;
     margin-block: 3rem;
-}
 
-.languages > *  {
-    flex-grow: 1;
-    flex-basis: calc((var(--threshold) - 100%) * 999);
-}
+    & > * {
+      flex-grow: 1;
+      flex-basis: calc((var(--threshold) - 100%) * 999);
+    }
+  }
 
-.language {
+  .language {
     margin-block: 1em;
     display: flex;
     flex-direction: column;
-}
-
-.language-name {
-    font-weight: 600;
-    font-size: var(--step-2)
-}
-
-.language-level {
-    font-weight: 400;
-    font-size: var(--step-0)
-}
-
+  }
 
 </style>

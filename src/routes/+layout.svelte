@@ -18,7 +18,7 @@
 
 <footer>
     <NavBar
-      --bg-color = "var(--primary)"
+      --bg-color = "var(--theatre-blue-4)"
       --min-height = "130px"
       --color = "var(--js-yellow)"
     />

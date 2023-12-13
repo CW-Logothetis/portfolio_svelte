@@ -1,0 +1,217 @@
+//If HTML --vars change, remember to use LLM to re-do the utility classes below
+
+html {
+    --light: #fafafa;
+    --light-shade: #eeeeee;
+    --grey: #c4c4c4;
+    --dark: #202020;
+    --background-main: #ffffff;
+    --background-secondary: #202020;
+    --anchor: #254BDD;
+    --js-yellow: #efd81d;
+    --nav-link: #404040;
+
+    --primary: #252525;
+
+    --hero-js: #efd81dd4;
+    --hero-html: #DD4B25d4;
+    --hero-css: #254BDDd4;
+
+    --theatre-green-1: #497036;
+    --theatre-green-2: #3f602e;
+    --theatre-green-3: #2a411f;
+    --theatre-green-4: #1d2c15;
+    --theatre-green-5: #162110;
+
+    --theatre-blue-1: #08438b;
+    --theatre-blue-2: #05336c;
+    --theatre-blue-3: #02234c;
+    --theatre-blue-4: #01142c;
+    --theatre-blue-5: #00060d;
+}
+
+/* Background Colors */
+.bg-light {
+    background-color: var(--light);
+}
+
+.bg-light-shade {
+    background-color: var(--light-shade);
+}
+
+.bg-grey {
+    background-color: var(--grey);
+}
+
+.bg-dark {
+    background-color: var(--dark);
+}
+
+.bg-background-main {
+    background-color: var(--background-main);
+}
+
+.bg-background-secondary {
+    background-color: var(--background-secondary);
+}
+
+.bg-anchor {
+    background-color: var(--anchor);
+}
+
+.bg-js-yellow {
+    background-color: var(--js-yellow);
+}
+
+.bg-nav-link {
+    background-color: var(--nav-link);
+}
+
+.bg-primary {
+    background-color: var(--primary);
+}
+
+.bg-hero-js {
+    background-color: var(--hero-js);
+}
+
+.bg-hero-html {
+    background-color: var(--hero-html);
+}
+
+.bg-hero-css {
+    background-color: var(--hero-css);
+}
+
+.bg-theatre-green-1 {
+    background-color: var(--theatre-green-1);
+}
+
+.bg-theatre-green-2 {
+    background-color: var(--theatre-green-2);
+}
+
+.bg-theatre-green-3 {
+    background-color: var(--theatre-green-3);
+}
+
+.bg-theatre-green-4 {
+    background-color: var(--theatre-green-4);
+}
+
+.bg-theatre-green-5 {
+    background-color: var(--theatre-green-5);
+}
+
+.bg-theatre-blue-1 {
+    background-color: var(--theatre-blue-1);
+}
+
+.bg-theatre-blue-2 {
+    background-color: var(--theatre-blue-2);
+}
+
+.bg-theatre-blue-3 {
+    background-color: var(--theatre-blue-3);
+}
+
+.bg-theatre-blue-4 {
+    background-color: var(--theatre-blue-4);
+}
+
+.bg-theatre-blue-5 {
+    background-color: var(--theatre-blue-5);
+}
+
+/* Text Colors */
+.color-light {
+    color: var(--light);
+}
+
+.color-light-shade {
+    color: var(--light-shade);
+}
+
+.color-grey {
+    color: var(--grey);
+}
+
+.color-dark {
+    color: var(--dark);
+}
+
+.color-background-main {
+    color: var(--background-main);
+}
+
+.color-background-secondary {
+    color: var(--background-secondary);
+}
+
+.color-anchor {
+    color: var(--anchor);
+}
+
+.color-js-yellow {
+    color: var(--js-yellow);
+}
+
+.color-nav-link {
+    color: var(--nav-link);
+}
+
+.color-primary {
+    color: var(--primary);
+}
+
+.color-hero-js {
+    color: var(--hero-js);
+}
+
+.color-hero-html {
+    color: var(--hero-html);
+}
+
+.color-hero-css {
+    color: var(--hero-css);
+}
+
+.color-theatre-green-1 {
+    color: var(--theatre-green-1);
+}
+
+.color-theatre-green-2 {
+    color: var(--theatre-green-2);
+}
+
+.color-theatre-green-3 {
+    color: var(--theatre-green-3);
+}
+
+.color-theatre-green-4 {
+    color: var(--theatre-green-4);
+}
+
+.color-theatre-green-5 {
+    color: var(--theatre-green-5);
+}
+
+.color-theatre-blue-1 {
+    color: var(--theatre-blue-1);
+}
+
+.color-theatre-blue-2 {
+    color: var(--theatre-blue-2);
+}
+
+.color-theatre-blue-3 {
+    color: var(--theatre-blue-3);
+}
+
+.color-theatre-blue-4 {
+    color: var(--theatre-blue-4);
+}
+
+.color-theatre-blue-5 {
+    color: var(--theatre-blue-5);
+}

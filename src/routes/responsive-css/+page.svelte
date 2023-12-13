@@ -1,33 +1,69 @@
 <script>
- 
- import {browser} from '$app/environment'
- import { onMount, tick } from 'svelte';
- let heading1
- let h1Styles
- let h1fSize
+    import { onMount } from 'svelte';
 
- onMount(() => {
-    h1Styles = getComputedStyle(heading1)
-    h1fSize = h1Styles.fontSize
-})
+    let heading1;
+    let heading2;
+    let heading3;
+    let heading4;
+    let heading5;
+    let heading6;
+    let paragraph;
 
-function handleResize() {
-    h1fSize = h1Styles.fontSize
-}
+    let h1Styles;
+    let h2Styles;
+    let h3Styles;
+    let h4Styles;
+    let h5Styles;
+    let h6Styles;
+    let pStyles;
 
+    let h1fSize;
+    let h2fSize;
+    let h3fSize;
+    let h4fSize;
+    let h5fSize;
+    let h6fSize;
+    let pfSize;
+
+    onMount(() => {
+        h1Styles = getComputedStyle(heading1);
+        h2Styles = getComputedStyle(heading2);
+        h3Styles = getComputedStyle(heading3);
+        h4Styles = getComputedStyle(heading4);
+        h5Styles = getComputedStyle(heading5);
+        h6Styles = getComputedStyle(heading6);
+        pStyles = getComputedStyle(paragraph);
+
+        h1fSize = h1Styles.fontSize;
+        h2fSize = h2Styles.fontSize;
+        h3fSize = h3Styles.fontSize;
+        h4fSize = h4Styles.fontSize;
+        h5fSize = h5Styles.fontSize;
+        h6fSize = h6Styles.fontSize;
+        pfSize = pStyles.fontSize;
+    });
+
+    function handleResize() {
+        h1fSize = h1Styles.fontSize;
+        h2fSize = h2Styles.fontSize;
+        h3fSize = h3Styles.fontSize;
+        h4fSize = h4Styles.fontSize;
+        h5fSize = h5Styles.fontSize;
+        h6fSize = h6Styles.fontSize;
+        pfSize = pStyles.fontSize;
+    }
 </script>
 
-<svelte:window on:resize={handleResize}
-/>
+<svelte:window on:resize={handleResize} />
 
 <section>
     <h1 bind:this={heading1}>H1 Heading {h1fSize}</h1>
-    <h2>H2 Heading</h2>
-    <h3>H3 Heading</h3>
-    <h4>H4 Heading</h4>
-    <h5>H5 Heading</h5>
-    <h6>H6 Heading</h6>
-    <p>paragraph</p>
+    <h2 bind:this={heading2}>H2 Heading {h2fSize}</h2>
+    <h3 bind:this={heading3}>H3 Heading {h3fSize}</h3>
+    <h4 bind:this={heading4}>H4 Heading {h4fSize}</h4>
+    <h5 bind:this={heading5}>H5 Heading {h5fSize}</h5>
+    <h6 bind:this={heading6}>H6 Heading {h6fSize}</h6>
+    <p bind:this={paragraph}>paragraph {pfSize}</p>
 </section>
 
 <style lang="scss">

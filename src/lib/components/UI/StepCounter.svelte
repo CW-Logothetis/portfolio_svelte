@@ -48,7 +48,7 @@
     font-weight: 600;
 
     border: 2px solid;
-    border-radius: 20px;
+    border-radius: var(--radius-l);
   }
 
   .color-theatre, .color-theatre {

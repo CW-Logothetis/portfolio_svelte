@@ -12,7 +12,7 @@
     width: 100%;
     max-width: 1000px;
     margin-inline: auto;
-    border-radius: 7px;
+    border-radius: var(--radius-s);
     box-shadow: 6.7px 13.4px 13.4px hsl(0deg 0% 0% / 0.29);
 }
 

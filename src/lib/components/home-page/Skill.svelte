@@ -38,7 +38,6 @@
     align-items: flex-end;
   }
 
-
 	img {
 		max-width: 70%;
 	}
