@@ -49,6 +49,7 @@
 
   .projects {
     display: flex;
+    margin-block-end: 5rem;
   }
 
   .card {

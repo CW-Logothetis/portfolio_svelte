@@ -15,7 +15,7 @@
       {/each}
     </div>
 
-    <div class="l: center" style="--center-max-inline-size: 120ch">
+    <div class="l: center | c: tech" style="--center-max-inline-size: 120ch">
 
       <div class="c: stack-flex">
         {#each skillsJS as skill}
@@ -54,7 +54,15 @@
 <style lang="scss">
 
   .bg {
-    background: linear-gradient(310deg, #DD4B25f9 0%, #d9b504 99%);
+    background: linear-gradient(
+                    135deg,
+                    #333377 0%,
+                    #444477 20%,
+                    #555577 40%,
+                    #666677DD 60%,
+                    #777788 80%,
+                    #666677 100%
+    );
   }
 
   /* ============================================================================================================
@@ -76,6 +84,11 @@
        ----------------------------------------------   Skills    ----------------------------------------------
   =============================================================================================================== */
 
+  .tech,
+  .languages {
+    margin-block: 5rem;
+  }
+
   .stack-flex {
     display: flex;
     flex-wrap: wrap;
@@ -89,9 +102,14 @@
   .languages {
     display: flex;
     flex-wrap: wrap;
-    --threshold: 40rem;
-    column-gap: 0.5rem;
-    margin-block: 3rem;
+    --threshold: 35rem;
+    column-gap: 5vw;
+    row-gap: 3vh;
+    background-color: rgba(39, 65, 98, 0.04);
+    box-shadow: var(--box-shadow);
+    border-radius: 20px;
+    padding: 3vw;
+    color: #f1f1ff;
 
     & > * {
       flex-grow: 1;

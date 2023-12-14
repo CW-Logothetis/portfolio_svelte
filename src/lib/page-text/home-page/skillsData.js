@@ -9,6 +9,15 @@ export const skillsJS = [
 		}
 	},
 	{
+		skillName: 'React',
+		image: {
+			width: '64',
+			title: `ReactJS, CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0, via Wikimedia Commons`,
+			alt: 'React Logo',
+			src: "https://upload.wikimedia.org/wikipedia/commons/4/47/React.svg"
+		}
+	},
+	{
 		skillName: 'SvelteKit',
 		image: {
 			width: '64',
@@ -29,31 +38,31 @@ export const skillsJS = [
 ];
 
 export const skillsCSS = [
-	{
-		skillName: 'HTML5',
-		image: {
-			width: '64',
-			title: "Julien Monty ( https://github.com/konpa ), author of Devicon repository, created this SVG file, MIT &lt;http://opensource.org/licenses/mit-license.php&gt;, via Wikimedia Commons",
-			alt: 'HTML Logo',
-			src: 'https://upload.wikimedia.org/wikipedia/commons/8/82/Devicon-html5-plain.svg'
-		}
-	},
-	{
-		skillName: 'CSS3',
-		image: {
-			width: '64',
-			title: "daPhyre (File:CSS3 and HTML5 logos and wordmarks.svg) Elfi (File:CSS3 logo and wordmark.svg) ExE Boss, CC BY 3.0 &lt;https://creativecommons.org/licenses/by/3.0&gt;, via Wikimedia Commons",
-			alt: 'CSS3 Logo',
-			src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/64px-CSS3_logo.svg.png'
-		}
-	},
+	// {
+	// 	skillName: 'HTML5',
+	// 	image: {
+	// 		width: '64',
+	// 		title: "Julien Monty ( https://github.com/konpa ), author of Devicon repository, created this SVG file, MIT &lt;http://opensource.org/licenses/mit-license.php&gt;, via Wikimedia Commons",
+	// 		alt: 'HTML Logo',
+	// 		src: 'https://upload.wikimedia.org/wikipedia/commons/8/82/Devicon-html5-plain.svg'
+	// 	}
+	// },
+	// {
+	// 	skillName: 'CSS3',
+	// 	image: {
+	// 		width: '64',
+	// 		title: "daPhyre (File:CSS3 and HTML5 logos and wordmarks.svg) Elfi (File:CSS3 logo and wordmark.svg) ExE Boss, CC BY 3.0 &lt;https://creativecommons.org/licenses/by/3.0&gt;, via Wikimedia Commons",
+	// 		alt: 'CSS3 Logo',
+	// 		src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/64px-CSS3_logo.svg.png'
+	// 	}
+	// },
 	{
 		skillName: 'SASS/SCSS',
 		image: {
 			width: '64',
 			title: 'Ionic Team, MIT http://opensource.org/licenses/mit-license.php, via Wikimedia Commons',
 			alt: 'Sass Logo',
-			src: 'https://upload.wikimedia.org/wikipedia/commons/8/80/Ionicons_logo-sass.svg'
+			src: 'https://upload.wikimedia.org/wikipedia/commons/9/96/Sass_Logo_Color.svg'
 		}
 	},
 	{
@@ -83,7 +92,7 @@ export const skillsCollaboration = [
 			width: '64',
 			title: "Jason Long, CC BY 3.0 <https://creativecommons.org/licenses/by/3.0>, via Wikimedia Commons",
 			alt: 'Git Logo',
-			src: 'https://upload.wikimedia.org/wikipedia/commons/a/ad/Git-icon-black.svg'
+			src: 'https://upload.wikimedia.org/wikipedia/commons/3/3f/Git_icon.svg'
 		}
 	},
 	{
