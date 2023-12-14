@@ -33,7 +33,7 @@
   /* LAYOUT */
   .nav-bar {
     background-color: var(--bg-color, transparent);
-    padding-block-start: 3dvh;
+    padding-block-start: 4dvh;
     min-height: var(--min-height, 50px);
   }
 

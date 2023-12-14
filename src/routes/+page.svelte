@@ -4,6 +4,8 @@
     import Projects from '$lib/components/home-page/Projects.svelte'
 </script>
 
-<Hero />
-<About />
-<Projects />
+<div class="stack">
+  <Hero />
+  <About />
+  <Projects />
+</div>
