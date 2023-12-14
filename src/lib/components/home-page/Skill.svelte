@@ -30,6 +30,11 @@
     justify-content: center;
     align-items: center;
 		flex-grow: 1;
+		background-color: rgba(239, 246, 255, 0.54);
+		box-shadow: var(--box-shadow);
+		border-radius: 50%;
+		height: 4lh;
+		width: 4lh;
   }
 
   .text-container {
