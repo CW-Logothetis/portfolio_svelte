@@ -7,7 +7,7 @@ export let introData = {
     "NOTE: during periods of high usage, OpenAI API calls can time out after 10s. I need to handle this."
   ],
   techStack: [
-    { title: "Stack:", description: "React&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;SvelteKit (FE and server)" },
+    { title: "Stack:", description: "React (client only)  &nbsp; | &nbsp; SvelteKit (client and server)" },
     {
       title: "Demo:",
       description: "<a href=\"https://array-openai-react.vercel.app/\" class=\"intro--para-col-2\" target=\"_blank\" rel=\"noreferrer\">React & Vercel</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href=\"https://openai-arrays.netlify.app/\" class=\"intro--para-col-2\" target=\"_blank\" rel=\"noreferrer\">Svelte & Netlify</a>\n"
