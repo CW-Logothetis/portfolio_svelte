@@ -21,9 +21,9 @@
           <h3 class="u: text-step-2">{project.title}</h3>
           <p>{project.description}</p>
 
-          <div class="c: card__btm-row">
+          <div class=" u: switcher | c: card__btm-row" style="--gap: var(--step--2); --threshold: 25ch">
             <p><strong>{project.stack}</strong></p>
-            <p><a href={project.link}><strong>READ MORE ></strong></a></p>
+            <p class="u: mbs-zero"><a href={project.link}><strong>READ MORE ></strong></a></p>
           </div>
 
         </div>
@@ -55,8 +55,8 @@
   .card {
     display: flex;
     flex-direction: column;
-    margin: var(--step-5) 5%;
-    padding: var(--step-5);
+    margin: var(--step-4) 5%;
+    padding: var(--step-4);
     border-radius: var(--radius-l);
     transition: transform .4s;
 
@@ -83,8 +83,10 @@
 
   .card__btm-row {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .openai {
