@@ -73,7 +73,7 @@
   /* Styles for links */
 
   a {
-    opacity: 0.8;
+    opacity: 0.9;
     color: var(--color, var(--nav-link));
     text-decoration: none;
   }
