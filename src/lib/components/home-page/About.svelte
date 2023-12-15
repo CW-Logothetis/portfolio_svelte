@@ -6,49 +6,52 @@
 
 <section class="bg" id="about">
 
-  <div class="l: stack | u: color-light">
+    <div class="l: stack | u: color-light">
 
-    <div class="l: center | u: text-center | c: about-me__text" style="--center-max-inline-size: 70ch">
-      <h2>{aboutText.header}</h2>
-      {#each aboutText.paragraphs as paragraph (paragraph)}
-        <p>{paragraph}</p>
-      {/each}
+        <div
+            class="l: center | u: text-center | c: about-me__text"
+            style="--center-max-inline-size: 70ch"
+        >
+            <h2>{aboutText.header}</h2>
+            {#each aboutText.paragraphs as paragraph (paragraph)}
+                <p>{paragraph}</p>
+            {/each}
+        </div>
+
+        <div class="l: center | c: tech" style="--center-max-inline-size: 120ch">
+
+            <div class="c: stack-flex">
+                {#each skillsJS as skill}
+                    <Skill
+                        {skill}
+                    />
+                {/each}
+            </div>
+            <div class="c: stack-flex">
+                {#each skillsCSS as skill}
+                    <Skill
+                        {skill}
+                    />
+                {/each}
+            </div>
+            <div class="c: stack-flex">
+                {#each skillsCollaboration as skill}
+                    <Skill
+                        {skill}
+                    />
+                {/each}
+            </div>
+
+            <div class="u: text-center | c: languages">
+                {#each languageText as language}
+                    <div class="c: language">
+                        <p class="u: text-step-2 w-600">{language.name}</p>
+                        <p class="u: w-400">{language.level}</p>
+                    </div>
+                {/each}
+            </div>
+        </div>
     </div>
-
-    <div class="l: center | c: tech" style="--center-max-inline-size: 120ch">
-
-      <div class="c: stack-flex">
-        {#each skillsJS as skill}
-          <Skill
-            {skill}
-          />
-        {/each}
-      </div>
-      <div class="c: stack-flex">
-        {#each skillsCSS as skill}
-          <Skill
-            {skill}
-          />
-        {/each}
-      </div>
-      <div class="c: stack-flex">
-        {#each skillsCollaboration as skill}
-          <Skill
-            {skill}
-          />
-        {/each}
-      </div>
-
-      <div class="u: text-center | c: languages">
-        {#each languageText as language}
-          <div class="c: language">
-            <p class="u: text-step-2 w-600">{language.name}</p>
-            <p class="u: w-400">{language.level}</p>
-          </div>
-        {/each}
-      </div>
-    </div>
-  </div>
 </section>
 
 <style lang="scss">
@@ -70,14 +73,14 @@
 =============================================================================================================== */
 
   .about-me__text {
-      display: flex;
-      flex-direction: column;
+    display: flex;
+    flex-direction: column;
 
-      p {
-          font-weight: 500;
-          line-height: 1.6;
-          text-align: left;
-      }
+    p {
+      font-weight: 500;
+      line-height: 1.6;
+      text-align: left;
+    }
   }
 
   /* ============================================================================================================

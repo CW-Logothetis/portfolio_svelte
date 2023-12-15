@@ -1,10 +1,10 @@
 export let introData = {
   title: "Array Methods & OpenAI",
   para: [
-    "Since I was first learning to code, I wanted a quick reference for array methods.",
-    "So I had the idea to summarise MDN docs for each method, then write a couple of short examples.",
-    "I never got around to it - too much content to write. But now an LLM can do explanations, syntax and examples for me.",
-    "For a comparison, I built the app in React and Svelte, deploying to Netlify and Vercel."
+    "Since first learning to code, I've wanted a quick, short reference for array methods.",
+    "So I had the idea to summarise MDN docs for each method, then write a couple of short examples. I never got around to it - too much content to write. But now an LLM can do explanations, syntax and examples for me.",
+    "For a comparison, I built the app in React and Svelte, deploying to Netlify and Vercel.",
+    "NOTE: during periods of high usage, OpenAI API calls can time out after 10s. I need to handle this."
   ],
   techStack: [
     { title: "Stack:", description: "React (client only)  &nbsp; | &nbsp; SvelteKit (client and server)" },
