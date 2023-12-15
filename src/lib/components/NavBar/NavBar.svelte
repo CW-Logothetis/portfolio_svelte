@@ -5,7 +5,7 @@
   >
     <div class="with-sidebar">
       <div>
-        <a href="/" class="logo-link">Chris W. Logothetis</a>
+        <a href="/" class="logo-link">Chris W. Mounsey-Logothetis</a>
         <nav>
           <a href="/#about" class="nav-link">about me</a>
           <a href="/#projects" class="nav-link">projects</a>

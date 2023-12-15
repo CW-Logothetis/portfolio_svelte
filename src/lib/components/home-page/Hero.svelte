@@ -1,11 +1,10 @@
-<section class="hero main-grid">
+<section class="mbs-step-0 hero main-grid">
 
   <div class="name-flexbox">
     <h1>
       Hi,<br>
       I'm<br>
-      Chris<br>
-      Logothetis
+      Chris
     </h1>
   </div>
 
