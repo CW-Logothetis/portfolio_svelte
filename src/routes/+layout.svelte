@@ -20,6 +20,6 @@
     <NavBar
       --bg-color = "var(--nav-link)"
       --min-height = "20vh"
-      --color = "var(--js-yellow)"
+      --color = "var(--light)"
     />
 </footer>
