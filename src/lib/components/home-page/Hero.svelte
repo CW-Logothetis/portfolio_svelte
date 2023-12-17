@@ -36,6 +36,7 @@
 
     h1 {
       font-size: var(--step-7);
+      color: var(--light-shade);
       grid-column: 2/-2;
       grid-row: 2;
     }
@@ -59,7 +60,7 @@
   }
 
   .hero-js, .hero-html, .hero-css {
-    color: var(--background-main);
+    color: #0a0c10;
     font-weight: 900;
     letter-spacing: -4px;
     text-align: right;
@@ -308,14 +309,14 @@
     }
   }
 
-  @media (min-width: 1020px) {
+  @media (min-width: 0px) {
 
     .tech-flexbox {
-      grid-column: -4;
+      grid-column: -3;
     }
 
     .name-flexbox {
-      grid-column: 3;
+      grid-column: 2;
     }
   }
 
@@ -330,7 +331,15 @@
     }
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: 500px) {
+
+    .tech-flexbox {
+      grid-column: -4;
+    }
+
+    .name-flexbox {
+      grid-column: 3;
+    }
 
     .hero-js, .hero-html, .hero-css {
       letter-spacing: -0.75rem;

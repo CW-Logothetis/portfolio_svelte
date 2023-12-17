@@ -2,7 +2,7 @@
 
 :root {
     /* Step -2: 11.11px → 11.52px */
-    --step--2: clamp(0.6944rem, 0.6855rem + 0.0446vw, 0.72rem);
+    --step--2: clamp(0.7rem, 0.7rem + 0.05vw, 0.72rem);
 
     /* Step -1: 13.33px → 14.40px */
     --step--1: clamp(0.8331rem, 0.8099rem + 0.1163vw, 0.9rem);
@@ -32,7 +32,7 @@
     --step-7: clamp(2.5831rem, 2.25rem + 4.1348vw, 5.9606rem);
 
     /* Step 8: 68.80px → 119.21px */
-    --step-8: clamp(1.3rem, 2.5rem + 6vw, 7.4506rem);
+    --step-8: clamp(1rem, 2.5rem + 5vw, 7.4506rem);
 
     /* Step 9: 82.56px → 149.01px */
     --step-9: clamp(5.16rem, 3.7154rem + 7.2228vw, 9.3131rem);

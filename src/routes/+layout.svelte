@@ -9,17 +9,20 @@
     Otherwise, the NavBar component would have <header> used in the footer.
 -->
 <header>
-    <NavBar />
+    <NavBar
+        --bg-color = "var(--background-main)"
+        --color = "var(--light-shade)"
+    />
 </header>
 
-<main>
+<main class="bg-background-main color-light-shade">
     <slot />
 </main>
 
 <footer>
     <NavBar
-      --bg-color = "var(--nav-link)"
-      --min-height = "20vh"
+      --bg-color = "var(--background-secondary)"
+      --min-height = "15vh"
       --color = "var(--light)"
     />
 </footer>

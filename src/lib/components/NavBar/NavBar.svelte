@@ -12,7 +12,7 @@
         </nav>
       </div>
 
-      <div class="u: text-step--2 w-500 | c: contact">
+      <div class="u: text-step--1 w-500 | c: contact">
         <a href="mailto:cwlogo@pm.me"> <span class="visually-hidden">Email:</span> cwlogo@pm.me</a>
         <a href="https://www.linkedin.com/in/christopher-logothetis">
           <span class="visually-hidden">LinkedIn:</span>
@@ -101,7 +101,12 @@
   }
 
   .contact > a {
-    color: var(--color, var(--hero-css));
+    color: var(--anchor);
+  }
+
+  .contact > a:hover,
+  .contact > a:focus {
+    color: var(--light);
   }
 
 </style>

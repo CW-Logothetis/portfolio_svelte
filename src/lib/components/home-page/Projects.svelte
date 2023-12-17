@@ -13,9 +13,9 @@
 
   <div class="flex-grid">
     {#each projectsText.projects as project (project)}
-      <div class="u: box-shadow | c: card bg {project.bg}">
+      <div class="u: | c: card bg {project.bg}">
 
-        <img src={project.image} alt="{project.title}" class="u: box-shadow">
+        <img src={project.image} alt="{project.title}" class="u:">
 
         <div class="c: card__text">
           <h3 class="u: text-step-2">{project.title}</h3>
@@ -90,11 +90,11 @@
   }
 
   .openai {
-      background: linear-gradient(180deg, rgba(132, 146, 202, 0.2) 0%, rgba(37, 75, 221, 0) 100%);
+      background: linear-gradient(220deg, rgba(132, 146, 202, 0.2) 0%, rgba(37, 75, 221, 0) 100%);
   }
 
   .theatres {
-      background: linear-gradient(180deg, rgba(206, 198, 156, 0.2) 0%, rgba(234, 205, 55, 0) 100%);
+      background: linear-gradient(220deg, rgba(206, 198, 156, 0.2) 0%, rgba(234, 205, 55, 0) 100%);
   }
 
 </style>
