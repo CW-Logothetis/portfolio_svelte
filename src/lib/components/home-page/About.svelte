@@ -60,10 +60,8 @@
     background: linear-gradient(
                     180deg,
                     var(--background-main) 0%,
-                    #444477 40%,
-                    #555577 60%,
-                    rgba(97, 97, 141, 0.93) 80%,
-                    #4d4d6c 100%
+                    #444477 50%,
+                    #555577 100%
     );
   }
 

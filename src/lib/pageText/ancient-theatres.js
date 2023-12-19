@@ -15,7 +15,10 @@ export let introData = {
   ]
 };
 
-export let heroImage = "/theatres-hero.png"
+export let heroImage = {
+  src: "/theatres-hero.png",
+  alt: "Screenshot of a project page, with a photo of the theatre at Epidavros."
+}
 
 export let processData =
   {

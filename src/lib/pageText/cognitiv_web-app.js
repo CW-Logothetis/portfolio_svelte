@@ -1,13 +1,15 @@
 export let introData = {
-  title: "Cognitiv+ AI Document Review | from MVP to First Release",
+  title: "Cognitiv+ <br> AI Document Review",
+  subtitle: "from MVP to First Release",
   para: [
-    "Since first learning to code, I've wanted a quick, short reference for array methods.",
-    "So I had the idea to summarise MDN docs for each method, then write a couple of short examples. I never got around to it - too much content to write. But now an LLM can do explanations, syntax and examples for me.",
-    "For a comparison, I built the app in React and Svelte, deploying to Netlify and Vercel.",
-    "NOTE: during periods of high usage, OpenAI API calls can time out after 10s. I need to handle this."
+    "Cognitiv+ is an AI-powered platform for automating document review and classification tasks by extracting key information.",
+    "The company first built and sold an app using an Angular front-end and early ML models.",
+    "After I joined, work started on an MVP for faster models. It was an opportune moment to switch to Svelte and SvelteKit.",
+    "Kit was then in beta and Svelte didn't have the support, UI libraries or packages it does today. So there was a lot of fun to be had and custom components to build.",
+    `"Start-up life" means we've not always had a UI/UX designer either; the MVP is a work in progress and very rough around the edges.`
   ],
   techStack: [
-    { title: "Stack:", description: "SvelteKit | GraphQL | Playwright | Figma" },
+    { title: "Stack:", description: "SvelteKit &nbsp;&nbsp;|&nbsp;&nbsp; GraphQL &nbsp;&nbsp;|&nbsp;&nbsp; Playwright &nbsp;&nbsp;|&nbsp;&nbsp; Figma" },
     {
       title: "Demo:",
       description: "<a href=\"https://cloud.cognitivplus.com/accounts/register/\" class=\"intro--para-col-2\" target=\"_blank\" rel=\"noreferrer\">Sign up for free trial</a>"
@@ -15,7 +17,10 @@ export let introData = {
   ]
 };
 
-export let heroImage = "/array_homescreen.png"
+export let heroImage = {
+  src: "/cog_app/cog_reviewer.png",
+  alt: "Screenshot of Cognitiv plus Document Reviewer."
+}
 
 export let processData =
   {
@@ -23,37 +28,55 @@ export let processData =
     "steps": [
       {
         "text": [
-          "A simple homepage layout with CSS Grid and Flexbox.",
-          "They make it naturally responsive and there's no need for any media queries.",
-          "The colour scheme is based on the JavaScript logo."
+          "<strong>User Stories, flows and initial design</strong>",
+          "Stories were drafted in Confluence, then flows in FigJam before a UI/UX designer made Figma mock-ups",
+          "<strong>NOTE:</strong> these aren’t the company's final flows or designs. Just here for illustrative purposes."
         ],
         "colorClass": "bubble-4-blue",
-        "image": "array_responsive"
+        "image": "cog_app/cog_figma"
       },
       {
         "text": [
-          "I prompted chatGPT to write the content for the 37 array method cards.",
-          "A first idea was a table. But then I asked it to convert to an object, which populates the cards.",
-          "Saved me a huge amount of time. Even in the 'old' days of text-davinci."
+          "<strong>Add a project</strong>",
+          "Built a multi-step form “Wizard” for users to create a new project, which will hold sets of documents that they will upload for classification and review."
         ],
         "colorClass": "bubble-4-blue",
-        "image": "array_openai"
+        "image": "cog_app/cog_create_project"
       },
       {
         "text": [
-          "Set up a dynamic route for the text output page, using SvelteKit's `[parameter]`, passing the array method's ID as a param for the URL.",
-          "Each method will have its own 'page', ready for OpenAI generated summary, syntax and examples."
+          "<strong>Project main page: a Document List</strong>",
+          "An HTML table, sortable by using a Svelte Store and GraphQL query.",
+          "Document list updated by polling."
         ],
         "colorClass": "bubble-4-blue",
-        "image": "array_page"
+        "image": "cog_app/cog_doc_list"
       },
       {
         "text": [
-          "As the OpenAI API key is private the request lives in a +page.server.js file, which is fetched before the page is rendered.",
-          "When the user navigates to this page, SvelteKit's load function outputs the response from OpenAI for the `+page.svelte`"
+          "<strong>Reviewing a document</strong>",
+          "Final part of the MVP is a review of the various data types that the ML models extracted.",
+          "The big design and technical challenge here is presenting the data in the page and linking it to expanded details in the card."
         ],
         "colorClass": "bubble-4-blue",
-        "image": "array_page-server"
+        "image": "cog_app/cog_reviewer"
+      }
+    ]
+  }
+
+export let nextStepsData =
+  {
+    "sectionHeader": "Next Steps",
+    "steps": [
+      {
+        "text": [
+          "<strong>Training the ML models</strong>",
+          "The models aren’t always 100% correct. So the user needs to be able to add missing data, or edit incorrect data.",
+          "This will probably be a wizard in a modal, to handle the 250+ clause types and 15+ ML models that the user may want to correct.",
+          "Plus, we need reporting, dashboards, multi-user assignment and notifications, and a workflow for starting and ending the review or a document and project."
+        ],
+        "colorClass": "bubble-4-blue",
+        "image": "cog_app/cog_next_steps"
       }
     ]
   }

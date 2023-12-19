@@ -15,7 +15,10 @@ export let introData = {
   ]
 };
 
-export let heroImage = "/array_homescreen.png"
+export let heroImage = {
+  src: "/array_homescreen.png",
+  alt: "Screenshot of the app's home screen with cards for each array method."
+}
 
 export let processData =
   {
