@@ -3,7 +3,7 @@
 </script>
 
 <section class="center">
-    <img src="{heroImage}" class="project-hero" alt="">
+    <img src="{heroImage.src}" class="project-hero" alt="{heroImage.alt}" >
 </section>
 
 <style lang="scss">

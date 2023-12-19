@@ -4,11 +4,19 @@
 
 <section id="introduction">
 
-  <div class="center stack-intro" style="--center-max-inline-size: 70ch">
-    <h1 class="u: text-center | intro--title">
-      {introData.title}
+  <div
+      class="l: center | c: stack-intro"
+      style="--center-max-inline-size: 70ch"
+  >
+    <h1 class="u: text-center | c: intro--title">
+      {@html introData.title}
     </h1>
-    <div class="intro--para">
+    {#if introData.subtitle}
+      <h2 class="u: text-center text-step-3">
+        {@html introData.subtitle}
+      </h2>
+    {/if}
+    <div class="c: intro--para">
       {#each introData.para as para }
         <p>{para}</p>
       {/each}
@@ -16,23 +24,22 @@
   </div>
 
   <div
-    class="intro-container center"
+    class="l: center | u: mbs-step-4 | c: intro-container"
     style="--center-max-inline-size: 70ch"
   >
     {#each introData.techStack as { title, description }}
-      <div class="line">
-        <div class="title">{title}</div>
-        <div class="description">{@html description}</div>
+      <div class="c: line">
+        <div class="c: title">{title}</div>
+        <div class="c: description">{@html description}</div>
       </div>
     {/each}
   </div>
-
 
 </section>
 
 <style lang="scss">
   .stack-intro > * + * {
-    margin-block-start: 1.5rem;
+    margin-block-start: 3rem;
   }
 
   .intro--title {

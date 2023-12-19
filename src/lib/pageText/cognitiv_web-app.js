@@ -1,13 +1,15 @@
 export let introData = {
-  title: "Cognitiv+ AI Document Review | from MVP to First Release",
+  title: "Cognitiv+ <br> AI Document Review",
+  subtitle: "from MVP to First Release",
   para: [
-    "Since first learning to code, I've wanted a quick, short reference for array methods.",
-    "So I had the idea to summarise MDN docs for each method, then write a couple of short examples. I never got around to it - too much content to write. But now an LLM can do explanations, syntax and examples for me.",
-    "For a comparison, I built the app in React and Svelte, deploying to Netlify and Vercel.",
-    "NOTE: during periods of high usage, OpenAI API calls can time out after 10s. I need to handle this."
+    "Cognitiv+ is an AI-powered platform for automating document review and classification tasks by extracting key information.",
+    "The company first built and sold an app using an Angular front-end and early ML models.",
+    "After I joined, work started on an MVP for faster models. It was an opportune moment to switch to Svelte and SvelteKit.",
+    "Kit was then in beta and Svelte didn't have the support, UI libraries or packages it does today. So there was a lot of fun to be had and custom components to build.",
+    `"Start-up life" means we've not always had a UI/UX designer either; the MVP is a work in progress and very rough around the edges.`
   ],
   techStack: [
-    { title: "Stack:", description: "SvelteKit | GraphQL | Playwright | Figma" },
+    { title: "Stack:", description: "SvelteKit &nbsp;&nbsp;|&nbsp;&nbsp; GraphQL &nbsp;&nbsp;|&nbsp;&nbsp; Playwright &nbsp;&nbsp;|&nbsp;&nbsp; Figma" },
     {
       title: "Demo:",
       description: "<a href=\"https://cloud.cognitivplus.com/accounts/register/\" class=\"intro--para-col-2\" target=\"_blank\" rel=\"noreferrer\">Sign up for free trial</a>"
@@ -15,7 +17,10 @@ export let introData = {
   ]
 };
 
-export let heroImage = "/array_homescreen.png"
+export let heroImage = {
+  src: "/cog_app/cog_reviewer.png",
+  alt: "Screenshot of Cognitiv plus Document Reviewer."
+}
 
 export let processData =
   {
