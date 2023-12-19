@@ -1,5 +1,5 @@
 <script>
-  import { projectsText } from "$lib/page-text/home-page/projects.js";
+  import { projectsText } from "$lib/pageText/home-page/projects.js";
 </script>
 
 <section
@@ -18,12 +18,14 @@
         <img src={project.image} alt="{project.title}" class="u:">
 
         <div class="c: card__text">
-          <h3 class="u: text-step-2">{project.title}</h3>
+          <h3 class="u: text-step-1">{project.title}</h3>
           <p>{project.description}</p>
 
-          <div class=" u: switcher | c: card__btm-row" style="--gap: var(--step--2); --threshold: 25ch">
+          <div class="c: card__btm-row">
             <p><strong>{project.stack}</strong></p>
-            <p class="u: mbs-zero"><a href={project.link}><strong>READ MORE ></strong></a></p>
+            <p class="u: mbs-zero w-600">
+              <a class="u: color-hero-css" href={project.link}>READ MORE ></a>
+            </p>
           </div>
 
         </div>
@@ -55,22 +57,18 @@
   .card {
     display: flex;
     flex-direction: column;
-    margin: var(--step-4) 5%;
-    padding: var(--step-4);
+    margin: 4% 2%;
+    padding: var(--step-3);
     border-radius: var(--radius-l);
     transition: transform .4s;
 
     img {
       // screenshots should be same dimension so that max-height isn't needed
-      max-height: 260px;
+      max-height: 200px;
+      max-width: 350px;
+      margin: 0 auto;
       border-radius: var(--radius-s);
     }
-  }
-
-  .card:hover {
-    -ms-transform: scale(1.01); /* IE 9 */
-    -webkit-transform: scale(1.01); /* Safari 3-8 */
-    transform: scale(1.05);
   }
 
   .card > * + * {
@@ -83,14 +81,18 @@
 
   .card__btm-row {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .cognitiv {
+    background: linear-gradient(220deg, rgba(61, 48, 143, 0.51) 0%, rgba(37, 75, 221, 0) 100%);
   }
 
   .openai {
-      background: linear-gradient(220deg, rgba(132, 146, 202, 0.2) 0%, rgba(37, 75, 221, 0) 100%);
+      background: linear-gradient(220deg, rgba(130, 139, 175, 0.2) 0%, rgba(37, 75, 221, 0) 100%);
   }
 
   .theatres {

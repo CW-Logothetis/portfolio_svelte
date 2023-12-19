@@ -1,6 +1,6 @@
 <script>
-  import { aboutText, languageText } from "$lib/page-text/home-page/about.js";
-  import { skillsJS, skillsCSS, skillsCollaboration } from "$lib/page-text/home-page/skillsData.js";
+  import { aboutText, languageText } from "$lib/pageText/home-page/about.js";
+  import { skillsJS, skillsCSS, skillsCollaboration } from "$lib/pageText/home-page/skillsData.js";
   import Skill from "./Skill.svelte";
 </script>
 
