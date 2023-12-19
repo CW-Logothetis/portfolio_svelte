@@ -28,37 +28,55 @@ export let processData =
     "steps": [
       {
         "text": [
-          "A simple homepage layout with CSS Grid and Flexbox.",
-          "They make it naturally responsive and there's no need for any media queries.",
-          "The colour scheme is based on the JavaScript logo."
+          "<strong>User Stories, flows and initial design</strong>",
+          "Stories were drafted in Confluence, then flows in FigJam before a UI/UX designer made Figma mock-ups",
+          "<strong>NOTE:</strong> these aren’t the company's final flows or designs. Just here for illustrative purposes."
         ],
         "colorClass": "bubble-4-blue",
-        "image": "array_responsive"
+        "image": "cog_app/cog_figma"
       },
       {
         "text": [
-          "I prompted chatGPT to write the content for the 37 array method cards.",
-          "A first idea was a table. But then I asked it to convert to an object, which populates the cards.",
-          "Saved me a huge amount of time. Even in the 'old' days of text-davinci."
+          "<strong>Add a project</strong>",
+          "Built a multi-step form “Wizard” for users to create a new project, which will hold sets of documents that they will upload for classification and review."
         ],
         "colorClass": "bubble-4-blue",
-        "image": "array_openai"
+        "image": "cog_app/cog_create_project"
       },
       {
         "text": [
-          "Set up a dynamic route for the text output page, using SvelteKit's `[parameter]`, passing the array method's ID as a param for the URL.",
-          "Each method will have its own 'page', ready for OpenAI generated summary, syntax and examples."
+          "<strong>Project main page: a Document List</strong>",
+          "An HTML table, sortable by using a Svelte Store and GraphQL query.",
+          "Document list updated by polling."
         ],
         "colorClass": "bubble-4-blue",
-        "image": "array_page"
+        "image": "cog_app/cog_doc_list"
       },
       {
         "text": [
-          "As the OpenAI API key is private the request lives in a +page.server.js file, which is fetched before the page is rendered.",
-          "When the user navigates to this page, SvelteKit's load function outputs the response from OpenAI for the `+page.svelte`"
+          "<strong>Reviewing a document</strong>",
+          "Final part of the MVP is a review of the various data types that the ML models extracted.",
+          "The big design and technical challenge here is presenting the data in the page and linking it to expanded details in the card."
         ],
         "colorClass": "bubble-4-blue",
-        "image": "array_page-server"
+        "image": "cog_app/cog_reviewer"
+      }
+    ]
+  }
+
+export let nextStepsData =
+  {
+    "sectionHeader": "Next Steps",
+    "steps": [
+      {
+        "text": [
+          "<strong>Training the ML models</strong>",
+          "The models aren’t always 100% correct. So the user needs to be able to add missing data, or edit incorrect data.",
+          "This will probably be a wizard in a modal, to handle the 250+ clause types and 15+ ML models that the user may want to correct.",
+          "Plus, we need reporting, dashboards, multi-user assignment and notifications, and a workflow for starting and ending the review or a document and project."
+        ],
+        "colorClass": "bubble-4-blue",
+        "image": "cog_app/cog_next_steps"
       }
     ]
   }
