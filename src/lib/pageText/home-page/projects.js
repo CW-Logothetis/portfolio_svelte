@@ -12,7 +12,7 @@ const projectsText = {
     },
     {
       image: "/array_homescreen.png",
-      title: "Array reference with OpenAI",
+      title: "LLM Array Tutor",
       description: "JS array methods with OpenAI generated content.",
       stack: "React | SvelteKit",
       link: "../openai",
