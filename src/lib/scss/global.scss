@@ -32,15 +32,18 @@ a {
 }
 
 a:hover,
-a:focus {
+a:focus-visible {
     color: var(--color, var(--hero-css));
     opacity: 1;
     outline: var(--color, var(--hero-css)) solid 2px;
     outline-offset: 4px;
 }
 
-a:focus {
+a:focus-visible  {
+    background: var(--js-yellow);
+    color: var(--primary);
     outline-style: dashed;
+    outline-color: var(--js-yellow)
 }
 
 /* ============================================================================================
