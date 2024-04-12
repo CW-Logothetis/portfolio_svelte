@@ -26,9 +26,6 @@
 <section class="l: c: banner" style="--center-max-inline-size: 1200ch">
     <div class="screen">
         <div class="macos-bar">
-<!--            <button class="close-button" on:click={() => clearProjectHover()}></button>-->
-<!--            <button class="minimize-button" disabled></button>-->
-<!--            <button class="zoom-button" disabled></button>-->
             <ButtonsMacOS
                 {clearProjectHover}
                 {projectHover}
@@ -45,9 +42,10 @@
                 </div>
             </div>
         {:else}
-            <div class="u: pi-step-1" in:fly="{{ y: -40, duration: 3000 }}">
+            <div class="l: stack | u: pi-step-1" style="--block: 0rem; --space: 2rem" in:fly="{{ y: -40, duration: 2000 }}">
                 <h1>Chris Mounsey-Logothetis</h1>
-                <div class="mbs-step-0">Front end developer</div>
+                <div class="mbs-step--1">Front-end developer</div>
+                <a href="/#about" class="u: in-size-fit">About me & CV</a>
                 <div class="u: text-step--1 w-500 | c: contact">
                     <a href="mailto:cwlogo@pm.me"> <span class="visually-hidden">Email:</span> cwlogo@pm.me</a>
                     <a href="https://www.linkedin.com/in/christopher-logothetis">
@@ -64,7 +62,7 @@
     </div>
 
     <div class="projects">
-        <h2>Blog</h2>
+        <h2>Latest blog articles</h2>
         <div class="flex-grid">
             {#each projectsText.projects as project (project)}
                 <button
@@ -149,20 +147,26 @@
     column-gap: 2rem;
   }
 
-  .contact > a {
+  a {
     color: var(--anchor);
   }
 
-  .contact > a:hover {
+  // First use of hover and focus-visible
+  a:hover {
     color: var(--light);
   }
 
-  .contact > a:focus-visible {
+  a:focus-visible {
     color: var(--primary);
+    outline: 2px var(--js-yellow);
   }
 
+  //Second use of hover and focus-visible to allow just the outline to change white when user has keyboard focus and mouse hover at same element
   a:hover {
-    outline-color: dashed 1px var(--white);
+    outline: white solid 2px;
+  }
+  a:focus-visible {
+    outline-style: dashed;
   }
 
   ///////
