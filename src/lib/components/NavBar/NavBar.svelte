@@ -13,10 +13,10 @@
         <a href="/" class="logo-link">Chris Mounsey-Logothetis</a>
 
 <!-- TODO for now, the home page has a navBar in the Banner. Another traditional navbar - with a <nav> like below - will be needed for other page layouts-->
-<!--        <nav>-->
-<!--          <a href="/#about" class="nav-link">about me</a>-->
-<!--          <a href="/#projects" class="nav-link">projects</a>-->
-<!--        </nav>-->
+        <nav>
+          <a href="/blog" class="nav-link">blog</a>
+<!--          <a href="/projects" class="nav-link">projects</a>-->
+        </nav>
       </div>
 
       <div class="u: text-step--1 w-500 | c: contact">

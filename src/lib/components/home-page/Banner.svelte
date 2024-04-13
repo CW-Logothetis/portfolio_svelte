@@ -145,21 +145,22 @@
     font-size: var(--step-0);
   }
 
+  //banner is adapted from Sidebar in https://every-layout.dev/layouts/sidebar/
   .banner {
+    // default styles from every-layout
     display: flex;
     flex-wrap: wrap;
-    //box-sizing: content-box;
+    gap: var(--step-5);
+
     align-items: center;
     justify-content: center;
-    gap: var(--step-5);
-    //padding-inline: 5%;
-    ////min-width: 100%;
     min-height: 100vh;
   }
 
   .screen__container {
+    // default styles from every-layout
     flex-grow: 1;
-
+    // my custom styles
     display: flex;
     justify-content: center;
     align-items: center;
@@ -215,10 +216,11 @@
   ///////
 
   .projects {
+    // default styles from every-layout
     flex-basis: 0;
     flex-grow: 999;
     min-inline-size: 55%;
-
+    // my custom styles
     display: flex;
     flex-direction: column;
     align-items: center;

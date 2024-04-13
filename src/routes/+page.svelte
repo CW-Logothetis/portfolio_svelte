@@ -35,21 +35,21 @@
 
 </script>
 
-<header
-    class="primary-header"
-    bind:this={primaryHeader}
-    class:visually-hidden={visuallyHidden}
-    aria-hidden={visuallyHidden ? 'true' : 'false'}
->
-    <NavBar
-        --bg-color="var(--background-main)"
-        --color="var(--light-shade)"
-    />
-</header>
+<!--<header-->
+<!--    class="primary-header"-->
+<!--    bind:this={primaryHeader}-->
+<!--    class:visually-hidden={visuallyHidden}-->
+<!--    aria-hidden={visuallyHidden ? 'true' : 'false'}-->
+<!--&gt;-->
+<!--    <NavBar-->
+<!--        &#45;&#45;bg-color="var(&#45;&#45;background-main)"-->
+<!--        &#45;&#45;color="var(&#45;&#45;light-shade)"-->
+<!--    />-->
+<!--</header>-->
 
 <div class="stack" style="--block: 0rem; --space: 3rem">
     <Banner />
-    <div bind:this={showNavBar}>
+    <div bind:this={showNavBar} id="about">
         <About />
     </div>
 </div>

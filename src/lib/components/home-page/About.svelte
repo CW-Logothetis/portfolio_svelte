@@ -1,8 +1,8 @@
 <script>
-  import { aboutText } from "$lib/pageText/home-page/about.js";
+  import { aboutText } from "$lib/pageText/home-page/about";
 </script>
 
-<section class="bg" id="about">
+<section class="bg">
 
     <div class="l: stack | u: color-light" style="--block: 4rem; --space: 0rem">
 
