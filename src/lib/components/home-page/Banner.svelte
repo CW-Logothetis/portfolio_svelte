@@ -9,12 +9,34 @@
     projectHover = p;
   }
 
+  // don't want to setProjectHover if user is flying around the screen
+  // so user must stay on for 300ms before setProjectHover is called
+  let hoverTimeout;
+
+  function handleMouseOver(project) {
+    // Multiple cards, so clear any existing timeout to prevent multiple triggers
+    clearTimeout(hoverTimeout);
+
+    hoverTimeout = setTimeout(() => {
+      setProjectHover(project);
+    }, 200);
+  }
+
+  // Every time the mouse leaves a card, clear the timeout
+  // If setProjectHover hasn't already been called, it now can't be
+  function handleMouseOut() {
+    clearTimeout(hoverTimeout);
+  }
+
+  // red button or user scrolls down
   function clearProjectHover() {
     setTimeout(() => {
       projectHover = null;
     }, 100);
   }
 
+  // should user not click red button (likely),
+  // screen will reset whenever user scrolls.
   function handleScroll() {
     clearProjectHover();
   }
@@ -70,19 +92,20 @@
         </header>
     </div>
     <div class="projects">
-        <h2>Latest blog articles</h2>
+        <h2>Blog</h2>
         <div class="flex-grid">
             {#each projectsText.projects as project (project)}
                 <button
-                    on:mouseover|stopPropagation={() => setProjectHover(project)}
+                    on:mouseover|stopPropagation={() => handleMouseOver(project)}
+                    on:mouseout={handleMouseOut}
                     class="u: | c: card bg {project.bg}"
-                    style=" background-size: cover;  background-image: url({project.image});"
+                    style=" background-size: cover; background-position: center; background-image: url({project.image});"
                 >
 
                     <!--                    <img src={project.image} alt="{project.title}" class="u:">-->
 
                     <span class="c: card__text bg-background-secondary">
-                        <div class="u: text-step-0">{project.title}</div>
+                        <div class="u: text-step--1">{project.title}</div>
                         <!--                        <p>{project.description}</p>-->
 
                     </span>
@@ -95,7 +118,7 @@
                 <button
                     on:mouseover|stopPropagation={() => setProjectHover(project)}
                     class="u: | c: card bg {project.bg}"
-                    style=" background-size: cover;  background-image: url({project.image});"
+                    style=" background-size: cover; background-position: center; background-image: url({project.image});"
                 >
 
                     <!--                    <img src={project.image} alt="{project.title}" class="u:">-->
@@ -152,9 +175,9 @@
     min-inline-size: 350px;
     inline-size: 32vw;
     max-inline-size: 100vw;
-    min-block-size: calc(350px / 1.3);
-    block-size: calc(32vw / 1.3);
-    max-block-size: calc(100vw / 1.3);
+    min-block-size: calc(350px / 1.1);
+    block-size: calc(32vw / 1.1);
+    max-block-size: calc(100vw / 1.1);
     position: relative; /* Add this to make the macOS bar position absolute relative to the screen div */
   }
 
@@ -194,25 +217,28 @@
   .projects {
     flex-basis: 0;
     flex-grow: 999;
-    min-inline-size: 50%;
+    min-inline-size: 55%;
 
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
 
+  // only want blog/project cards to wrap on small screens
   .flex-grid {
     display: flex;
-    //flex-wrap: wrap;
-    min-width: 90%;
+    flex-wrap: wrap;
+    min-width: 100%;
     justify-content: center;
   }
 
-  //.flex-grid > * {
-  //  flex: 1 1 30ch;
-  //  flex-basis: calc((var(--threshold) - 100%) * 999);
-  //  max-width: 50ch;
-  //}
+  // on screens over 900px, big enough for screen on left, cards on right,
+  // then the cards should always be in one line (e.g. nowrap)
+  @media (min-width: 900px) {
+    .flex-grid {
+     flex-wrap: nowrap;
+    }
+  }
 
   .card {
     display: flex;
@@ -220,7 +246,7 @@
     justify-content: center;
     align-items: center;
     margin: 4% 2%;
-    padding: var(--step-3);
+    padding: var(--step-0);
     border-radius: var(--radius-l);
     border: solid 3px grey;
     transition: transform .4s;

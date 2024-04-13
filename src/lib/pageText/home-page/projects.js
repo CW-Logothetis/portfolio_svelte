@@ -20,7 +20,7 @@ const projectsText = {
     },
     {
       image: "/theatres-landscape.png",
-      title: "Ancient Greek Theatres",
+      title: "Ancient Theatres",
       description: "Mobile-first web design, with Vanilla JS components.",
       stack: "Vanilla JS & CSS",
       link: "../ancient-theatres",

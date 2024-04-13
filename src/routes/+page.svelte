@@ -47,7 +47,7 @@
     />
 </header>
 
-<div class="stack" style="--block: 0rem; --space: 0rem">
+<div class="stack" style="--block: 0rem; --space: 3rem">
     <Banner />
     <div bind:this={showNavBar}>
         <About />
