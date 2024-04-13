@@ -1,15 +1,22 @@
-<div class="c: nav-bar">
+<script>
+  import { fade } from 'svelte/transition';
+
+</script>
+
+  <div class="c: nav-bar" transition:fade>
   <div
     class="l: center | u: text-step--1"
     style="--center-max-inline-size: 120ch"
   >
     <div class="with-sidebar">
       <div>
-        <a href="/" class="logo-link">Chris W. Mounsey-Logothetis</a>
-        <nav>
-          <a href="/#about" class="nav-link">about me</a>
-          <a href="/#projects" class="nav-link">projects</a>
-        </nav>
+        <a href="/" class="logo-link">Chris Mounsey-Logothetis</a>
+
+<!-- TODO for now, the home page has a navBar in the Banner. Another traditional navbar - with a <nav> like below - will be needed for other page layouts-->
+<!--        <nav>-->
+<!--          <a href="/#about" class="nav-link">about me</a>-->
+<!--          <a href="/#projects" class="nav-link">projects</a>-->
+<!--        </nav>-->
       </div>
 
       <div class="u: text-step--1 w-500 | c: contact">
@@ -28,12 +35,17 @@
 
 </div>
 
+
 <style lang="scss">
 
   /* LAYOUT */
   .nav-bar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
     background-color: var(--bg-color, transparent);
-    padding-block-start: 4dvh;
+    padding-block: 2dvh;
     min-height: var(--min-height, 50px);
   }
 
@@ -78,9 +90,12 @@
     text-decoration: none;
   }
 
-  a:hover,
-  a:focus {
+  a:hover {
     color: var(--color, var(--hero-css));
+  }
+
+  a:focus-visible {
+    color: var(--primary, var(--hero-css));
   }
 
   a:hover {
@@ -88,7 +103,7 @@
     outline-offset: 4px;
   }
 
-  a:focus {
+  a:focus-visible {
     outline-style: dashed;
   }
 
@@ -104,9 +119,12 @@
     color: var(--anchor);
   }
 
-  .contact > a:hover,
-  .contact > a:focus {
+  .contact > a:hover {
     color: var(--light);
+  }
+
+  .contact > a:focus-visible {
+    color: var(--primary);
   }
 
 </style>

@@ -36,8 +36,8 @@ ol[class] {
 
 /* Set core root defaults
    applies the scroll-behavior: smooth; style to the <html> element only when it or any of its descendants are focused.
-   The :focus-within pseudo-class is a CSS Level 4 pseudo-class that represents an element that has received focus or
-   contains an element that has received focus. In other words, it applies to elements that are themselves matched by :focus or that have descendants which are matched by :focus.
+   The :focus-visible-within pseudo-class is a CSS Level 4 pseudo-class that represents an element that has received focus or
+   contains an element that has received focus. In other words, it applies to elements that are themselves matched by :focus-visible or that have descendants which are matched by :focus-visible.
  */
 html:focus-within {
   scroll-behavior: smooth;
@@ -82,17 +82,17 @@ img:not([alt]) {
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-// @media (prefers-reduced-motion: reduce) {
-//     html:focus-within {
-//      scroll-behavior: auto;
-//     }
+ @media (prefers-reduced-motion: reduce) {
+     html:focus-within {
+      scroll-behavior: auto;
+     }
 
-//     *,
-//     *::before,
-//     *::after {
-//       animation-duration: 0.01ms !important;
-//       animation-iteration-count: 1 !important;
-//       transition-duration: 0.01ms !important;
-//       scroll-behavior: auto !important;
-//     }
-//   }
+     *,
+     *::before,
+     *::after {
+       animation-duration: 0.01ms !important;
+       animation-iteration-count: 1 !important;
+       transition-duration: 0.01ms !important;
+       scroll-behavior: auto !important;
+     }
+   }

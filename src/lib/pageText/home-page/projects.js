@@ -12,7 +12,7 @@ const projectsText = {
     },
     {
       image: "/array_homescreen.png",
-      title: "Array reference with OpenAI",
+      title: "LLM Array Tutor",
       description: "JS array methods with OpenAI generated content.",
       stack: "React | SvelteKit",
       link: "../openai",
@@ -20,7 +20,7 @@ const projectsText = {
     },
     {
       image: "/theatres-landscape.png",
-      title: "Ancient Greek Theatres",
+      title: "Ancient Theatres",
       description: "Mobile-first web design, with Vanilla JS components.",
       stack: "Vanilla JS & CSS",
       link: "../ancient-theatres",
