@@ -39,6 +39,9 @@
 
     /* Step 10: 99.07px → 186.26px */
     --step-10: clamp(6.1919rem, 4.2964rem + 9.4772vw, 11.6413rem);
+
+    /* Step Custom Banner h1: 99.07px → 186.26px */
+    --step-banner-h1: clamp(1rem, 1rem + 1.711vw, 3.519rem);
 }
 
 /* Font Sizes */

@@ -21,14 +21,14 @@
             <div class="grid-item item0"></div>
             <div class="grid-item item1">JS | Frameworks:</div>
             <div class="grid-item item2">JavaScript, TypeScript, SvelteKit, React</div>
-            <div class="grid-item item3">CMS:</div>
-            <div class="grid-item item4">WordPress, HubSpot</div>
-            <div class="grid-item item5">API:</div>
-            <div class="grid-item item6">REST, GraphQL</div>
-            <div class="grid-item item7">CSS:</div>
-            <div class="grid-item item8">SCSS/SASS, Tailwind, Bootstrap</div>
-            <div class="grid-item item9">Collaboration:</div>
-            <div class="grid-item item10">GitHub, Jira, Confluence, Figma, FigJam</div>
+            <div class="grid-item item3">API:</div>
+            <div class="grid-item item4">REST, GraphQL</div>
+            <div class="grid-item item5">CSS:</div>
+            <div class="grid-item item6">SCSS/SASS, Tailwind, Bootstrap</div>
+            <div class="grid-item item7">Collaboration:</div>
+            <div class="grid-item item8">GitHub, Jira, Confluence, Figma, FigJam</div>
+            <div class="grid-item item9">CMS:</div>
+            <div class="grid-item item10">WordPress, HubSpot</div>
         </div>
 
         <div class="l: center e: enlarge" style="--center-max-inline-size: 80ch">
@@ -36,8 +36,8 @@
             <div class="container">
                 <div class="left">
                     <div>2022 - Present</div>
-                    <a class="u: in-size-fit | e: nav-link" href="/cv_mounsey-logothetis.pdf" target="_blank"
-                       rel="noreferrer noopener" aria-label="View Full CV (opens in a new tab)">Open full CV</a>
+                    <a class="u: in-size-fit" href="/cv_mounsey-logothetis.pdf" target="_blank"
+                       rel="noreferrer noopener" aria-label="View Full CV (opens in a new tab)">Open full CV ></a>
                 </div>
                 <div class="right">
                     <h4>Front-end developer - Cognitiv+</h4>
@@ -70,11 +70,6 @@
                 </div>
             </div>
         </div>
-
-        <div class="" style="margin-inline: auto; inline-size: 80ch">
-
-        </div>
-
     </div>
 </section>
 
@@ -86,17 +81,24 @@
 
   a {
     color: white;
-    border: solid 3px white;
-    padding: 5px;
+  }
 
-    &:focus-visible {
-      color: black;
-      border: solid 3px var(--js-yellow);
-    }
+  // First use of hover and focus-visible
+  a:hover {
+    color: var(--light);
+  }
 
-    &:hover {
-      border: solid 3px white;
-    }
+  a:focus-visible {
+    color: var(--primary);
+    outline: 2px var(--js-yellow);
+  }
+
+  //Second use of hover and focus-visible to allow just the outline to change white when user has keyboard focus and mouse hover at same element
+  a:hover {
+    outline: white solid 2px;
+  }
+  a:focus-visible {
+    outline-style: dashed;
   }
 
   .bg {
@@ -137,7 +139,7 @@
     display: grid;
     grid-template-columns: 1fr 1.618fr;
     row-gap: 1.5rem;
-    width: 100%; /* this will make the grid items take up at least the width of their content */
+    //width: 100%; /* this will make the grid items take up at least the width of their content */
   }
 
   .item0 {
@@ -195,7 +197,8 @@
 
   .grid-item:nth-child(even) {
     font-weight: 500;
-    min-width: 400px;
+    min-width: 0; /* Remove the fixed min-width */
+    word-wrap: break-word; /* Ensure long words do not overflow */
   }
 
   .container {

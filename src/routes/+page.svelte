@@ -47,7 +47,7 @@
     />
 </header>
 
-<div class="stack">
+<div class="stack" style="--block: 0rem; --space: 0rem">
     <Banner />
     <div bind:this={showNavBar}>
         <About />
@@ -59,6 +59,7 @@
   // TODO need to add a permanent navBar for about, blog, projects, and for top of home page, only
   // and on the home bar it would be good to have a transition, but that's not possible with display:block-none
   // for now though, display:block-none is best for a11y as it hides the navBar visually, for keyboard users and screen readers
+  // https://kittygiraudel.com/2021/02/17/hiding-content-responsibly/
   .primary-header {
     position: sticky;
     top: 0;
