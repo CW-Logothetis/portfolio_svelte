@@ -29,16 +29,17 @@
   }
 
   // red button or user scrolls down
-  function clearProjectHover() {
+  function clearProjectHover(delay = 100) {
     setTimeout(() => {
       projectHover = null;
-    }, 100);
+    }, delay);
   }
 
   // should user not click red button (likely),
   // screen will reset whenever user scrolls.
+  // TODO set this with intersectionObserver when use scrolls to About in +page.svelte
   function handleScroll() {
-    clearProjectHover();
+    clearProjectHover(200);
   }
 
 </script>
@@ -67,7 +68,8 @@
                     </div>
                 </div>
             {:else}
-                <div class="l: stack | u: pi-step-1" style="--block: 0; --space: var(--step-1); font-size: var(--step-0)"
+                <div class="l: stack | u: pi-step-1"
+                     style="--block: 0; --space: var(--step-1); font-size: var(--step-0)"
                      in:fly="{{ y: -40, duration: 2000 }}">
                     <h1>Chris Mounsey-Logothetis</h1>
                     <div style="margin-block-start: 0">Front-end developer</div>
@@ -95,40 +97,21 @@
         <h2>Blog</h2>
         <div class="flex-grid">
             {#each projectsText.projects as project (project)}
-                <button
+                <div
                     on:mouseover|stopPropagation={() => handleMouseOver(project)}
                     on:mouseout={handleMouseOut}
+                    on:focus={() => handleMouseOver(project)}
+                    on:blur={handleMouseOut}
                     class="u: | c: card bg {project.bg}"
                     style=" background-size: cover; background-position: center; background-image: url({project.image});"
+                    aria-label={`Details about ${project.title}`}
+                    role="button"
+                    tabindex="0"
                 >
-
-                    <!--                    <img src={project.image} alt="{project.title}" class="u:">-->
-
-                    <span class="c: card__text bg-background-secondary">
+                    <article class="c: card__text bg-background-secondary">
                         <div class="u: text-step--1">{project.title}</div>
-                        <!--                        <p>{project.description}</p>-->
-
-                    </span>
-                </button>
-            {/each}
-        </div>
-        <h2>Projects</h2>
-        <div class="flex-grid">
-            {#each projectsText.projects as project (project)}
-                <button
-                    on:mouseover|stopPropagation={() => setProjectHover(project)}
-                    class="u: | c: card bg {project.bg}"
-                    style=" background-size: cover; background-position: center; background-image: url({project.image});"
-                >
-
-                    <!--                    <img src={project.image} alt="{project.title}" class="u:">-->
-
-                    <span class="c: card__text bg-background-secondary">
-                        <div class="u: text-step-0">{project.title}</div>
-                        <!--                        <p>{project.description}</p>-->
-
-                    </span>
-                </button>
+                    </article>
+                </div>
             {/each}
         </div>
     </div>
@@ -155,6 +138,8 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    //50px is height of navBar
+    margin-block-start: -60px;
   }
 
   .screen__container {
@@ -238,7 +223,7 @@
   // then the cards should always be in one line (e.g. nowrap)
   @media (min-width: 900px) {
     .flex-grid {
-     flex-wrap: nowrap;
+      flex-wrap: nowrap;
     }
   }
 

@@ -67,11 +67,11 @@
 </script>
 
 <svelte:head>
-    <link rel="canonical" href="https://www.cognitivplus.com/blog" />
+    <link rel="canonical" href="https://www.cwlogo.vercel.app/blog" />
     <meta
         data-i18n-key="blog.meta.description"
         name="description"
-        content="Discover the latest in AI Document review technology at the Cognitiv+ blog. Stay informed on the latest trends and developments in this rapidly changing field, and learn how to apply AI to your own work and life."
+        content="Notes from my projects both at work and for pleasure."
     />
     <title>Blog</title>
 </svelte:head>

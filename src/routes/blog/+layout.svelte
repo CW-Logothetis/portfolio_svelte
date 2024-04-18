@@ -12,7 +12,7 @@
 -->
 <header>
     <NavBar
-        --bg-color = "var(--background-secondary)"
+        --bg-color = "var(--background-main)"
         --color = "var(--light-shade)"
     />
 </header>
