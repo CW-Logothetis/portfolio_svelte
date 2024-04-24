@@ -10,10 +10,12 @@
 @import '2_Utilities/colours';
 @import '2_Utilities/inline-size';
 @import '2_Utilities/margin-padding';
+@import '2_Utilities/no-underline';
 @import '2_Utilities/text-align-center';
 @import '2_Utilities/typography';
 @import '2_Utilities/visually-hidden';
 @import '3_Components/process-step';
+@import '3_Components/buttons';
 
 body {
     line-height: 1.5;
@@ -26,26 +28,6 @@ h1,
 h2,
 h3 {
     line-height: 1.2;
-}
-
-a {
-    text-decoration: none;
-    color: var(--hero-css);
-}
-
-a:hover,
-a:focus-visible {
-    color: var(--color, var(--hero-css));
-    opacity: 1;
-    outline: var(--color, var(--hero-css)) solid 2px;
-    outline-offset: 4px;
-}
-
-a:focus-visible  {
-    background: var(--js-yellow);
-    color: var(--primary);
-    outline-style: dashed;
-    outline-color: var(--js-yellow)
 }
 
 /* ============================================================================================

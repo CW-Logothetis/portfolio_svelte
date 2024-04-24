@@ -14,11 +14,11 @@ export let posts = [
         post_body: `
 
 <p>This is a bit of a deep dive into the intricacies of designing accessible buttons, using my portfolio as a case study. It came about due to a task at work, where I’m stripping out Bootstrap from our MVP and having to re-design buttons to focus on accessibility for our older customer base (this’ll be a blog post for the future). By looking at colour schemes, interaction states and ARIA labelling, small choices in button design can increase accessibility and improve user experience for a diverse audience. </p>
-<p>In designing and coding them, I had this checklist to hand:</p>
 <h2 id="anchor-elements-">A11y Checklist for Anchor Elements</h2>
+<p>In designing and coding them, I had this checklist to hand:</p>
 <p>Anchor elements are primarily used for navigation, guiding users to different pages or specific locations within the same page. Here’s how to optimize them for accessibility:</p>
 <ul>
-    <li><strong>Semantic HTML</strong>: Choose the correct element (&lt;a&gt; vs. &lt;button&gt;) to communicate the purpose to assistive technologies.</li>
+    <li><strong>Semantic HTML</strong>: Choose the correct element to communicate the purpose to assistive technologies. Consider &lt;a&gt; vs. &lt;button&gt;</li>
     <li><strong>Descriptive Link Text</strong>: Avoid vague phrases like &quot;click here.&quot; Instead, use clear descriptions that convey the destination of the link.</li>
     <li><strong>Proper Use of href</strong>: Always include a valid href attribute to ensure the link is focusable and accessible to screen readers.</li>
     <li><strong>Additional Context</strong>: Use aria-label or aria-labelledby to provide extra information when the link text alone doesn&#39;t fully explain the link’s purpose.</li>
@@ -29,7 +29,7 @@ export let posts = [
     <li><strong>High Contrast Mode Support</strong>: Accommodate users who depend on high contrast settings for better visibility.</li>
     <li><strong>Accessibility Testing</strong>: Regularly test your links with screen readers and other assistive tools to ensure they are fully accessible.</li>
 </ul>
-<img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/92b2509f-e24c-4b1f-90ea-28718fdfdbc1/ac317a23-c54a-4314-9bb2-9c4e0bede5ee/Untitled.png" alt="Untitled">
+<img src="/blog_images/all_buttons.png" alt="Screenshot of a table of Navigation buttons used on the site, in their default, hover, focus and active states">
 <h2>Colours</h2>
 <p>With a nearly black site background, slightly off-white text ensures compliance with WCAG AA and AAA standards. So I alternate between white and black font colour and background for ‘solid’ and ‘outline’ buttons. When a user sees the default button or hovers over it, the black/white change is apparent for any type of colour blindness or the partially sighted.</p>
 <h3>Focus</h3>
@@ -55,16 +55,18 @@ export let posts = [
 <p>Active is a bit of a odd choice of word given that it can just last a split second and is superseded by focus. Indeed, when clicking a link to navigate away, the active state may not even be noticed by the user. Rather unsurprisingly then, a lot of sites don’t bother with a discernible active state for navigation buttons and links, or don’t add an active state at all. (Check boxes and toggles would be an obvious exception, but for my current site I’m just looking at anchors and ‘navigation’ buttons. )</p>
 <p>If we have in mind slow connections and errors though, then having a transient active state at least gives users a sense that a button did ‘click’, even if nothing happens. For this I’ve used transform or scale before (making the button drop down or decrease in size - think neumorphism), but that can create a few headaches with layout shift in certain places or transforming fonts rendering a bit janky. Adding opacity is a simple way of doing it, which you can see if you click here.</p>
 <img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/92b2509f-e24c-4b1f-90ea-28718fdfdbc1/c742d9f3-f4a4-46b8-a79f-ef2e75e39db3/Untitled.png" alt="Untitled">
-<h2>Specifics</h2>
-<h3>Anchor links</h3>
-<p>Here’s an anchor link to hover over and give focus to.</p>
+<h2 id="specifics">Specifics</h2>
+<h3 id="anchor-links">Anchor links</h3>
+<p>Here’s an <a href="#specifics">anchor link</a> to hover over and give focus to.</p>
 <img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/92b2509f-e24c-4b1f-90ea-28718fdfdbc1/f2d2a942-9936-4779-83b0-b74b0bfd7e6c/Untitled.png" alt="Untitled">
 <p>By default, it looks like a typical hyperlink. A lot of designers dislike the blue and the underline. The blue we can soften and change to any highly contrasting colour, but the underline should really remain;  WCAG requires controls to be distinguishable and, if you’re colour blind, hyperlinks only shown by colour change might be easily missed.</p>
 <p>On hover, some design systems just remove the line, which to be fair is quite an obvious change, but I prefer a border box around it. Saying that, I actually use outline here as a border would really hug the text, but adding a bit of space around it would require padding. If the padding is only on the hover, then the whole layout of surrounding text will shift on hover (pretty ugly and annoying for the user), and if the padding is always there, then even without hover, the hyperlink text has extra white space around it. Outline solves this as its offset property doesn’t affect surrounding elements.</p>
-<pre>&amp;:hover {
-    outline: solid 2px var(--anchor);
-    outline-offset: 2px;
-}</pre>
+<pre>
+    &amp;:hover {
+        outline: solid 2px var(--anchor);
+        outline-offset: 2px;
+    }
+</pre>
 <h3>Links without underlines</h3>
 <p>Whilst WCAG requires controls to be distinguishable and just using a colour doesn’t help the colour-blind, there are some cases where we can get away without the underlines. Obvious exceptions are header/navbars, footers, sidebars and email addresses. In these zones, users are expecting any text to likely behave as a ‘button’ regardless of whether it’s with or without an icon or has any obvious button styling. </p>
 <img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/92b2509f-e24c-4b1f-90ea-28718fdfdbc1/075e502a-d798-4584-a118-244c419040f2/Untitled.png" alt="Untitled">
@@ -93,6 +95,7 @@ export let posts = [
 <p>I’d be surprised if everything here is 100% a11y best practice because it's no simple matter. But at least by double-checking colour usage, interaction states and ARIA labeling we can try to improve the user experience for everyone.</p>
         `,
         featured_image_url: '$lib/img/blog/featured_images/risks_of_bidding.jpg?enhanced',
+        image01: '',
         status: 'PUBLISHED',
         archived: false
     }
