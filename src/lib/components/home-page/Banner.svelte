@@ -67,28 +67,29 @@
                         <p>{projectHover.description}</p>
                     </div>
                 </div>
+<!--                TODO add hidden <nav> so always there and consistent for screen readers-->
             {:else}
                 <div class="l: stack | u: pi-step-1"
-                     style="--block: 0; --space: var(--step-1); font-size: var(--step-0)"
+                     style="--block: 0; --space: var(--step-2); font-size: var(--step-0)"
                      in:fly="{{ y: -40, duration: 2000 }}">
                     <h1>Chris Mounsey-Logothetis</h1>
                     <div style="margin-block-start: 0">Front-end developer</div>
 
-                    <nav>
-                        <a href="/#about" class="u: in-size-fit">About</a>
-                    </nav>
-
                     <div class="u: text-step--1 w-500 | c: contact">
-                        <a href="mailto:cwlogo@pm.me"> <span class="visually-hidden">Email:</span> cwlogo@pm.me</a>
-                        <a href="https://www.linkedin.com/in/christopher-logothetis">
+                        <a href="mailto:cwlogo@pm.me" class="u: no-underline button link" > <span class="U: visually-hidden">Email:</span> cwlogo@pm.me </a>
+                        <a href="https://www.linkedin.com/in/christopher-logothetis" class="u: no-underline button link">
                             <span class="visually-hidden">LinkedIn:</span>
                             <i class="fab fa-linkedin" aria-hidden="true"></i>
                         </a>
-                        <a href="https://github.com/CW-Logothetis">
+                        <a href="https://github.com/CW-Logothetis" class="u: no-underline button link">
                             <span class="visually-hidden">GitHub:</span>
                             <i class="fab fa-github" aria-hidden="true"></i>
                         </a>
                     </div>
+
+                    <nav>
+                        <a href="/#about" class="u: in-size-fit button solid">About</a>
+                    </nav>
                 </div>
             {/if}
         </header>
@@ -173,29 +174,6 @@
     column-gap: 2rem;
   }
 
-  a {
-    color: var(--anchor);
-  }
-
-  // First use of hover and focus-visible
-  a:hover {
-    color: var(--light);
-  }
-
-  a:focus-visible {
-    color: var(--primary);
-    outline: 2px var(--js-yellow);
-  }
-
-  //Second use of hover and focus-visible to allow just the outline to change white when user has keyboard focus and mouse hover at same element
-  a:hover {
-    outline: white solid 2px;
-  }
-
-  a:focus-visible {
-    outline-style: dashed;
-  }
-
   ///////
   //RHS
   ///////
@@ -241,14 +219,18 @@
     width: 150px;
 
     &:hover {
-      border: solid 3px white !important;
+      border: solid 3px var(--hero-css) !important;
     }
 
     &:focus-visible {
       background: var(--js-yellow);
       color: var(--primary);
       outline: dashed var(--js-yellow) 3px;
-      outline-offset: 3px;
+      outline-offset: 5px;
+    }
+
+    &:active {
+      transform: translateY(15px); /* Consistent tactile feedback across interactive elements */
     }
 
   }
