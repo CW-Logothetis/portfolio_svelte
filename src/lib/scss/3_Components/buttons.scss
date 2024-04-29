@@ -1,6 +1,7 @@
 a {
   color: var(--anchor);
   background: transparent;
+  border-radius: 2px;
 
   // `outline` better than `border` here
   // border would require a little padding to look decent, but padding then pushes hyperlink text away from surrounding text
@@ -36,7 +37,7 @@ a {
 }
 
 .button {
-  // unlike <a>, all buttons get a border, border radius and no underline
+  // unlike <a>, all buttons get a border and no underline
   border: solid 1px transparent;
   border-radius: 2px;
   text-decoration: none;

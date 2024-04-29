@@ -58,8 +58,13 @@ body {
 /* Make images easier to work with */
 img, picture, video, canvas, svg {
   display: block;
-  max-width: 100%;
+  max-inline-size: 100%;
 }
+
+img {
+  height: auto;
+}
+
 
 /* Natural flow and rhythm in articles by default */
 article > * + * {

@@ -6,7 +6,7 @@
   <div class="c: nav-bar" transition:fade>
   <div
     class="l: center | u: text-step--1"
-    style="--center-max-inline-size: 120ch"
+    style=""
   >
     <div class="with-sidebar">
       <div>
@@ -16,7 +16,7 @@
       </div>
 
       <div class="u: text-step--1 w-500 | c: contact">
-        <a href="mailto:cwlogo@pm.me" class="u: no-underline | c: button link"> <span class="u: visually-hidden">Email:</span> cwlogo@pm.me</a>
+        <a href="mailto:cwlogo@pm.me" class=" c: button link"> <span class="u: visually-hidden">Email:</span> cwlogo@pm.me</a>
         <a href="https://www.linkedin.com/in/christopher-logothetis" class="c: button link">
           <span class="visually-hidden">LinkedIn:</span>
           <i class="fab fa-linkedin" aria-hidden="true"></i>
@@ -80,29 +80,6 @@
   }
 
   /* Styles for links */
-  //
-  //a {
-  //  opacity: 0.9;
-  //  color: var(--color, var(--nav-link));
-  //  text-decoration: none;
-  //}
-  //
-  //a:hover {
-  //  color: var(--color, var(--hero-css));
-  //}
-  //
-  //a:focus-visible {
-  //  color: var(--primary, var(--hero-css));
-  //}
-  //
-  //a:hover {
-  //  outline: var(--color, var(--hero-css)) solid 2px;
-  //  outline-offset: 4px;
-  //}
-  //
-  //a:focus-visible {
-  //  outline-style: dashed;
-  //}
 
   .logo-link {
     font-weight: 700;
@@ -111,17 +88,5 @@
   .nav-link {
     font-weight: 500;
   }
-
-  //.contact > a {
-  //  color: var(--anchor);
-  //}
-  //
-  //.contact > a:hover {
-  //  color: var(--light);
-  //}
-  //
-  //.contact > a:focus-visible {
-  //  color: var(--primary);
-  //}
 
 </style>
