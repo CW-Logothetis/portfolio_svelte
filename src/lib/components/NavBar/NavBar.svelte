@@ -6,7 +6,7 @@
   <div class="c: nav-bar" transition:fade>
   <div
     class="l: center | u: text-step--1"
-    style="--center-max-inline-size: 120ch"
+    style=""
   >
     <div class="with-sidebar">
       <div>
