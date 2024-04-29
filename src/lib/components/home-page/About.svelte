@@ -1,8 +1,8 @@
 <script>
-  import { aboutText } from "$lib/pageText/home-page/about.js";
+  import { aboutText } from "$lib/pageText/home-page/about";
 </script>
 
-<section class="bg" id="about">
+<section class="bg mbs-step-5">
 
     <div class="l: stack | u: color-light" style="--block: 4rem; --space: 0rem">
 
@@ -36,8 +36,16 @@
             <div class="container">
                 <div class="left">
                     <div>2022 - Present</div>
-                    <a class="u: in-size-fit" href="/cv_mounsey-logothetis.pdf" target="_blank"
-                       rel="noreferrer noopener" aria-label="View Full CV (opens in a new tab)">Open full CV ></a>
+                    <a
+                        class="u: in-size-fit c: button outline"
+                        href="/cv_mounsey-logothetis.pdf"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        aria-label="Open my CV in a new window as a PDF"
+                    >
+                        Open CV (pdf)
+                        <i class="c: fa fa-external-link-alt | e: open-new-window" aria-hidden="true"></i>
+                    </a>
                 </div>
                 <div class="right">
                     <h4>Front-end developer - Cognitiv+</h4>
@@ -77,28 +85,6 @@
 
   h3 {
     font-weight: 300;
-  }
-
-  a {
-    color: white;
-  }
-
-  // First use of hover and focus-visible
-  a:hover {
-    color: var(--light);
-  }
-
-  a:focus-visible {
-    color: var(--primary);
-    outline: 2px var(--js-yellow);
-  }
-
-  //Second use of hover and focus-visible to allow just the outline to change white when user has keyboard focus and mouse hover at same element
-  a:hover {
-    outline: white solid 2px;
-  }
-  a:focus-visible {
-    outline-style: dashed;
   }
 
   .bg {
@@ -217,7 +203,7 @@
     .enlarge:focus-within {
       transform: scale(1.05);
       background-color: rgba(0, 0, 0, 0.68);
-      color: white;
+      color: var(--light);
       padding: 2rem;
       border-radius: 20px;
     }
@@ -265,7 +251,11 @@
     font-size: var(--step--1);
     padding: 5px 10px;
     border-radius: 20px;
-    border: solid white 1px;
+    border: solid var(--light) 1px;
+  }
+
+  .open-new-window {
+    margin-inline-start: 0.5rem;
   }
 
 </style>

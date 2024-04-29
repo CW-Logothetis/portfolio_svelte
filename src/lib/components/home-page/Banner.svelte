@@ -29,16 +29,17 @@
   }
 
   // red button or user scrolls down
-  function clearProjectHover() {
+  function clearProjectHover(delay = 100) {
     setTimeout(() => {
       projectHover = null;
-    }, 100);
+    }, delay);
   }
 
   // should user not click red button (likely),
   // screen will reset whenever user scrolls.
+  // TODO set this with intersectionObserver when use scrolls to About in +page.svelte
   function handleScroll() {
-    clearProjectHover();
+    clearProjectHover(200);
   }
 
 </script>
@@ -66,27 +67,29 @@
                         <p>{projectHover.description}</p>
                     </div>
                 </div>
+<!--                TODO add hidden <nav> so always there and consistent for screen readers-->
             {:else}
-                <div class="l: stack | u: pi-step-1" style="--block: 0; --space: var(--step-1); font-size: var(--step-0)"
+                <div class="l: stack | u: pi-step-1"
+                     style="--block: 0; --space: var(--step-2); font-size: var(--step-0)"
                      in:fly="{{ y: -40, duration: 2000 }}">
                     <h1>Chris Mounsey-Logothetis</h1>
                     <div style="margin-block-start: 0">Front-end developer</div>
 
-                    <nav>
-                        <a href="/#about" class="u: in-size-fit">About</a>
-                    </nav>
-
                     <div class="u: text-step--1 w-500 | c: contact">
-                        <a href="mailto:cwlogo@pm.me"> <span class="visually-hidden">Email:</span> cwlogo@pm.me</a>
-                        <a href="https://www.linkedin.com/in/christopher-logothetis">
+                        <a href="mailto:cwlogo@pm.me" class="u: no-underline button link" > <span class="U: visually-hidden">Email:</span> cwlogo@pm.me </a>
+                        <a href="https://www.linkedin.com/in/christopher-logothetis" class="u: no-underline button link">
                             <span class="visually-hidden">LinkedIn:</span>
                             <i class="fab fa-linkedin" aria-hidden="true"></i>
                         </a>
-                        <a href="https://github.com/CW-Logothetis">
+                        <a href="https://github.com/CW-Logothetis" class="u: no-underline button link">
                             <span class="visually-hidden">GitHub:</span>
                             <i class="fab fa-github" aria-hidden="true"></i>
                         </a>
                     </div>
+
+                    <nav>
+                        <a href="/#about" class="u: in-size-fit button solid">About</a>
+                    </nav>
                 </div>
             {/if}
         </header>
@@ -95,40 +98,21 @@
         <h2>Blog</h2>
         <div class="flex-grid">
             {#each projectsText.projects as project (project)}
-                <button
+                <div
                     on:mouseover|stopPropagation={() => handleMouseOver(project)}
                     on:mouseout={handleMouseOut}
+                    on:focus={() => handleMouseOver(project)}
+                    on:blur={handleMouseOut}
                     class="u: | c: card bg {project.bg}"
                     style=" background-size: cover; background-position: center; background-image: url({project.image});"
+                    aria-label={`Details about ${project.title}`}
+                    role="button"
+                    tabindex="0"
                 >
-
-                    <!--                    <img src={project.image} alt="{project.title}" class="u:">-->
-
-                    <span class="c: card__text bg-background-secondary">
+                    <article class="c: card__text bg-background-secondary">
                         <div class="u: text-step--1">{project.title}</div>
-                        <!--                        <p>{project.description}</p>-->
-
-                    </span>
-                </button>
-            {/each}
-        </div>
-        <h2>Projects</h2>
-        <div class="flex-grid">
-            {#each projectsText.projects as project (project)}
-                <button
-                    on:mouseover|stopPropagation={() => setProjectHover(project)}
-                    class="u: | c: card bg {project.bg}"
-                    style=" background-size: cover; background-position: center; background-image: url({project.image});"
-                >
-
-                    <!--                    <img src={project.image} alt="{project.title}" class="u:">-->
-
-                    <span class="c: card__text bg-background-secondary">
-                        <div class="u: text-step-0">{project.title}</div>
-                        <!--                        <p>{project.description}</p>-->
-
-                    </span>
-                </button>
+                    </article>
+                </div>
             {/each}
         </div>
     </div>
@@ -145,21 +129,24 @@
     font-size: var(--step-0);
   }
 
+  //banner is adapted from Sidebar in https://every-layout.dev/layouts/sidebar/
   .banner {
+    // default styles from every-layout
     display: flex;
     flex-wrap: wrap;
-    //box-sizing: content-box;
+    gap: var(--step-5);
+
     align-items: center;
     justify-content: center;
-    gap: var(--step-5);
-    //padding-inline: 5%;
-    ////min-width: 100%;
     min-height: 100vh;
+    //50px is height of navBar
+    margin-block-start: -60px;
   }
 
   .screen__container {
+    // default styles from every-layout
     flex-grow: 1;
-
+    // my custom styles
     display: flex;
     justify-content: center;
     align-items: center;
@@ -187,38 +174,16 @@
     column-gap: 2rem;
   }
 
-  a {
-    color: var(--anchor);
-  }
-
-  // First use of hover and focus-visible
-  a:hover {
-    color: var(--light);
-  }
-
-  a:focus-visible {
-    color: var(--primary);
-    outline: 2px var(--js-yellow);
-  }
-
-  //Second use of hover and focus-visible to allow just the outline to change white when user has keyboard focus and mouse hover at same element
-  a:hover {
-    outline: white solid 2px;
-  }
-
-  a:focus-visible {
-    outline-style: dashed;
-  }
-
   ///////
   //RHS
   ///////
 
   .projects {
+    // default styles from every-layout
     flex-basis: 0;
     flex-grow: 999;
     min-inline-size: 55%;
-
+    // my custom styles
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -236,7 +201,7 @@
   // then the cards should always be in one line (e.g. nowrap)
   @media (min-width: 900px) {
     .flex-grid {
-     flex-wrap: nowrap;
+      flex-wrap: nowrap;
     }
   }
 
@@ -254,14 +219,18 @@
     width: 150px;
 
     &:hover {
-      border: solid 3px white !important;
+      border: solid 3px var(--hero-css) !important;
     }
 
     &:focus-visible {
       background: var(--js-yellow);
       color: var(--primary);
       outline: dashed var(--js-yellow) 3px;
-      outline-offset: 3px;
+      outline-offset: 5px;
+    }
+
+    &:active {
+      transform: translateY(15px); /* Consistent tactile feedback across interactive elements */
     }
 
   }
