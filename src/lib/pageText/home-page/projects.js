@@ -7,26 +7,36 @@ const projectsText = {
       title: "AI Document Review",
       description: "Front-end development work for Cognitiv+ MVP.",
       stack: "SvelteKit | GraphQL",
-      link: "../cognitiv-web-app",
-      bg: "cognitiv"
+      url: "../projects/cognitiv-web-app",
+      bg: "cognitiv",
+      card_bg: "project_bg"
+    },
+    {
+      image: "/blog_images/all_buttons.png",
+      title: "...on buttons",
+      description: "Best practice for accessible navigation 'buttons'.",
+      stack: "a11y",
+      url: "../blog/a11y-navigation-buttons",
+      bg: "theatres",
+      card_bg: "blog_bg"
     },
     {
       image: "/array_homescreen.png",
       title: "LLM Array Tutor",
       description: "JS array methods with OpenAI generated content.",
       stack: "React | SvelteKit",
-      link: "../openai",
-      bg: "openai"
+      url: "../projects/openai",
+      bg: "cognitiv",
+      card_bg: "project_bg"
     },
-    {
-      image: "/theatres-landscape.png",
-      title: "Ancient Theatres",
-      description: "Mobile-first web design, with Vanilla JS components.",
-      stack: "Vanilla JS & CSS",
-      link: "../ancient-theatres",
-      bg: "theatres"
-    }
-    // Add more projects as needed
+    // {
+    //   image: "/theatres-landscape.png",
+    //   title: "Ancient Theatres",
+    //   description: "Mobile-first web design, with Vanilla JS components.",
+    //   stack: "Vanilla JS & CSS",
+    //   url: "../ancient-theatres",
+    //   bg: "theatres"
+    // }
   ]
 };
 
