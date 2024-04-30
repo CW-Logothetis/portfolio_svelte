@@ -1,5 +1,6 @@
 <script>
-  import { fly } from "svelte/transition";
+  import { goto } from "$app/navigation";
+  import { fade, fly } from "svelte/transition";
   import { projectsText } from "$lib/pageText/home-page/projects";
   import ButtonsMacOS from "$lib/components/UI/ButtonsMacOS.svelte";
 
@@ -42,6 +43,16 @@
     clearProjectHover(200);
   }
 
+  function navigateToProject(project) {
+    goto(project.url); // Assuming `project.url` is the URL you want to navigate to
+  }
+
+  function handleKeyUp(event, project) {
+    if (event.key === "Enter" || event.key === " ") { // Check if the pressed key is 'Enter' or 'Space'
+      navigateToProject(project);
+    }
+  }
+
 </script>
 
 <svelte:window on:scroll={handleScroll} />
@@ -60,14 +71,20 @@
             {#if projectHover}
                 <div class="project-info c: bg {projectHover.bg}">
                     <div class="project-image-container">
-                        <img src={projectHover.image} alt="{projectHover.title}" class="project-image" />
+<!-- `{#key}` block forces Svelte to recreate the `<img>` if `projectHover.image` changes i.e. it's a completely new element and thus triggers the fade transition.-->
+<!-- Without the #key, the image will only fade in when projectHover is first set to true, and not when projectHover.image changes if user hovers over another card.-->
+                        {#key projectHover.image}
+                            <img src={projectHover.image} alt="{projectHover.title}" class="project-image" in:fade="{{ duration: 200 }}" />
+                        {/key}
                     </div>
-                    <div class="project-title-description">
+                    <div class="project-title-description stack" style="--block: 0.5rem; --space: 0">
                         <h3 class="u: text-step-1">{projectHover.title}</h3>
                         <p>{projectHover.description}</p>
+                        <p class="u: text-step--1">{projectHover.stack}</p>
+                        <a href="{projectHover.url}" class="u: button link in-size-fit">Read the post &gt;</a>
                     </div>
                 </div>
-<!--                TODO add hidden <nav> so always there and consistent for screen readers-->
+                <!--                TODO add hidden <nav> so always there and consistent for screen readers-->
             {:else}
                 <div class="l: stack | u: pi-step-1"
                      style="--block: 0; --space: var(--step-2); font-size: var(--step-0)"
@@ -76,8 +93,10 @@
                     <div style="margin-block-start: 0">Front-end developer</div>
 
                     <div class="u: text-step--1 w-500 | c: contact">
-                        <a href="mailto:cwlogo@pm.me" class="u: no-underline button link" > <span class="U: visually-hidden">Email:</span> cwlogo@pm.me </a>
-                        <a href="https://www.linkedin.com/in/christopher-logothetis" class="u: no-underline button link">
+                        <a href="mailto:cwlogo@pm.me" class="u: no-underline button link"> <span
+                            class="U: visually-hidden">Email:</span> cwlogo@pm.me </a>
+                        <a href="https://www.linkedin.com/in/christopher-logothetis"
+                           class="u: no-underline button link">
                             <span class="visually-hidden">LinkedIn:</span>
                             <i class="fab fa-linkedin" aria-hidden="true"></i>
                         </a>
@@ -95,7 +114,7 @@
         </header>
     </div>
     <div class="projects">
-        <h2>Blog</h2>
+        <!--        <h2>Projects</h2>-->
         <div class="flex-grid">
             {#each projectsText.projects as project (project)}
                 <div
@@ -103,13 +122,15 @@
                     on:mouseout={handleMouseOut}
                     on:focus={() => handleMouseOver(project)}
                     on:blur={handleMouseOut}
+                    on:click={() => navigateToProject(project)}
+                    on:keyup={(event) => handleKeyUp(event, project)}
                     class="u: | c: card bg {project.bg}"
                     style=" background-size: cover; background-position: center; background-image: url({project.image});"
                     aria-label={`Details about ${project.title}`}
                     role="button"
                     tabindex="0"
                 >
-                    <article class="c: card__text bg-background-secondary">
+                    <article class="c: card__text bg-background-secondary {project.card_bg}">
                         <div class="u: text-step--1">{project.title}</div>
                     </article>
                 </div>
@@ -123,10 +144,6 @@
 
   h1 {
     font-size: var(--step-banner-h1);
-  }
-
-  h2 {
-    font-size: var(--step-0);
   }
 
   //banner is adapted from Sidebar in https://every-layout.dev/layouts/sidebar/
@@ -215,8 +232,9 @@
     border-radius: var(--radius-l);
     border: solid 3px grey;
     transition: transform .4s;
-    height: 200px;
-    width: 150px;
+    height: 250px;
+    width: 200px;
+    cursor: pointer;
 
     &:hover {
       border: solid 3px var(--hero-css) !important;
@@ -259,17 +277,24 @@
     gap: 1rem;
   }
 
+  .project_bg {
+    background: linear-gradient(220deg, rgba(61, 48, 143, 1) 0%, rgba(37, 75, 221, 1) 100%);
+  }
+
+  .blog_bg {
+    background: linear-gradient(220deg, rgb(47, 52, 42) 0%, rgb(21, 21, 23) 100%);
+  }
 
   .cognitiv {
-    background: linear-gradient(220deg, rgba(61, 48, 143, 0.51) 0%, rgba(37, 75, 221, 0) 100%);
+    background: linear-gradient(220deg, rgba(143, 48, 81, 0.51) 0%, rgba(0, 7, 37, 0.8) 100%);
   }
 
   .openai {
-    background: linear-gradient(220deg, rgba(130, 139, 175, 0.2) 0%, rgba(37, 75, 221, 0) 100%);
+    background: linear-gradient(220deg, rgba(130, 139, 175, 0.2) 0%, rgba(37, 75, 221, 0.8) 100%);
   }
 
   .theatres {
-    background: linear-gradient(220deg, rgba(206, 198, 156, 0.2) 0%, rgba(234, 205, 55, 0) 100%);
+    background: linear-gradient(220deg, rgba(131, 110, 224, 0.2) 0%, rgba(23, 22, 19, 0.93) 100%);
   }
 
   .project-info {
@@ -287,14 +312,14 @@
   .project-image-container {
     display: flex;
     justify-content: center;
-    height: 80%; /* Set the height of the image container to 70% of the screen div */
-    overflow: hidden; /* Add this to hide any excess image */
-    position: relative; /* Add this to make the image position absolute relative to the container */
+    height: 80%;
+    overflow: hidden; /* hide any excess image */
+    position: relative; /* make the image position absolute relative to the container */
   }
 
   .project-image {
-    position: absolute; /* Add this to make the image fill the width of the container */
-    top: 0%;
+    position: absolute; /* makes the image fill the width of the container */
+    top: 0;
     left: 50%;
     transform: translate(-50%, 0%);
     max-width: 100%;

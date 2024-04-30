@@ -38,7 +38,7 @@ a {
 
 .button {
   // unlike <a>, all buttons get a border and no underline
-  border: solid 1px transparent;
+  //border: solid 1px transparent;
   border-radius: 2px;
   text-decoration: none;
 
@@ -73,7 +73,7 @@ a {
 .solid,
 .outline {
   @extend %button-variant;
-  border-color: var(--light);
+  border: solid 1px var(--light);
 }
 
 .solid {
