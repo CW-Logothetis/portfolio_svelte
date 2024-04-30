@@ -70,7 +70,7 @@
     position: sticky;
     top: 0;
     background: transparent;
-    z-index: 1000;
+    //z-index: 1000;
     min-height: 60px
     //opacity: 1; // Ensure default state has opacity set for transition
     //transform: translateY(0); // Ensure default state has transform set for transition
