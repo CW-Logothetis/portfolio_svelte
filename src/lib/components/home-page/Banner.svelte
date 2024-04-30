@@ -5,6 +5,7 @@
   import ButtonsMacOS from "$lib/components/UI/ButtonsMacOS.svelte";
 
   $: projectHover = null;
+  $: isMaximized = false;
 
   function setProjectHover(p) {
     projectHover = p;
@@ -33,14 +34,20 @@
   function clearProjectHover(delay = 100) {
     setTimeout(() => {
       projectHover = null;
+      isMaximized = false;
     }, delay);
   }
 
+  function toggleMaximize() {
+    isMaximized = !isMaximized; // Toggle the maximized state
+  }
+
   // should user not click red button (likely),
-  // screen will reset whenever user scrolls.
+  // screen will reset whenever user scrolls,
+  // but only IF screen is not maximized.
   // TODO set this with intersectionObserver when use scrolls to About in +page.svelte
   function handleScroll() {
-    clearProjectHover(200);
+   !isMaximized && clearProjectHover(200);
   }
 
   function navigateToProject(project) {
@@ -60,11 +67,12 @@
 <!--TODO on projectHover the navBar disappears from DOM, so user has to press red button to return it. Terrible UX.
  a focusable NavBar needs adding to the MacOS bar... -->
 <section class="u: pbs-step-0 pi-step-5 | c: banner">
-    <div class="screen__container">
-        <header class="screen">
+    <div class={isMaximized ? 'screen__container maximized' : 'screen__container'}>
+        <header class={isMaximized ? 'screen max' : 'screen' }>
             <div class="macos-bar">
                 <ButtonsMacOS
                     {clearProjectHover}
+                    {toggleMaximize}
                     {projectHover}
                 />
             </div>
@@ -167,6 +175,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: width 0.5s ease; /* Smooth transition for width change */
+    width: auto; /* Default width */
+  }
+
+  .screen__container.maximized {
+    width: 90vw; /* Set width to 90% of the viewport width when maximized */
   }
 
   .screen {
@@ -183,6 +197,13 @@
     block-size: calc(32vw / 1.1);
     max-block-size: calc(100vw / 1.1);
     position: relative; /* Add this to make the macOS bar position absolute relative to the screen div */
+  }
+
+  .screen.max {
+    inline-size: 50vw;
+    max-inline-size: 100vw;
+    block-size: calc(50vw / 1.1);
+    max-block-size: calc(100vw / 1.1);
   }
 
   .contact {

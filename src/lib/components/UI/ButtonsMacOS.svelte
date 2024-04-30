@@ -2,6 +2,7 @@
 
 <script>
   export let clearProjectHover;
+  export let toggleMaximize;
   export let projectHover;
 
 </script>
@@ -9,8 +10,8 @@
 <div class={projectHover && 'enabled'} >
     <div class="macos-bar {projectHover && 'enabled'}">
         <button aria-label="close" disabled="{!projectHover}" class="traffic-light traffic-light-close" on:click={() => clearProjectHover()}></button>
-        <button aria-label="minimize" disabled="{!projectHover}" class="traffic-light traffic-light-minimize" id="minimize"></button>
-        <button aria-label="maximize" disabled="{!projectHover}" class="traffic-light traffic-light-maximize" id="maximize"></button>
+        <button aria-label="minimize" disabled="{!projectHover}" class="traffic-light traffic-light-minimize" id="minimize" on:click={() => clearProjectHover()}></button>
+        <button aria-label="maximize" disabled="{!projectHover}" class="traffic-light traffic-light-maximize" id="maximize" on:click={() => toggleMaximize()}></button>
     </div>
 </div>
 
