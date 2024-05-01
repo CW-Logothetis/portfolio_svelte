@@ -1,5 +1,33 @@
 <script>
   import { aboutText } from "$lib/pageText/home-page/about";
+  import { onMount } from "svelte";
+
+  let currentRole;
+  let enlargeCurrentRole = false;
+
+  onMount(() => {
+    const navObserver = new IntersectionObserver(
+      ([entry]) => {
+        console.log({ entry });
+        // When the scrollWatcher is not fully visible, make the navbar sticky
+
+        enlargeCurrentRole = entry.isIntersecting;
+        console.log({enlargeCurrentRole})
+      },
+      {
+        root: null, // viewport
+        threshold: 0.8, // callback when 100% of the target is visible or not
+        rootMargin: "0px 0px 0px 0px" // trigger exactly when the target enters or exits the viewport
+      }
+    );
+
+    navObserver.observe(currentRole);
+    console.log(navObserver);
+
+    return () => {
+      navObserver.unobserve(currentRole);
+    };
+  });
 </script>
 
 <section class="bg mbs-step-5">
@@ -31,7 +59,7 @@
             <div class="grid-item item10">WordPress, HubSpot</div>
         </div>
 
-        <div class="l: center e: enlarge" style="--center-max-inline-size: 80ch">
+        <div class="l: center e: enlarge"   class:enlargeCurrentRole={enlargeCurrentRole} style="--center-max-inline-size: 80ch" bind:this={currentRole} >
             <h3>Current role</h3>
             <div class="container">
                 <div class="left">
@@ -50,25 +78,21 @@
                 <div class="right">
                     <h4>Front-end developer - Cognitiv+</h4>
                     <h5 class="w-500">MVP DEVELOPMENT: </h5>
-                    <p>Led development of the MVP front end web app, translating Figma designs
-                        into a fully functional interface using SvelteKit, SASS / SCSS and GraphQL.</p>
-                    <h5 class="w-500">DESIGN TEAMWORK: </h5>
-                    <p>Collaborated with UI/UX designer and CEO for implementation and enhancement of
-                        MVP designs, aligned with UX goals.</p>
-                    <h5 class="w-500">FUNCTIONAL DESIGN OVERHAUL: </h5>
-                    <p>Conducted a re-think for the MVP's core features,
-                        incorporating insights from user feedback and marketing/sales teams. Created wireframes in Figma
-                        and flow diagrams using FigJam to visualise improvements.</p>
-                    <h5 class="w-500">TESTING & QA: </h5>
-                    <p>End-to-end testing with Playwright. Work with DevOps and CTO to ensure smooth tag/release
-                        deployment and product launch.</p>
-                    <h5 class="w-500">AGILE & SCRUM: </h5>
-                    <p>Fortnightly sprints and weekly backlog grooming sessions with Back End and
-                        Machine Learning teams. Play a pivotal role in ticket writing and breaking down Front End/Back
-                        End stories and tasks.</p>
-                    <h5 class="w-500">WEBSITE TRANSITION: </h5>
-                    <p>Responsible for website migration from WordPress to HubSpot. Then later supervised an intern in
-                        downscaling HubSpot site to a custom SvelteKit and Tailwind UI version.</p>
+                    <p>Front end for a new web app, replacing an Angular front end.
+                        Transformed Figma designs into a fully functional interface with <strong>SvelteKit, SCSS, Bootstrap, and GraphQL</strong>.</p>
+                    <h5 class="w-500"> FUNCTIONAL DESIGN OVERHAUL FOR v1.0: </h5>
+                    <p>Conducted a re-think of the MVP's core features following user and sales team feedback.
+                        Created mock-ups in <strong>Figma</strong> and flow diagrams using <strong>FigJam</strong> to remedy confusing steps and layouts reported by older users.</p>
+                    <h5 class="w-500">LLM INTEGRATION: </h5>
+                    <p>Designed and built an internal SvelteKit app for the CEO to test prompts,
+                        score them (human evaluation) and save them for later comparison against other prompts.
+                        Now designing a new feature for summarising and chatting with contracts</p>
+                    <h5 class="w-500">CMS TRANSITION: </h5>
+                    <p>Responsible for website migration from <strong>WordPress</strong> to <strong>HubSpot</strong>. Then later supervised an intern in downscaling HubSpot to a custom SvelteKit and <strong>Tailwind UI website.</p>
+                    <h5 class="w-500">MISC: </h5>
+                    <p><strong>Playwright</strong> end-to-end testing. <strong>GitHub</strong> version control and code reviews.
+                        Deploy with <strong>Lens.</strong> <strong>Agile with Jira</strong> (fortnightly sprints, weekly backlog grooming, assisted CTO with story and ticket writing).
+                        Docs with <strong>Confluence.</strong></p>
                     <div class="pills">
                         <div>SvelteKit</div>
                         <div>GraphQL</div>
@@ -199,8 +223,7 @@
       border-radius: 20px;
     }
 
-    .enlarge:hover,
-    .enlarge:focus-within {
+    .enlargeCurrentRole {
       transform: scale(1.05);
       background-color: rgba(0, 0, 0, 0.68);
       color: var(--light);
