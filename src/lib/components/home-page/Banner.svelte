@@ -308,14 +308,17 @@
 
   .cognitiv {
     background: linear-gradient(220deg, rgba(143, 48, 81, 0.51) 0%, rgba(0, 7, 37, 0.8) 100%);
+    border-radius: 16px;
   }
 
   .openai {
     background: linear-gradient(220deg, rgba(130, 139, 175, 0.2) 0%, rgba(37, 75, 221, 0.8) 100%);
+    border-radius: 16px;
   }
 
   .theatres {
     background: linear-gradient(220deg, rgba(131, 110, 224, 0.2) 0%, rgba(23, 22, 19, 0.93) 100%);
+    border-radius: 16px;
   }
 
   .project-info {
