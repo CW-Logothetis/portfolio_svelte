@@ -2,9 +2,12 @@
 
   export let post_body, blog_post_title;
 
-  // as the blog content is inserted via Svelte's {@html post_body},
-  // CSS in the <style> block won't work
-  // this is a method to set them just for this file and not by adding them to global stylesheet
+   /**
+   * as the blog content is inserted via Svelte's @html post_body,
+   * any CSS in this component's style block won't work.
+   * This 'styles' is a method to set CSS just for this file, instead of having to add them to the global stylesheet
+   */
+
   $: styles = `
     <style>
 
