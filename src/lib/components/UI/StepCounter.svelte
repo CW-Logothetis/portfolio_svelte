@@ -3,7 +3,7 @@
   export let colorClass = "";
 </script>
 
-<div class="border-grid">
+<div class="e: border-grid">
   <div class={`empty-box empty-box-1 ${colorClass}`}></div>
   <div class={`step-number ${colorClass}`}>{text}</div>
   <div class={`empty-box empty-box-2 ${colorClass}`}></div>

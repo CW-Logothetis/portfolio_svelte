@@ -1,4 +1,4 @@
-<!-- https://codepen.io/atdrago/pen/yezrBR -->
+<!-- Adapted from https://codepen.io/atdrago/pen/yezrBR -->
 
 <script>
   export let clearProjectHover;
@@ -8,10 +8,27 @@
 </script>
 
 <div class={projectHover && 'enabled'} >
-    <div class="macos-bar {projectHover && 'enabled'}">
-        <button aria-label="close" disabled="{!projectHover}" class="traffic-light traffic-light-close" on:click={() => clearProjectHover()}></button>
-        <button aria-label="minimize" disabled="{!projectHover}" class="traffic-light traffic-light-minimize" id="minimize" on:click={() => clearProjectHover()}></button>
-        <button aria-label="toggle full screen" disabled="{!projectHover}" class="traffic-light traffic-light-maximize" id="maximize" on:click={() => toggleMaximize()}></button>
+    <div class="e: macos-bar {projectHover && 'enabled'}">
+        <button
+            aria-label="close"
+            disabled="{!projectHover}"
+            class="e: traffic-light traffic-light-close"
+            on:click={() => clearProjectHover()}
+        ></button>
+        <button
+            aria-label="minimize"
+            disabled="{!projectHover}"
+            class="e: traffic-light traffic-light-minimize"
+            id="minimize"
+            on:click={() => clearProjectHover()}
+        ></button>
+        <button
+            aria-label="toggle full screen"
+            disabled="{!projectHover}"
+            class="e: traffic-light traffic-light-maximize"
+            id="maximize"
+            on:click={() => toggleMaximize()}
+        ></button>
     </div>
 </div>
 
@@ -41,7 +58,7 @@
     padding: 0 10px;
     //background-color: var(--background-secondary);
     border-radius: 12px 12px 0 0;
-    position: absolute; /* Add this to make the macOS bar always hug the top of the screen div */
+    position: absolute; // make the macOS bar always hug the top of the screen div
     top: 0;
     left: 0;
     right: 0;
@@ -74,7 +91,6 @@
         opacity: 1;
       }
     }
-
 
     .enabled &, &:hover, &:active {
       > .traffic-light-close {
