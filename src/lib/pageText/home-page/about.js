@@ -7,10 +7,4 @@ const aboutText = {
   ]
 };
 
-const languageText = [
-  { name: "ENGLISH", level: "Native Speaker" },
-  { name: "GREEK", level: "Intermediate Conversational" },
-  { name: "JAPANESE", level: "...it’s been a long time..." }
-];
-
-export { aboutText, languageText };
+export { aboutText };
