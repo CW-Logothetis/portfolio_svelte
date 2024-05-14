@@ -14,15 +14,13 @@
   onMount(() => {
     const navObserver = new IntersectionObserver(
       ([entry]) => {
-        console.log({ entry });
         // When the scrollWatcher is not fully visible, make the navbar sticky
-
         displayNavBar = entry.isIntersecting;
 
       },
       {
         root: null, // viewport
-        threshold: 0.4, // callback when 100% of the target is visible or not
+        threshold: 0.4, // callback when 40% of the target is visible or not
         rootMargin: "0px 0px 0px 0px" // trigger exactly when the target enters or exits the viewport
       }
     );

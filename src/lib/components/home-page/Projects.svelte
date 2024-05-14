@@ -1,10 +1,12 @@
+<!--TODO: Old home page component. Keep for future '/projects' page-->
+
 <script>
-  import { projectsText } from "$lib/pageText/home-page/projects.js";
+  import { projectsText } from "$lib/pageText/home-page/projects";
 </script>
 
 <section
   id="projects"
-  class="l: stack center | u: text-center | c: projects"
+  class="l: stack center | u: text-center | e: projects"
 >
   <div class="l: center" style="--center-max-inline-size: 70ch">
     <h2>{projectsText.heading}</h2>
