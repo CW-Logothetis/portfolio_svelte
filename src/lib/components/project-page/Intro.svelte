@@ -5,10 +5,10 @@
 <section id="introduction">
 
   <div
-      class="l: center | c: stack-intro"
+      class="l: center | e: stack-intro"
       style="--center-max-inline-size: 70ch"
   >
-    <h1 class="u: text-center | c: intro--title">
+    <h1 class="u: text-center | e: intro--title">
       {@html introData.title}
     </h1>
     {#if introData.subtitle}
@@ -16,7 +16,7 @@
         {@html introData.subtitle}
       </h2>
     {/if}
-    <div class="c: intro--para">
+    <div class="e: intro--para">
       {#each introData.para as para }
         <p>{para}</p>
       {/each}
@@ -24,13 +24,13 @@
   </div>
 
   <div
-    class="l: center | u: mbs-step-4 | c: intro-container"
+    class="l: center | u: mbs-step-4 | e: intro-container"
     style="--center-max-inline-size: 70ch"
   >
     {#each introData.techStack as { title, description }}
-      <div class="c: line">
-        <div class="c: title">{title}</div>
-        <div class="c: description">{@html description}</div>
+      <div class="e: line">
+        <div class="e: title">{title}</div>
+        <div class="e: description">{@html description}</div>
       </div>
     {/each}
   </div>
@@ -54,12 +54,12 @@
 
   .intro-container {
     display: flex;
-    flex-direction: column; /* Adjust to make it a flex column */
+    flex-direction: column;
   }
 
   .line {
     display: flex;
-    align-items: center; /* Align items in the center of each row */
+    align-items: center;
     column-gap: 0.5rem;
     margin-bottom: 1rem;
   }

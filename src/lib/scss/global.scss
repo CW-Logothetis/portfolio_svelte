@@ -14,8 +14,9 @@
 @import '2_Utilities/text-align-center';
 @import '2_Utilities/typography';
 @import '2_Utilities/visually-hidden';
-@import '3_Components/process-step';
 @import '3_Components/buttons';
+@import '3_Components/main-grid';
+@import '3_Components/process-step';
 
 body {
     line-height: 1.5;
@@ -39,13 +40,6 @@ h3 {
 /* ==================
     general layout
 ===================== */
-
-.main-grid {
-    display: grid;
-    grid-template-columns: repeat(12, minmax(0, 1fr));
-    max-width: 1200px;
-    margin-inline: auto;
-}
 
 .template-bg {
     background-color: var(--background-main);

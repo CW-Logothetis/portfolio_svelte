@@ -2,8 +2,8 @@
     export let heroImage
 </script>
 
-<section class="center">
-    <img src="{heroImage.src}" class="project-hero" alt="{heroImage.alt}" >
+<section class="l: center">
+    <img src="{heroImage.src}" class="e: project-hero" alt="{heroImage.alt}" >
 </section>
 
 <style lang="scss">
