@@ -13,8 +13,8 @@
       },
       {
         root: null, // viewport
-        threshold: 0.8, // callback when 100% of the target is visible or not
-        rootMargin: "0px 0px 0px 0px" // trigger exactly when the target enters or exits the viewport
+        threshold: 0.25, // callback when 100% of the target is visible or not
+        rootMargin: "50px 0px 0px 0px" // trigger exactly when the target enters or exits the viewport
       }
     );
 
@@ -55,7 +55,12 @@
             <div class="e: grid-item item10">WordPress, HubSpot</div>
         </div>
 
-        <div class="l: center e: enlarge"   class:enlargeCurrentRole={enlargeCurrentRole} style="--center-max-inline-size: 80ch" bind:this={currentRole} >
+        <div
+            class="l: center | e: enlarge"
+            class:enlargeCurrentRole={enlargeCurrentRole}
+            style="--center-max-inline-size: 80ch"
+            bind:this={currentRole}
+        >
             <h3>Current role</h3>
             <div class="e: cv-container">
                 <div class="e: left">
@@ -141,7 +146,7 @@
     display: grid;
     grid-template-columns: 1fr 1.618fr;
     row-gap: 1.5rem;
-    //width: 100%; /* this will make the grid items take up at least the width of their content */
+    //width: 100%; /* grid items take up at least the width of their content */
   }
 
   .item0 {
@@ -206,19 +211,27 @@
   .cv-container {
     display: flex;
     flex-wrap: wrap;
+    column-gap: 0.75rem;
+  }
+
+  .enlarge {
+    transition: transform 0.1s ease, background-color 0.5s ease;
+  }
+
+  .enlargeCurrentRole {
+    background-color: rgba(0, 0, 0, 0.68);
+    color: var(--light);
+    padding-block: 2rem;
   }
 
   @media (min-width: 900px) {
     .enlarge {
-      transition: transform 0.1s ease, background-color 0.5s ease;
       padding: 2rem;
       border-radius: 20px;
     }
 
     .enlargeCurrentRole {
       transform: scale(1.05);
-      background-color: rgba(0, 0, 0, 0.68);
-      color: var(--light);
       padding: 2rem;
       border-radius: 20px;
     }
