@@ -1,6 +1,8 @@
+<!--This is an old NavBar with a <nav> for Projects and Blog-->
+<!--The <nav> is not used whilst the Projects and Blog pages are re-designed -->
+
 <script>
   import { fade } from 'svelte/transition';
-
 </script>
 
   <div class="c: nav-bar" transition:fade>
@@ -11,12 +13,10 @@
     <div class="with-sidebar">
       <div>
         <a href="/" class="logo-link">Chris Mounsey-Logothetis</a>
-
-<!-- TODO for now, the home page has a navBar in the Banner. Another traditional navbar - with a <nav> like below - will be needed for other page layouts-->
-        <nav>
-<!--          <a href="/blogText" class="nav-link">blogText</a>-->
+<!--        <nav>-->
+<!--          <a href="/blog" class="nav-link">blog</a>-->
 <!--          <a href="/projects" class="nav-link">projects</a>-->
-        </nav>
+<!--        </nav>-->
       </div>
 
       <div class="u: text-step--1 w-500 | c: contact">
