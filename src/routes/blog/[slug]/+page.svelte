@@ -1,6 +1,6 @@
 <script>
-	export let data;
 	import BlogPost from '$lib/Blog/BlogPost.svelte';
+	export let data;
 
 	let featured_image_url = data.post.featured_image_url;
 	let post_body = data.post.post_body;
@@ -19,7 +19,14 @@
 	<meta name="description" content="{meta_description}">
 	<title>{blog_post_title}</title>
 </svelte:head>
-<BlogPost {featured_image_url} {published_date} {post_body} {blog_post_title} {author} {tags} {prev} {next}/>
 
-<style lang="scss">
-</style>
+<BlogPost
+	{featured_image_url}
+	{published_date}
+	{post_body}
+	{blog_post_title}
+	{author}
+	{tags}
+	{prev}
+	{next}
+/>

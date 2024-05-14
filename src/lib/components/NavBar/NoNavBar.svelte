@@ -1,3 +1,7 @@
+<!--
+Note the home page has a navBar in the Banner component.
+NavBar.svelte is the traditional navbar - with a <nav> like - for other page layouts-->
+
 <script>
   import { fade } from 'svelte/transition';
 
@@ -11,8 +15,6 @@
     <div class="with-sidebar">
       <div>
         <a href="/" class="logo-link button text-only">Chris Mounsey-Logothetis</a>
-      <!-- TODO for now, the home page has a navBar in the Banner.
-      NavBar.svelte is the traditional navbar - with a <nav> like - for other page layouts-->
       </div>
 
       <div class="u: text-step--1 w-500 | c: contact">
@@ -68,25 +70,16 @@
     }
   }
 
-  nav, .contact {
+  .contact {
     display: inline-flex;
     align-items: center;
     column-gap: 2rem;
-  }
-
-  nav {
-    flex-grow: 1;
-    justify-content: flex-end;
   }
 
   /* Styles for links */
 
   .logo-link {
     font-weight: 700;
-  }
-
-  .nav-link {
-    font-weight: 500;
   }
 
 </style>

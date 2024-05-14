@@ -14,8 +14,9 @@
 @import '2_Utilities/text-align-center';
 @import '2_Utilities/typography';
 @import '2_Utilities/visually-hidden';
-@import '3_Components/process-step';
 @import '3_Components/buttons';
+@import '3_Components/main-grid';
+@import '3_Components/process-step';
 
 body {
     line-height: 1.5;
@@ -29,70 +30,3 @@ h2,
 h3 {
     line-height: 1.2;
 }
-
-/* ============================================================================================
-===============================================================================================
-   LAYOUT - MOBILE FIRST   ====================================================================
-===============================================================================================
-=============================================================================================== */
-
-/* ==================
-    general layout
-===================== */
-
-.main-grid {
-    display: grid;
-    grid-template-columns: repeat(12, minmax(0, 1fr));
-    max-width: 1200px;
-    margin-inline: auto;
-}
-
-.template-bg {
-    background-color: var(--background-main);
-}
-
-
-/* ============================================================================================================
-   ------------------------------------      Stretch Goals       ------------------------------------ 
-============================================================================================================== */
-
-.stretch-heading {
-    margin-bottom: 0.5em !important;
-}
-
-.stretch--para {
-    grid-column: 2 / -2;
-
-    margin: 0;
-    padding: 0;
-
-    background-color: transparent;
-}
-
-.stretch--para ul {
-    margin-top: 0;
-    margin-bottom: 1.5em;
-  }
-
-.stretch--para p {
-  padding-bottom: 1em;
-}
-
-    @media (min-width: 800px) {
-
-        .stretch--para {
-            grid-column: 3 / -3;
-        }
-
-        .stretch--para p {
-            font-size: 1.8rem;
-        }
-
-        .stretch--para ul {
-            margin-top: -3em;
-        }
-
-        .stretch--para li {
-            font-size: 1.8rem;
-        }
-    }

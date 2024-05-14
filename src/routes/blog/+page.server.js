@@ -1,5 +1,5 @@
-import { posts } from '$lib/shared/blog/data';
-import { getAllTags } from '$lib/helpers/tags';
+import { posts } from '$lib/blogText/data';
+import { getAllTags } from '$lib/utilities/tags';
 
 export function load() {
 
