@@ -1,34 +1,25 @@
 <script>
   import { onMount } from "svelte";
   import BlogCard from "$lib/Blog/BlogCard.svelte";
-  import { createTagSlug } from "$lib/helpers/tags";
 
   export let data;
 
-  let loadingRef;
+  let loadingRef; // intersection observer binds to this
 
   let page = 0;
   let posts = [];
-  // tags come in as a Set, which svelte can't iterate over in each block
-  $: tags = Array.from(data.tags);
-  let isLoading = false; // New variable to track loading state
+  let isLoading = false;
   const debounceDelay = 500;
-
-  // Dynamically import images
-  // const imageModules = import.meta.glob('$lib/img/blog/featured_images/*.{avif,gif,heif,jpeg,jpg,png,tiff,webp}', {
-  // 	eager: true, // Instantly imports all matched modules.
-  // });
 
   /**
    * Fetches a chunk of posts based on the current "page" number and updates the posts array.
-   * (TODO: it's not really a page - bad name)
    * Sets a loading state and debounces the loading indicator to prevent flickering.
    */
   async function fetchPosts() {
     isLoading = true;
     const newPosts = data.posts.slice(page * 8, (page + 1) * 8);
     if (newPosts.length > 0) {
-      posts = [...posts, ...newPosts]; // Create a new array to trigger reactivity
+      posts = [...posts, ...newPosts]; // Create a new array to trigger Svelte reactivity
       page++;
     }
     // Not set up DB, so data will be v quick and might have flicker. So, debounce to mimic load.
@@ -45,7 +36,6 @@
     fetchPosts();
 
     const loadingObserver = new IntersectionObserver((entries) => {
-        console.log({ entries });
         const first = entries[0];
         if (first.isIntersecting) {
           fetchPosts();
@@ -63,13 +53,12 @@
       loadingObserver.disconnect(); // Clean up when component destroyed
     };
   });
-  $: console.log({ posts });
+
 </script>
 
 <svelte:head>
     <link rel="canonical" href="https://www.cwlogo.vercel.app/blog" />
     <meta
-        data-i18n-key="blog.meta.description"
         name="description"
         content="Notes from my projects both at work and for pleasure."
     />
@@ -77,35 +66,21 @@
 </svelte:head>
 
 
-<div class="center flow" style="--center-max-inline-size: 110ch">
+<div class="l: center flow" style="--center-max-inline-size: 110ch">
     <div>
-        <h1 class="text-step-3">Blog</h1>
-        <h2 class="text-step-2">Learning in public</h2>
-        <p class="text-step-0">
+        <h1 class="u: text-step-3">Blog</h1>
+        <h2 class="u: text-step-2">Learning in public</h2>
+        <p class="u: text-step-0">
             Articles about work and personal projects.
         </p>
     </div>
 
-    {#if tags}
-        <div class="text-step--1">
-            {#each tags as tag}
-                <a
-                    data-sveltekit-reload
-                    href={'/blog/tag/' + createTagSlug(tag)}
-                    class=""
-                >
-                    {tag}
-                </a>
-            {/each}
-        </div>
-    {/if}
-
-    <div class="c: post__grid">
+    <div class="e: post__grid">
         {#each posts as post}
             <BlogCard {post} />
         {/each}
         {#if isLoading}
-            <p class="loading">...Loading</p>
+            <p>...Loading</p>
         {/if}
     </div>
     <span bind:this={loadingRef}></span>

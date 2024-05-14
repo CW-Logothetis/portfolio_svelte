@@ -227,7 +227,7 @@
     align-items: center;
   }
 
-  // only want blog/project cards to wrap on small screens
+  // only want blogText/project cards to wrap on small screens
   .flex-grid {
     display: flex;
     flex-wrap: wrap;

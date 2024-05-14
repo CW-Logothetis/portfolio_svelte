@@ -1,14 +1,12 @@
 <script>
-  import { createTagSlug } from "$lib/helpers/tags";
 
-  export let post_body, blog_post_title, tags;
+  export let post_body, blog_post_title;
 
+  // as the blog content is inserted via Svelte's {@html post_body},
+  // CSS in the <style> block won't work
+  // this is a method to set them just for this file and not by adding them to global stylesheet
   $: styles = `
     <style>
-
-        #blog_content {
-            padding-inline: 5%;
-        }
 
         #blog_content section {
             margin-block-end: 5rem;
@@ -28,10 +26,6 @@
             margin-block-end: 1.5rem;
         }
 
-        #blog_content li {
-            /*margin-block-end: 1rem;*/
-        }
-
         #blog_content img {
             margin-block: 3rem;
             image-rendering: crisp-edges;
@@ -40,11 +34,6 @@
             border-radius: var(--radius-s);
             background-color: var(--light-shade);
         }
-
-        /*#blog_content img:hover {*/
-        /*    -ms-transform: scale(1.15); !* IE 9 *!*/
-        /*    transform: scale(1.15);*/
-        /*}*/
 
         #blog_content figcaption {
             font-size: var(--step--1);
@@ -75,36 +64,14 @@
 {@html styles}
 
 <article>
-    <header class="bg-background-secondary">
-        <div class="center flow" style="">
-
-            <h1 class="">{blog_post_title}</h1>
-
-            <!--    <div class="">-->
-            <!--		<img-->
-            <!--			src={featured_image_url}-->
-            <!--			alt={blog_post_title}-->
-            <!--			class=""-->
-            <!--		/>-->
-            <!--		<div class=""></div>-->
-            <!--	</div>-->
-            <!--            <div class="">-->
-            <!--                {#if tags}-->
-            <!--                    {#each tags as tag}-->
-            <!--                        <a-->
-            <!--                            data-sveltekit-reload-->
-            <!--                            href={'/blog/tag/' + createTagSlug(tag)}-->
-            <!--                            style="margin-inline-end: 1rem"-->
-            <!--                            >{tag}</a-->
-            <!--                        >-->
-            <!--                    {/each}-->
-            <!--                {/if}-->
-            <!--            </div>-->
+    <header class="u: bg-background-secondary">
+        <div class="l: center flow">
+            <h1>{blog_post_title}</h1>
         </div>
     </header>
 
-    <div class="center flow" style="--center-max-inline-size: 80ch">
-        <div class="stack" style="--block: 0rem; --space: 0rem" id="blog_content">
+    <div class="l: center flow" style="--center-max-inline-size: 80ch">
+        <div class="l: stack" style="--block: 0rem; --space: 0rem" id="blog_content">
             {@html post_body}
         </div>
     </div>
@@ -113,9 +80,5 @@
 <style lang="scss">
   h1 {
     font-size: var(--step-4);
-  }
-
-  h2 {
-    font-size: var(--step-3);
   }
 </style>

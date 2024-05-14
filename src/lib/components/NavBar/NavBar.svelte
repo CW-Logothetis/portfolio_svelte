@@ -14,7 +14,7 @@
 
 <!-- TODO for now, the home page has a navBar in the Banner. Another traditional navbar - with a <nav> like below - will be needed for other page layouts-->
         <nav>
-<!--          <a href="/blog" class="nav-link">blog</a>-->
+<!--          <a href="/blogText" class="nav-link">blogText</a>-->
 <!--          <a href="/projects" class="nav-link">projects</a>-->
         </nav>
       </div>
