@@ -61,10 +61,13 @@
             style="--center-max-inline-size: 80ch"
             bind:this={currentRole}
         >
-            <h3>Current role</h3>
+
             <div class="e: cv-container">
                 <div class="e: left">
-                    <div>2022 - Present</div>
+                    <div>
+                        <h3>Current role</h3>
+                        <div>2022 - Present</div>
+                    </div>
                     <a
                         class="u: in-size-fit | c: button outline"
                         href="/cv_mounsey-logothetis.pdf"
@@ -72,11 +75,11 @@
                         rel="noreferrer noopener"
                         aria-label="Open my CV in a new window as a PDF"
                     >
-                        Open CV (pdf)
+                        Full CV (pdf)
                         <i class="c: fa fa-external-link-alt | e: open-new-window" aria-hidden="true"></i>
                     </a>
                 </div>
-                <div class="e: right">
+                <div class="u: mbs-step-1 | e: right">
                     <h4>Front-end developer - Cognitiv+</h4>
                     <h5 class="u: w-500">MVP DEVELOPMENT: </h5>
                     <p>Front end for a new web app, replacing an Angular front end.
@@ -121,9 +124,7 @@
     );
   }
 
-  /* ============================================================================================================
-     ----------------------------------------------  Intro    ----------------------------------------------
-=============================================================================================================== */
+  /* ----------------------------------------------   Intro    ---------------------------------------------- */
 
   .about-me__text {
     display: flex;
@@ -138,9 +139,7 @@
     }
   }
 
-  /* ============================================================================================================
-       ----------------------------------------------   Skills    ----------------------------------------------
-  =============================================================================================================== */
+  /*  ----------------------------------------------   Skills    ---------------------------------------------- */
 
   .grid-container {
     display: grid;
@@ -210,7 +209,7 @@
 
   .cv-container {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     column-gap: 0.75rem;
   }
 
@@ -231,7 +230,6 @@
     }
 
     .enlargeCurrentRole {
-      transform: scale(1.05);
       padding: 2rem;
       border-radius: 20px;
     }
@@ -242,9 +240,19 @@
     align-items: flex-start;
     justify-content: space-between;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
   }
 
+  @media (min-width: 700px) {
+    .cv-container {
+      display: flex;
+      flex-direction: row;
+      column-gap: 0.75rem;
+    }
+    .left {
+      flex-direction: column;
+    }
+  }
 
   .right {
     flex: 1.618;
