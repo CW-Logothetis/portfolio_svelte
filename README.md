@@ -45,7 +45,7 @@ This is largely due to the Largest Contentful Paint and images
 
 With that in mind, I added four sorts of 'enhanced' image in my portfolio
 1. where possible, I added SvelteKit's enhanced:img, which is similar to Next.js <Image/>. At build time, <enhanced:img> tags are replaced with a <picture><img> wrap, which provides multiple next-gen image types and sizes, and help with performance and layout shift (https://kit.svelte.dev/docs/images). These images are under the src directory in 'lib'. Took performance score up to 99.
-2. Images in the blog are inside a string and I use the {@html} directive, but this is just raw HTML and so custom elements like <enhanced:img> won't work. So I use the traditional, long-winded approach:
+2. Images in the blog are inside a string and I use the {@html} directive, but this is just raw HTML and so custom elements like <enhanced:img> won't work. So I use the traditional, long-winded approach and images are in `/static`, not `/lib`:
 ```    
 <picture>
       <source 
@@ -63,9 +63,9 @@ With that in mind, I added four sorts of 'enhanced' image in my portfolio
           alt="Screenshot of buttons when user clicks to activate a button"
       />
     </picture>
-```
-  This means uploading each original image to Squoosh or similar to reduce it, then use Cloudinary's responsive breakpoint tool to generate breakpoint sizes and duplicates at those sizes. I chose just to do this for webp, rather than avif as well, seeing as modern browsers all allow webp - https://caniuse.com/webp.
-3. <enhanced:img> won't work in Svelte's {#if / else} blocks, which I use at the top of the home page. So again, here, <picture><img> blocks are needed.
+``` 
+This means uploading each original image to Squoosh or similar to reduce it, then use Cloudinary's responsive breakpoint tool to generate breakpoint sizes and duplicates at those sizes. I chose just to do this for webp, rather than avif as well, seeing as modern browsers all allow webp - https://caniuse.com/webp.
+3. <enhanced:img> won't work in Svelte's {#if / else} blocks, which I use at the top of the home page. So again, here, <picture><img> blocks are needed. And the images are in `/static`, not `/lib`
 4. Finally, how to handle background images set in CSS with `background-image: url()` and where the url is dynamic? There are packages like Modernizr, but there's a simple, progressive image-set from CSS, which allows us to add a next gen image format like webp if the browser accepts it, then fallback to a png if not: 
 ```
   style="
