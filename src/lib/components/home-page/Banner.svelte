@@ -87,7 +87,22 @@
                         <!-- Without the #key, the image will only fade in when projectHover is first set to true,
                              and not when projectHover.image changes if user hovers over another card.-->
                         {#key projectHover.image}
-                            <img src={projectHover.image} alt="{projectHover.title}" class="e: project-image" in:fade="{{ duration: 200 }}" />
+                            <picture>
+                                <source
+                                    sizes={projectHover.picture.sizes}
+                                    srcset={projectHover.picture.srcset}
+                                    type={projectHover.picture.type}
+                                />
+                                <img
+                                    class="e: project-image"
+                                    in:fade="{{ duration: 200 }}"
+                                    loading="lazy"
+                                    height={projectHover.picture.height}
+                                    width={projectHover.picture.width}
+                                    src={projectHover.picture.fallback_img}
+                                    alt={projectHover.picture.alt}
+                                />
+                            </picture>
                         {/key}
                     </div>
                     <div class="l: stack | e: project-title-description" style="--block: 0.5rem; --space: 0">
@@ -142,7 +157,7 @@
                     on:click={() => navigateToProject(project)}
                     on:keyup={(event) => handleKeyUp(event, project)}
                     class="e: card bg {project.bg}"
-                    style=" background-size: cover; background-position: center; background-image: url({project.image});"
+                    style=" background-size: cover; background-position: center; background-image: url({project.thumbnail});"
                     aria-label={`Details about ${project.title}`}
                     role="button"
                     tabindex="0"
@@ -260,11 +275,6 @@
     height: 100%;
   }
 
-  .project-image {
-    //aspect-ratio: 1.618 / 1;
-    //inline-size: 100%;
-  }
-
   .project-image-container {
     display: flex;
     justify-content: center;
@@ -278,7 +288,6 @@
     top: 0;
     left: 50%;
     transform: translate(-50%, 0%);
-    max-width: 100%;
     height: auto;
   }
 
