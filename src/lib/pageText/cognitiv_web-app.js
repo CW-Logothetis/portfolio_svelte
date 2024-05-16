@@ -1,3 +1,10 @@
+import heroImg from "$lib/img/cog_app/cog_reviewer.png?enhanced"
+import cogFigma from "$lib/img/cog_app/cog_figma.png?enhanced"
+import cogCreateProject from "$lib/img/cog_app/cog_create_project.png?enhanced"
+import cogDocList from "$lib/img/cog_app/cog_doc_list.png?enhanced"
+import cogReviewer from "$lib/img/cog_app/cog_reviewer.png?enhanced"
+import cogNextSteps from "$lib/img/cog_app/cog_next_steps.png?enhanced"
+
 export let introData = {
   title: "Cognitiv+ <br> AI Document Review",
   subtitle: "from MVP to First Release",
@@ -18,7 +25,7 @@ export let introData = {
 };
 
 export let heroImage = {
-  src: "/cog_app/cog_reviewer.png",
+  src: heroImg,
   alt: "Screenshot of Cognitiv plus Document Reviewer."
 }
 
@@ -33,7 +40,8 @@ export let processData =
           "<strong>NOTE:</strong> these aren’t the company's final flows or designs. Just here for illustrative purposes."
         ],
         "colorClass": "bubble-4-blue",
-        "image": "cog_app/cog_figma"
+        "image": cogFigma,
+        "alt": "Screenshot of Figma designs."
       },
       {
         "text": [
@@ -41,7 +49,8 @@ export let processData =
           "Built a multi-step form “Wizard” for users to create a new project, which will hold sets of documents that they will upload for classification and review."
         ],
         "colorClass": "bubble-4-blue",
-        "image": "cog_app/cog_create_project"
+        "image": cogCreateProject,
+        "alt": "Screenshot of create project wizard."
       },
       {
         "text": [
@@ -50,7 +59,8 @@ export let processData =
           "Document list updated by polling."
         ],
         "colorClass": "bubble-4-blue",
-        "image": "cog_app/cog_doc_list"
+        "image": cogDocList,
+        "alt": "Screenshot of document list."
       },
       {
         "text": [
@@ -59,7 +69,8 @@ export let processData =
           "The big design and technical challenge here is presenting the data in the page and linking it to expanded details in the card."
         ],
         "colorClass": "bubble-4-blue",
-        "image": "cog_app/cog_reviewer"
+        "image": cogReviewer,
+        "alt": "Screenshot of contract opened in Review mode."
       }
     ]
   }
@@ -76,7 +87,8 @@ export let nextStepsData =
           "Plus, we need reporting, dashboards, multi-user assignment and notifications, and a workflow for starting and ending the review or a document and project."
         ],
         "colorClass": "bubble-4-blue",
-        "image": "cog_app/cog_next_steps"
+        "image": cogNextSteps,
+        "alt": "Screenshot of draft modal for adding insights."
       }
     ]
   }
