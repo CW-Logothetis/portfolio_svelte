@@ -87,7 +87,22 @@
                         <!-- Without the #key, the image will only fade in when projectHover is first set to true,
                              and not when projectHover.image changes if user hovers over another card.-->
                         {#key projectHover.image}
-                            <img src={projectHover.image} alt="{projectHover.title}" class="e: project-image" in:fade="{{ duration: 200 }}" />
+                            <picture>
+                                <source
+                                    sizes={projectHover.picture.sizes}
+                                    srcset={projectHover.picture.srcset}
+                                    type={projectHover.picture.type}
+                                />
+                                <img
+                                    class="e: project-image"
+                                    in:fade="{{ duration: 200 }}"
+                                    loading="lazy"
+                                    height={projectHover.picture.height}
+                                    width={projectHover.picture.width}
+                                    src={projectHover.picture.fallback_img}
+                                    alt={projectHover.picture.alt}
+                                />
+                            </picture>
                         {/key}
                     </div>
                     <div class="l: stack | e: project-title-description" style="--block: 0.5rem; --space: 0">
@@ -129,10 +144,11 @@
     </div>
 
     <!--///////////////// RHS //////////////////-->
-
+<!-- next gen images won't work in IE, so use url() then image-set(url())
+     https://developer.mozilla.org/en-US/docs/Web/CSS/image/image-set -->
     <div class="e: projects">
-        <!--        <h2>Projects</h2>-->
-        <div class="e: flex-grid">
+        <h2>Projects & Posts</h2>
+        <div class="u: mbs-step--2 | e: flex-grid">
             {#each projectsText.projects as project (project)}
                 <div
                     on:mouseover|stopPropagation={() => handleMouseOver(project)}
@@ -142,7 +158,10 @@
                     on:click={() => navigateToProject(project)}
                     on:keyup={(event) => handleKeyUp(event, project)}
                     class="e: card bg {project.bg}"
-                    style=" background-size: cover; background-position: center; background-image: url({project.image});"
+                    style="
+                        background-image: url({project.thumbnail_fallback});
+                        background-image: image-set(url({project.thumbnail_next_gen}));
+                    "
                     aria-label={`Details about ${project.title}`}
                     role="button"
                     tabindex="0"
@@ -260,11 +279,6 @@
     height: 100%;
   }
 
-  .project-image {
-    //aspect-ratio: 1.618 / 1;
-    //inline-size: 100%;
-  }
-
   .project-image-container {
     display: flex;
     justify-content: center;
@@ -278,7 +292,6 @@
     top: 0;
     left: 50%;
     transform: translate(-50%, 0%);
-    max-width: 100%;
     height: auto;
   }
 
@@ -325,6 +338,8 @@
     height: 250px;
     width: 200px;
     cursor: pointer;
+    background-size: cover;
+    background-position: center;
 
     &:hover {
       border: solid 3px var(--hero-css) !important;

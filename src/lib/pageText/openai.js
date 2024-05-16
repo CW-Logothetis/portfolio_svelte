@@ -1,3 +1,9 @@
+import heroImg from "$lib/img/openai/array_homescreen.png?enhanced"
+import arrayResponsive from "$lib/img/openai/array_responsive.png?enhanced"
+import arrayOpenai from "$lib/img/openai/array_openai.png?enhanced"
+import arrayPage from "$lib/img/openai/array_page.png?enhanced"
+import arrayPageServer from "$lib/img/openai/array_page-server.png?enhanced"
+
 export let introData = {
   title: "Array Methods & OpenAI",
   para: [
@@ -16,7 +22,7 @@ export let introData = {
 };
 
 export let heroImage = {
-  src: "/array_homescreen.png",
+  src: heroImg,
   alt: "Screenshot of the app's home screen with cards for each array method."
 }
 
@@ -31,7 +37,8 @@ export let processData =
           "The colour scheme is based on the JavaScript logo."
         ],
         "colorClass": "bubble-4-blue",
-        "image": "array_responsive"
+        "image": arrayResponsive,
+        "alt": "screenshot from app"
       },
       {
         "text": [
@@ -40,7 +47,8 @@ export let processData =
           "Saved me a huge amount of time. Even in the 'old' days of text-davinci."
         ],
         "colorClass": "bubble-4-blue",
-        "image": "array_openai"
+        "image": arrayOpenai,
+        "alt": "screenshot from app"
       },
       {
         "text": [
@@ -48,7 +56,8 @@ export let processData =
           "Each method will have its own 'page', ready for OpenAI generated summary, syntax and examples."
         ],
         "colorClass": "bubble-4-blue",
-        "image": "array_page"
+        "image": arrayPage,
+        "alt": "screenshot from app"
       },
       {
         "text": [
@@ -56,7 +65,8 @@ export let processData =
           "When the user navigates to this page, SvelteKit's load function outputs the response from OpenAI for the `+page.svelte`"
         ],
         "colorClass": "bubble-4-blue",
-        "image": "array_page-server"
+        "image": arrayPageServer,
+        "alt": "screenshot from app"
       }
     ]
   }

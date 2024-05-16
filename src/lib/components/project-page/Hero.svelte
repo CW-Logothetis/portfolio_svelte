@@ -3,7 +3,7 @@
 </script>
 
 <section class="l: center">
-    <img src="{heroImage.src}" class="e: project-hero" alt="{heroImage.alt}" >
+    <enhanced:img src="{heroImage.src}?w=1280;640;400&format=webp&lossless" sizes="(min-width:1920px) 1280px, (min-width:1080px) 640px, (min-width:768px) 400px" class="e: project-hero" alt="{heroImage.alt}" />
 </section>
 
 <style lang="scss">
