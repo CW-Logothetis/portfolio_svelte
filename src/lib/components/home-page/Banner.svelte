@@ -144,10 +144,11 @@
     </div>
 
     <!--///////////////// RHS //////////////////-->
-
+<!-- next gen images won't work in IE, so use url() then image-set(url())
+     https://developer.mozilla.org/en-US/docs/Web/CSS/image/image-set -->
     <div class="e: projects">
-        <!--        <h2>Projects</h2>-->
-        <div class="e: flex-grid">
+        <h2>Projects & Posts</h2>
+        <div class="u: mbs-step--2 | e: flex-grid">
             {#each projectsText.projects as project (project)}
                 <div
                     on:mouseover|stopPropagation={() => handleMouseOver(project)}
@@ -157,7 +158,10 @@
                     on:click={() => navigateToProject(project)}
                     on:keyup={(event) => handleKeyUp(event, project)}
                     class="e: card bg {project.bg}"
-                    style=" background-size: cover; background-position: center; background-image: url({project.thumbnail});"
+                    style="
+                        background-image: url({project.thumbnail_fallback});
+                        background-image: image-set(url({project.thumbnail_next_gen}));
+                    "
                     aria-label={`Details about ${project.title}`}
                     role="button"
                     tabindex="0"
@@ -334,6 +338,8 @@
     height: 250px;
     width: 200px;
     cursor: pointer;
+    background-size: cover;
+    background-position: center;
 
     &:hover {
       border: solid 3px var(--hero-css) !important;

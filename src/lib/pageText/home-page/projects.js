@@ -13,7 +13,8 @@ const projectsText = {
   intro: "Each project has a page with more screenshots and information about how I built the site, what problems I had to solve and my future plans for it.",
   projects: [
     {
-      thumbnail: "/home_page/cog/cog_reviewer_thumbnail.png", // CSS url() so must be a very small png to load fast. webp won't work on IE.
+      thumbnail_fallback: "/home_page/cog/cog_reviewer_thumbnail.png", // for CSS url() so must be a very small png to load fast. webp won't work on IE.
+      thumbnail_next_gen: "/home_page/cog/cog_reviewer_thumbnail.webp", // for CSS image-set(), which can take webp
       picture: {
         sizes: "(max-width: 922px) 100vw, 922px",
         srcset: "/home_page/cog/cog_reviewer_squoosh_yh4c2j_c_scale,w_480.webp 480w, " +
@@ -33,7 +34,8 @@ const projectsText = {
       card_bg: "project_bg"
     },
     {
-      thumbnail: "/home_page/buttons/all_buttons_thumbnail_squoosh.png",
+      thumbnail_fallback: "/home_page/buttons/all_buttons_thumbnail_squoosh.png",
+      thumbnail_next_gen: "/home_page/buttons/all_buttons_thumbnail_squoosh.webp",
       picture: {
         sizes: "(max-width: 1122px) 100vw, 1122px",
         srcset: "/home_page/buttons/all_buttons_squoosh_flxrc5_c_scale,w_200.webp 200w, " +
@@ -53,7 +55,8 @@ const projectsText = {
       card_bg: "blog_bg"
     },
     {
-      thumbnail: "/home_page/flashcards/flashcards_thumbnail_squoosh.png",
+      thumbnail_fallback: "/home_page/flashcards/flashcards_thumbnail_squoosh.png",
+      thumbnail_next_gen: "/home_page/flashcards/flashcards_thumbnail_squoosh.webp",
       picture: {
         sizes: "(max-width: 1400px) 100vw, 1400px",
         srcset: "/home_page/flashcards/flashcards_original_x6rdq1_c_scale,w_200.webp 200w, " +
