@@ -1,5 +1,5 @@
-// Note: cannot use Svelte enhanced:img in an if/else block
-// so I have to write the <picture><img> block manually and put images in 'static' folder, not lib
+// Note: cannot use Svelte enhanced:enhanced_img in an if/else block
+// so I have to write the <picture><enhanced_img> block manually and put images in 'static' folder, not lib
 // and manually process each image with squoosh and responsivebreakpoints.com
 // TODO - investigate serving every image from Cloudinary - svelte.cloudinary.dev - or cloudinary API for build script
 // fallback image is a compressed png from squoosh, but as of 2024 it'll only be served for IE

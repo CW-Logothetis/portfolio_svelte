@@ -1,7 +1,7 @@
 <!--TODO: Old home page component. Keep for future '/projects' page-->
 
 <script>
-  import { projectsText } from "$lib/pageText/home-page/projects";
+  import { projectsText } from "$lib/pageText/homePage/projects";
 </script>
 
 <section

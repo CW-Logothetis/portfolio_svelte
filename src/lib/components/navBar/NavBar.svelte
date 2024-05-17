@@ -1,5 +1,5 @@
-<!--This is an old NavBar with a <nav> for Projects and Blog-->
-<!--The <nav> is not used whilst the Projects and Blog pages are re-designed -->
+<!--This is an old navBar with a <nav> for Projects and blog-->
+<!--The <nav> is not used whilst the Projects and blog pages are re-designed -->
 
 <script>
   import { fade } from 'svelte/transition';

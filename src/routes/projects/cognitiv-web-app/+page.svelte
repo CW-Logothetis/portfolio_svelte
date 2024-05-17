@@ -1,8 +1,8 @@
 <script>
-    import Intro from "$lib/components/project-page/Intro.svelte";
-    import Hero from "$lib/components/project-page/Hero.svelte";
-    import StepData from "$lib/components/project-page/StepData.svelte";
-    import { introData, heroImage, processData, nextStepsData } from "$lib/pageText/cognitiv_web-app.js";
+    import Intro from "$lib/components/projectPage/Intro.svelte";
+    import Hero from "$lib/components/projectPage/Hero.svelte";
+    import StepData from "$lib/components/projectPage/StepData.svelte";
+    import { introData, heroImage, processData, nextStepsData } from "$lib/pageText/projects/cognitiv_web-app";
     import "$lib/scss/global.scss";
 </script>
 

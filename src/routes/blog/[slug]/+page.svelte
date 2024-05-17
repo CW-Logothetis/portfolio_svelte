@@ -1,5 +1,5 @@
 <script>
-	import BlogPost from '$lib/Blog/BlogPost.svelte';
+	import BlogPost from '$lib/components/blog/BlogPost.svelte';
 	export let data;
 
 	let featured_image_url = data.post.featured_image_url;

@@ -1,8 +1,8 @@
 <script>
   import { onMount } from "svelte";
-  import About from "$lib/components/home-page/About.svelte";
-  import Banner from "$lib/components/home-page/Banner.svelte";
-  import NoNavBar from "../lib/components/NavBar/NoNavBar.svelte";
+  import About from "$lib/components/homePage/About.svelte";
+  import Banner from "$lib/components/homePage/Banner.svelte";
+  import NoNavBar from "$lib/components/navBar/NoNavBar.svelte";
 
   // Initial inspiration taken here, but then lost a lot of it when adapting for Svelte:
   // https://youtu.be/V-CBdlfCPic

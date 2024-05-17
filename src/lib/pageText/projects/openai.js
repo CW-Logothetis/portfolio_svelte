@@ -1,8 +1,8 @@
-import heroImg from "$lib/img/openai/array_homescreen.png?enhanced"
-import arrayResponsive from "$lib/img/openai/array_responsive.png?enhanced"
-import arrayOpenai from "$lib/img/openai/array_openai.png?enhanced"
-import arrayPage from "$lib/img/openai/array_page.png?enhanced"
-import arrayPageServer from "$lib/img/openai/array_page-server.png?enhanced"
+import heroImg from "$lib/enhanced_img/openai/array_homescreen.png?enhanced"
+import arrayResponsive from "$lib/enhanced_img/openai/array_responsive.png?enhanced"
+import arrayOpenai from "$lib/enhanced_img/openai/array_openai.png?enhanced"
+import arrayPage from "$lib/enhanced_img/openai/array_page.png?enhanced"
+import arrayPageServer from "$lib/enhanced_img/openai/array_page-server.png?enhanced"
 
 export let introData = {
   title: "Array Methods & OpenAI",

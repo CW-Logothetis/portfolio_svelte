@@ -1,5 +1,5 @@
 <script>
-  import { aboutText } from "$lib/pageText/home-page/about";
+  import { aboutText } from "$lib/pageText/homePage/about";
   import { onMount } from "svelte";
 
   let currentRole;
