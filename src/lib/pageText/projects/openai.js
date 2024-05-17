@@ -16,7 +16,8 @@ export let introData = {
     { title: "Stack:", description: "React (client only)  &nbsp; | &nbsp; SvelteKit (client and server)" },
     {
       title: "Demo:",
-      description: "<a href=\"https://array-openai-react.vercel.app/\" class=\"intro--para-col-2\" target=\"_blank\" rel=\"noreferrer\">React & Vercel</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href=\"https://openai-arrays.netlify.app/\" class=\"intro--para-col-2\" target=\"_blank\" rel=\"noreferrer\">Svelte & Netlify</a>\n"
+      // description: "<a href=\"https://array-openai-react.vercel.app/\" class=\"intro--para-col-2\" target=\"_blank\" rel=\"noreferrer\">React & Vercel</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href=\"https://openai-arrays.netlify.app/\" class=\"intro--para-col-2\" target=\"_blank\" rel=\"noreferrer\">Svelte & Netlify</a>\n"
+      description: "Switching LLM due to timeout. Down for the weekend"
     }
   ]
 };
