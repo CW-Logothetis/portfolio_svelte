@@ -1,9 +1,9 @@
-import heroImg from "$lib/img/cog_app/cog_reviewer.png?enhanced"
-import cogFigma from "$lib/img/cog_app/cog_figma.png?enhanced"
-import cogCreateProject from "$lib/img/cog_app/cog_create_project.png?enhanced"
-import cogDocList from "$lib/img/cog_app/cog_doc_list.png?enhanced"
-import cogReviewer from "$lib/img/cog_app/cog_reviewer.png?enhanced"
-import cogNextSteps from "$lib/img/cog_app/cog_next_steps.png?enhanced"
+import heroImg from "$lib/enhanced_img/cog_app/cog_reviewer.png?enhanced"
+import cogFigma from "$lib/enhanced_img/cog_app/cog_figma.png?enhanced"
+import cogCreateProject from "$lib/enhanced_img/cog_app/cog_create_project.png?enhanced"
+import cogDocList from "$lib/enhanced_img/cog_app/cog_doc_list.png?enhanced"
+import cogReviewer from "$lib/enhanced_img/cog_app/cog_reviewer.png?enhanced"
+import cogNextSteps from "$lib/enhanced_img/cog_app/cog_next_steps.png?enhanced"
 
 export let introData = {
   title: "Cognitiv+ <br> AI Document Review",

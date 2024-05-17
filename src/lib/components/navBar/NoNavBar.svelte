@@ -1,6 +1,6 @@
 <!--
 Note the home page has a navBar in the Banner component.
-NavBar.svelte is the traditional navbar - with a <nav> like - for other page layouts-->
+navBar.svelte is the traditional navbar - with a <nav> like - for other page layouts-->
 
 <script>
   import { fade } from 'svelte/transition';

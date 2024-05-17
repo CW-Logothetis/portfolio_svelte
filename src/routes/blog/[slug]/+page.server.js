@@ -1,5 +1,5 @@
 import { error } from '@sveltejs/kit';
-import { posts } from '$lib/blogText/data';
+import { posts } from '$lib/pageText/blog/data';
 
 export function load({params}) {
 

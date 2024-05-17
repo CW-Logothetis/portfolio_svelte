@@ -1,4 +1,4 @@
-import { posts } from '$lib/blogText/data';
+import { posts } from '$lib/pageText/blog/data';
 import { getAllTags } from '$lib/utilities/tags';
 
 export function load() {

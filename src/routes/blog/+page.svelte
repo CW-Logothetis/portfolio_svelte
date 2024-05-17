@@ -1,6 +1,6 @@
 <script>
   import { onMount } from "svelte";
-  import BlogCard from "$lib/Blog/BlogCard.svelte";
+  import BlogCard from "$lib/components/blog/BlogCard.svelte";
 
   export let data;
 

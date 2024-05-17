@@ -284,7 +284,7 @@ export let posts = [
     <p>I’d be surprised if everything here is 100% a11y best practice because it's no simple matter. But at least by double-checking colour usage, interaction states and ARIA labeling we can try to improve the user experience for everyone.</p>
 </section>      
         `,
-        featured_image_url: '$lib/img/blogText/featured_images/risks_of_bidding.jpg?enhanced',
+        featured_image_url: '$lib/enhanced_img/text/featured_images/risks_of_bidding.jpg?enhanced',
         image01: '',
         status: 'PUBLISHED',
         archived: false

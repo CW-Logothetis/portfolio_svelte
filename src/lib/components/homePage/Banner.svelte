@@ -1,7 +1,7 @@
 <script>
   import { goto } from "$app/navigation";
   import { fade, fly } from "svelte/transition";
-  import { projectsText } from "$lib/pageText/home-page/projects";
+  import { projectsText } from "$lib/pageText/homePage/projects";
   import ButtonsMacOS from "$lib/components/UI/ButtonsMacOS.svelte";
 
   $: projectHover = null;
@@ -65,7 +65,7 @@
 <svelte:window on:scroll={handleScroll} />
 
 <!--TODO on projectHover the navBar disappears from DOM, so user has to press red button to return it. Terrible UX.
- a focusable NavBar needs adding to the MacOS bar... -->
+ a focusable navBar needs adding to the MacOS bar... -->
 <section class="u: pbs-step-0 pi-step-5 | e: banner">
 
 <!--///////////////// LHS //////////////////-->
@@ -82,7 +82,7 @@
             {#if projectHover}
                 <div class="c: bg {projectHover.bg} | e: project-info ">
                     <div class="e: project-image-container">
-                        <!-- `{#key}` block forces Svelte to recreate the `<img>` if `projectHover.image` changes
+                        <!-- `{#key}` block forces Svelte to recreate the `<enhanced_img>` if `projectHover.image` changes
                               i.e. it's a completely new element and thus triggers the fade transition.-->
                         <!-- Without the #key, the image will only fade in when projectHover is first set to true,
                              and not when projectHover.image changes if user hovers over another card.-->
@@ -309,7 +309,7 @@
     column-gap: 2rem;
   }
 
-  // only want blogText/project cards to wrap on small screens
+  // only want text/project cards to wrap on small screens
   .flex-grid {
     display: flex;
     flex-wrap: wrap;
