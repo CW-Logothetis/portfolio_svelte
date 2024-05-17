@@ -8,6 +8,7 @@ This project is built using SvelteKit, a modern framework with server-side rende
 - [CSS Methodology](#css-methodology)
 - [Responsive Design](#responsive-design)
 - [Image Optimization](#image-optimization)
+- [To Do](#ToDo)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
@@ -49,14 +50,14 @@ Layouts are adapted from [every-layout.dev](https://every-layout.dev/) and make 
 Images are served in next-gen formats using SvelteKit's `enhanced:img` where possible. For other parts, the `<picture>` element with `srcset` and `sizes` attributes is used to ensure optimal image loading and performance. A few words are required for the handling of images and the project structure.
 
 ### Performance
-initial Lighthouse scores for performance for the home page and projects/cognitiv-web-app weren't bad:
+Initial Lighthouse scores for performance for the home page and projects/cognitiv-web-app weren't bad:
 
 - Home page: 91
 - projects/cognitiv-web-app: 84
 
-Lighthouse is a lab test. Using webpagetest.org on a 4G mobile in the US the home and project page were scored as "Not bad" - Largest Contenful Pain was 3 seconds
+Lighthouse is very handy, but it is still a lab test, so using webpagetest.org on a 4G mobile in the US the home and project page were scored as "Not bad" - Largest Contentful Pain was 3 seconds
 
-Analysing lighthouse and webpagetest scores brought a bunch of small savings from render-blocking resources lik font-awesome, but the major factor was the uncompressed png images.
+Analysing lighthouse and webpagetest scores brought a bunch of small savings from render-blocking resources like font-awesome, but the major factor was the uncompressed `png` images.
 
 With that in mind, I added four sorts of 'enhanced' image in my portfolio
 1. Where possible, I added SvelteKit's enhanced:img, which is similar to `<Image/>` in Next.js. At build time, `<enhanced:img>` tags are replaced with a `<picture><img>` wrap, which provides multiple next-gen image types and sizes, and help with performance and layout shift (https://kit.svelte.dev/docs/images). These images are under `src/lib` and not SvelteKit's `static` directory. (Note: in a SvelteKit project, the static folder is meant for assets that should be served directly to the client without processing by Vite. This means that files in the static folder are not accessible through module imports like other files in the src directory.)
@@ -88,19 +89,35 @@ This means uploading each original image to Squoosh or similar to reduce it, the
          background-image: image-set(url({project.thumbnail_next_gen}));
         "
 ```
+<br>
 
 #### After
-Using enhanced images dramatically improves performance.
-![img_5.png](static/readme/img_5.png)
-![img_6.png](static/readme/img_6.png)
-Largest contentful paint for the home page and product page with webpagetest.com are now under 2seconds on a 4G mobile in the US.
-![img_7.png](static/readme/img_7.png)
+Using enhanced images dramatically improves performance. Lighthouse results are now excellent:
+<br>
+<br>
 
+![img_5.png](static/readme/img_5.png)
+<br>
+<br>
+![img_6.png](static/readme/img_6.png)
+<br>
+<br>
+Plus, the largest contentful paint for the home page and product page with webpagetest.com are now under 2seconds on a 4G mobile in the US.
+<br>
+<br>
+![img_7.png](static/readme/img_7.png)
+<br>
+<br>
 ### Thoughts on images
 There's quite a lot of phaff in serving images in different ways, especially when manually creating reponsive duplicates. This could be solved by Cloudinary. And borrowing from the SvelteKit docs for enhanced:img:
 ```
 Consider serving all images via CDN regardless of the image optimization types you use. CDNs reduce latency by distributing copies of static assets globally.
 ```
+Also, `<enchanced:img>` can't work with images in `/static`, and the way the images are inside a string for the blog means that I can't put those images in the `/lib`. So images are in two different places, which isn't ideal.
+
+
+## ToDo
+- this project has TODO notes. I need to add these here or better the Issues tab in GitHub repo.
 
 ## Installation
 
