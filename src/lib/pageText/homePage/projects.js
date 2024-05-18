@@ -69,10 +69,10 @@ const projectsText = {
         fallback_img: "/home_page/flashcards/flashcards_squoosh.png",
         alt: "screenshot of a blog post about my JavaScript flashcard web-app"
       },
-      title: "JS FlashCards LLM",
-      description: "Revising JS methods with OpenAI generated content.",
-      stack: "React | SvelteKit",
-      url: "../projects/openai",
+      title: "MethodMinder: LLM FlashCards",
+      description: "Revising JS methods with spaced repetition and AI flashcards.",
+      stack: "React Router",
+      url: "../projects/method-minder",
       bg: "cognitiv",
       card_bg: "project_bg"
     },
