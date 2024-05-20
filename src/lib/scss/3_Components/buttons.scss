@@ -2,6 +2,7 @@ a {
   color: var(--anchor);
   background: transparent;
   border-radius: 2px;
+  scroll-behavior: smooth;
 
   // `outline` better than `border` here
   // border would require a little padding to look decent, but padding then pushes hyperlink text away from surrounding text
