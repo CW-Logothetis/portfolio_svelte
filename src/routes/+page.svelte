@@ -2,20 +2,20 @@
   import { onMount } from "svelte";
   import About from "$lib/components/homePage/About.svelte";
   import Banner from "$lib/components/homePage/Banner.svelte";
-  import NoNavBar from "$lib/components/header/NoNavBar.svelte";
+  import Header from "../lib/components/header/Header.svelte";
 
   // Initial inspiration taken here, but then lost a lot of it when adapting for Svelte:
   // https://youtu.be/V-CBdlfCPic
 
   let primaryHeader;
-  let showNavBar;
-  let displayNavBar = false;
+  let showHeader;
+  let displayHeader = false;
 
   onMount(() => {
-    const navObserver = new IntersectionObserver(
+    const headerObserver = new IntersectionObserver(
       ([entry]) => {
         // When the scrollWatcher is not fully visible, make the navbar sticky
-        displayNavBar = entry.isIntersecting;
+        displayHeader = entry.isIntersecting;
 
       },
       {
@@ -25,11 +25,10 @@
       }
     );
 
-    navObserver.observe(showNavBar);
-    console.log(navObserver);
+    headerObserver.observe(showHeader);
 
     return () => {
-      navObserver.unobserve(showNavBar);
+      headerObserver.unobserve(showHeader);
     };
   });
 
@@ -41,11 +40,11 @@
 <div
     class="primary-header"
     bind:this={primaryHeader}
-    class:displayNavBar={displayNavBar}
-    aria-hidden={displayNavBar ? 'false' : 'true'}
+    class:displayHeader={displayHeader}
+    aria-hidden={displayHeader ? 'false' : 'true'}
 >
-    {#if displayNavBar}
-        <NoNavBar
+    {#if displayHeader}
+        <Header
             --bg-color="var(--background-main)"
             --color="var(--light-shade)"
         />
@@ -54,7 +53,7 @@
 
 <div class="stack" style="--block: 0rem; --space: 3rem">
     <Banner />
-    <div bind:this={showNavBar} id="about">
+    <div bind:this={showHeader} id="about">
         <About />
     </div>
 </div>
@@ -75,13 +74,12 @@
     //transition: ease 500ms, transform 500ms; // Apply transition to both properties
   }
 
-  .displayNavBar {
+  .displayHeader {
     display: block;
     background: #0a0c10;
     //opacity: 0; // Transition to this opacity
     //transform: translateY(-50%); // Transition to this transform
     //transition: ease 500ms, transform 500ms; // Apply transition to both properties
   }
-
 
 </style>

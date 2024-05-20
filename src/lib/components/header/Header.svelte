@@ -1,18 +1,22 @@
-<!--Note the home page has a header in the Banner component.
-header.svelte is the traditional navbar - with a <nav> like - for other page layouts-->
+<!--  Note:
+      this Header.svelte is the traditional header/nav bar
+      But the home page has it's own "header" in the Banner component.
+-->
 
 <script>
   import { fade } from 'svelte/transition';
   import ContactLinks from "./ContactLinks.svelte";
 </script>
 
-  <div class="c: nav-bar" transition:fade>
+  <div class="e: header" transition:fade>
   <div
     class="l: center | u: text-step--1"
   >
     <div class="with-sidebar">
       <div>
-        <a href="/" class="logo-link button text-only">Chris Mounsey-Logothetis</a>
+        <a href="/" class="u: w-700 | c: button text-only">Chris Mounsey-Logothetis</a>
+<!--    Space to add NavLinks component when project and blog pages are ready-->
+<!--    <slot></slot>-->
       </div>
       <ContactLinks />
     </div>
@@ -24,11 +28,8 @@ header.svelte is the traditional navbar - with a <nav> like - for other page lay
 <style lang="scss">
 
   /* LAYOUT */
-  .nav-bar {
-    position: sticky;
-    top: 0;
+  .header {
     z-index: 10;
-
     background-color: var(--bg-color, transparent);
     padding-block: 2dvh;
     min-height: var(--min-height, 50px);
@@ -37,7 +38,6 @@ header.svelte is the traditional navbar - with a <nav> like - for other page lay
   .with-sidebar {
     display: flex;
     flex-wrap: wrap-reverse;
-    align-items: center;
     column-gap: 1rem;
     row-gap: 1rem;
 
@@ -55,12 +55,6 @@ header.svelte is the traditional navbar - with a <nav> like - for other page lay
       flex-grow: 5;
       justify-content: flex-end;
     }
-  }
-
-  /* Styles for links */
-
-  .logo-link {
-    font-weight: 700;
   }
 
 </style>

@@ -72,7 +72,7 @@
 <!--///////////////// LHS //////////////////-->
 
     <div class={isMaximized ? 'screen__container maximized' : 'screen__container'}>
-        <header class={isMaximized ? 'screen max' : 'screen' }>
+        <div class={isMaximized ? 'screen max' : 'screen' }>
             <div class="e: macos-bar">
                 <ButtonsMacOS
                     {clearProjectHover}
@@ -116,7 +116,7 @@
 
         <!-- TODO add hidden <nav> so always there and consistent for screen readers-->
             {:else}
-                <div class="l: stack | u: pi-step-1"
+                <header class="l: stack | u: pi-step-1"
                      style="--block: 0; --space: var(--step-2); font-size: var(--step-0)"
                      in:fly="{{ y: -40, duration: 2000 }}">
                     <h1>Chris Mounsey-Logothetis</h1>
@@ -125,9 +125,9 @@
                     <nav>
                         <a href="/#about" class="u: in-size-fit | c: button solid">About</a>
                     </nav>
-                </div>
+                </header>
             {/if}
-        </header>
+        </div>
     </div>
 
     <!--///////////////// RHS //////////////////-->
