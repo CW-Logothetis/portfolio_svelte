@@ -1,15 +1,10 @@
 <script>
-  import NavBar from "$lib/components/navBar/NavBar.svelte";
+  import Header from "$lib/components/header/Header.svelte";
   import "$lib/scss/global.scss";
 </script>
 
-<!--
-    navBar is reused for Header and Footer so, for accessibility & semantic reasons,
-    the header and footer HTML elements are best written in this layout file as wrappers.
-    Otherwise, the navBar component would have <header> used in the footer.
--->
-<header>
-    <NavBar
+<header class="primary-header">
+    <Header
         --bg-color = "var(--background-main)"
         --color = "var(--light-shade)"
     />
@@ -18,3 +13,21 @@
 <main class="bg-background-main color-light-shade">
     <slot />
 </main>
+
+<style lang="scss">
+
+  // Would be good to have an opacity transition and for transformY to work, but that's not possible with display:block-none
+  // for now though, display:block-none is best for a11y as it hides the header visually, for keyboard users and screen readers
+  // https://kittygiraudel.com/2021/02/17/hiding-content-responsibly/
+  .primary-header {
+    position: sticky;
+    top: 0;
+    background: transparent;
+    //z-index: 1000;
+    min-height: 60px
+    //opacity: 1; // Ensure default state has opacity set for transition
+    //transform: translateY(0); // Ensure default state has transform set for transition
+    //transition: ease 500ms, transform 500ms; // Apply transition to both properties
+  }
+
+</style>

@@ -3,6 +3,7 @@
   import { fade, fly } from "svelte/transition";
   import { projectsText } from "$lib/pageText/homePage/projects";
   import ButtonsMacOS from "$lib/components/UI/ButtonsMacOS.svelte";
+  import ContactLinks from "../header/ContactLinks.svelte";
 
   $: projectHover = null;
   $: isMaximized = false;
@@ -64,14 +65,14 @@
 
 <svelte:window on:scroll={handleScroll} />
 
-<!--TODO on projectHover the navBar disappears from DOM, so user has to press red button to return it. Terrible UX.
- a focusable navBar needs adding to the MacOS bar... -->
+<!--TODO on projectHover the nav disappears from DOM, so user has to press red button to return it. Terrible UX.
+ a focusable nav needs adding to the MacOS bar... -->
 <section class="u: pbs-step-0 pi-step-5 | e: banner">
 
 <!--///////////////// LHS //////////////////-->
 
     <div class={isMaximized ? 'screen__container maximized' : 'screen__container'}>
-        <header class={isMaximized ? 'screen max' : 'screen' }>
+        <div class={isMaximized ? 'screen max' : 'screen' }>
             <div class="e: macos-bar">
                 <ButtonsMacOS
                     {clearProjectHover}
@@ -115,32 +116,18 @@
 
         <!-- TODO add hidden <nav> so always there and consistent for screen readers-->
             {:else}
-                <div class="l: stack | u: pi-step-1"
+                <header class="l: stack | u: pi-step-1"
                      style="--block: 0; --space: var(--step-2); font-size: var(--step-0)"
                      in:fly="{{ y: -40, duration: 2000 }}">
                     <h1>Chris Mounsey-Logothetis</h1>
                     <div style="margin-block-start: 0">Front-end developer</div>
-
-                    <div class="u: text-step--1 w-500 | e: contact">
-                        <a href="mailto:cwlogo@pm.me" class="u: no-underline | c: button link"> <span
-                            class="U: visually-hidden">Email:</span> cwlogo@pm.me </a>
-                        <a href="https://www.linkedin.com/in/christopher-logothetis"
-                           class="u: no-underline c: button link">
-                            <span class="u: visually-hidden">LinkedIn:</span>
-                            <i class="fab fa-linkedin" aria-hidden="true"></i>
-                        </a>
-                        <a href="https://github.com/CW-Logothetis" class="u: no-underline button link">
-                            <span class="u: visually-hidden">GitHub:</span>
-                            <i class="fab fa-github" aria-hidden="true"></i>
-                        </a>
-                    </div>
-
+                    <ContactLinks />
                     <nav>
                         <a href="/#about" class="u: in-size-fit | c: button solid">About</a>
                     </nav>
-                </div>
+                </header>
             {/if}
-        </header>
+        </div>
     </div>
 
     <!--///////////////// RHS //////////////////-->
@@ -215,7 +202,7 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    //50px is height of navBar
+    //50px is height of nav
     margin-block-start: -60px;
   }
 
@@ -301,12 +288,6 @@
     justify-content: center;
     height: 40%; /* Set the height of the title and description container re: the screen div */
     padding: 1rem;
-  }
-
-  .contact {
-    display: inline-flex;
-    align-items: center;
-    column-gap: 2rem;
   }
 
   // only want text/project cards to wrap on small screens
