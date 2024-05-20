@@ -2,7 +2,7 @@
   import { onMount } from "svelte";
   import About from "$lib/components/homePage/About.svelte";
   import Banner from "$lib/components/homePage/Banner.svelte";
-  import NoNavBar from "$lib/components/navBar/NoNavBar.svelte";
+  import NoNavBar from "$lib/components/header/NoNavBar.svelte";
 
   // Initial inspiration taken here, but then lost a lot of it when adapting for Svelte:
   // https://youtu.be/V-CBdlfCPic
@@ -62,7 +62,7 @@
 <style lang="scss">
 
   // Would be good to have an opacity transition and for transformY to work, but that's not possible with display:block-none
-  // for now though, display:block-none is best for a11y as it hides the navBar visually, for keyboard users and screen readers
+  // for now though, display:block-none is best for a11y as it hides the header visually, for keyboard users and screen readers
   // https://kittygiraudel.com/2021/02/17/hiding-content-responsibly/
   .primary-header {
     position: sticky;
