@@ -33,7 +33,7 @@ export let posts = [
     </ul>
 
     <figure>
-        <picture id="examples" >
+        <picture id="examples">
           <source 
             sizes="(max-width: 600px) calc(100vw - 32px), 2000px"
             srcset="
@@ -103,11 +103,11 @@ export let posts = [
     </picture>   
 </section>
 
-<section id="interaction">
+<section>
     <h2>Interaction States</h2>
-    <h3>Hover</h3>
+    <h3 id="interaction">Hover</h3>
     <p>On hover, I either invert the colours or add a ‘box’. For visual users, the cursor should change from defaultto pointer , which is arguably enough, but I think a clear state change in the button helps too for users whose eyesight means they might miss a cursor change. Many UI libraries like Bootstrap and Material UI use the faintest change in color or shade, which - to be fair - is easy to miss for the best of eyes. Some designers would - with justification - argue that a box is unnecessary ‘clutter’ and that contrasting colours can be off-putting. I can understand that point of view, and it’s a reason why accessibility is difficult to get “right”. The audience is broad, and we can’t please everyone, but I’d say it’s better to err on the side of being as accessible as possible over aesthetics. </p>
-    <picture>
+    <picture >
       <source 
         sizes="(max-width: 600px) calc(100vw - 32px), 2000px"
         srcset="
@@ -123,7 +123,7 @@ export let posts = [
         <a href="#interaction">&lt;a&gt;</a>
     </div>
     
-    <h3>Focus</h3>
+    <h3 id="focus-img">Focus</h3>
     <p>For the focus state I actually use focus-visible instead of focus because I only want the styles to apply when the user focuses with a keyboard or similar device, and not with a mouse selection.</p>
     <picture>
       <source 
@@ -137,21 +137,22 @@ export let posts = [
     </picture>  
        <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 2rem; margin-block: 3rem">
        <div>Examples:</div>
-        <a href="#interaction" class="u: in-size-fit button solid">Solid</a>
+        <a href="#focus-img" class="u: in-size-fit button solid">Solid</a>
         <a
             class="u: in-size-fit c: button outline"
-            href="#interaction"
+            href="#focus-img"
             aria-label="Example outline button"
         >
             Outline
         </a>
-        <a href="#interaction" class="button text-only">Text Only</a>
-        <a href="#interaction" class="button link"> <span class="visually-hidden">Email:</span>Link</a>
-        <a href="#interaction">&lt;a&gt;</a>
+        <a href="#focus-img" class="button text-only">Text Only</a>
+        <a href="#focus-img" class="button link"> <span class="visually-hidden">Email:</span>Link</a>
+        <a href="#focus-img">&lt;a&gt;</a>
     </div>
     <p>The key advantage of :focus-visible is that it prevents focus styles from appearing when interacting with a mouse or touch. Contrary to above, this crosses my own line as to aesthetics and cluttering the interface unnecessarily - maybe I’m wrong? But I prefer sticking with focus for form inputs, check boxes and toggles. These inputs aren’t to effect navigation; instead, the user clicks and something dynamic probably happen in the UI, so we want to clearly show that the element is ready for further interaction.</p>
     <p>Style-wise, as well as the glaring yellow, I settled on a dashed outline to make it doubly clear to the user that the keyboard (or other non-mouse device) was focused on the element.</p>
-    <h3>Focus-visible and hover</h3>
+    
+    <h3 id="focus-visible">Focus-visible and hover</h3>
      <picture>
           <source 
             sizes="(max-width: 1156px) 100vw, 1156px" 
@@ -165,17 +166,17 @@ export let posts = [
     <p>On the vast majority of sites or apps I’ve visited, if you use the keyboard to focus on an element, then hover over it with the mouse, nothing changes. Admittedly, this isn’t going to be an everyday occurrence because most users don’t user keyboard AND mouse, so I wonder if it causes much of an accessibility issue. But it bugs me a little that this state change is largely ignored, so I thought it doesn’t hurt to enable it.</p>
        <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 2rem; margin-block: 3rem">
        <div>Examples:</div>
-        <a href="#interaction" class="u: in-size-fit button solid">Solid</a>
+        <a href="#focus-visible" class="u: in-size-fit button solid">Solid</a>
         <a
             class="u: in-size-fit c: button outline"
-            href="#interaction"
+            href="#focus-visible"
             aria-label="Example outline button"
         >
             Outline
         </a>
-        <a href="#interaction" class="button text-only">Text Only</a>
-        <a href="#interaction" class="button link"> <span class="visually-hidden">Email:</span>Link</a>
-        <a href="#interaction">&lt;a&gt;</a>
+        <a href="#focus-visible" class="button text-only">Text Only</a>
+        <a href="#focus-visible" class="button link"> <span class="visually-hidden">Email:</span>Link</a>
+        <a href="#focus-visible">&lt;a&gt;</a>
     </div>
     <h3>Active</h3>
     <p>Active is a bit of an odd choice of word given that it can just last a split second and is superseded by focus. Indeed, when clicking a link to navigate away, the active state may not even be noticed by the user. Rather unsurprisingly then, a lot of sites don’t bother with a discernible active state for navigation buttons and links, or don’t add an active state at all. (Check boxes and toggles would be an obvious exception, but for my current site I’m just looking at anchors and ‘navigation’ buttons.)</p>
@@ -207,7 +208,7 @@ export let posts = [
         />
       <img loading="lazy" height="118" width="1302" src="/blog_images/screenshot_anchor_squoosh.png" alt="Screenshot of anchor elements with basic styling"/>
     </picture> 
-       <p>Here’s an <a href="#specifics">anchor link</a> to hover over and give focus to.</p>
+       <p>Here’s an <a href="#specifics">anchor link</a> to hover over, or click, and give focus to.</p>
     <p>By default, it looks like a typical hyperlink. A lot of designers dislike the blue and the underline. The blue we can soften and change to any highly contrasting colour, but the underline should really remain;  WCAG requires controls to be distinguishable and, if you’re colour blind, hyperlinks only shown by colour change might be easily missed.</p>
     <p>On hover, some design systems just remove the line, which to be fair is quite an obvious change, but I prefer a border box around it. Saying that, I actually use outline here as a border would really hug the text, but adding a bit of space around it would require padding. If the padding is only on the hover, then the whole layout of surrounding text will shift on hover (pretty ugly and annoying for the user), and if the padding is always there, then even without hover, the hyperlink text has extra white space around it. Outline solves this as its offset property doesn’t affect surrounding elements.</p>
     <pre>&amp;:hover {
