@@ -1,14 +1,14 @@
-<!--This is an old navBar with a <nav> for Projects and blog-->
+<!--This is an old header with a <nav> for Projects and blog-->
 <!--The <nav> is not used whilst the Projects and blog pages are re-designed -->
 
 <script>
   import { fade } from 'svelte/transition';
+  import ContactLinks from "./ContactLinks.svelte";
 </script>
 
   <div class="c: nav-bar" transition:fade>
   <div
     class="l: center | u: text-step--1"
-    style=""
   >
     <div class="with-sidebar">
       <div>
@@ -18,18 +18,7 @@
 <!--          <a href="/projects" class="nav-link">projects</a>-->
 <!--        </nav>-->
       </div>
-
-      <div class="u: text-step--1 w-500 | c: contact">
-        <a href="mailto:cwlogo@pm.me"> <span class="visually-hidden">Email:</span> cwlogo@pm.me</a>
-        <a href="https://www.linkedin.com/in/christopher-logothetis">
-          <span class="visually-hidden">LinkedIn:</span>
-          <i class="fab fa-linkedin" aria-hidden="true"></i>
-        </a>
-        <a href="https://github.com/CW-Logothetis">
-          <span class="visually-hidden">GitHub:</span>
-          <i class="fab fa-github" aria-hidden="true"></i>
-        </a>
-      </div>
+      <ContactLinks />
     </div>
   </div>
 
@@ -71,7 +60,7 @@
     }
   }
 
-  nav, .contact {
+  nav {
     display: inline-flex;
     align-items: center;
     column-gap: 2rem;
@@ -113,18 +102,6 @@
 
   .nav-link {
     font-weight: 500;
-  }
-
-  .contact > a {
-    color: var(--anchor);
-  }
-
-  .contact > a:hover {
-    color: var(--light);
-  }
-
-  .contact > a:focus-visible {
-    color: var(--primary);
   }
 
 </style>

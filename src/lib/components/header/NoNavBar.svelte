@@ -1,33 +1,20 @@
-<!--
-Note the home page has a navBar in the Banner component.
-navBar.svelte is the traditional navbar - with a <nav> like - for other page layouts-->
+<!--Note the home page has a header in the Banner component.
+header.svelte is the traditional navbar - with a <nav> like - for other page layouts-->
 
 <script>
   import { fade } from 'svelte/transition';
-
+  import ContactLinks from "./ContactLinks.svelte";
 </script>
 
   <div class="c: nav-bar" transition:fade>
   <div
     class="l: center | u: text-step--1"
-    style=""
   >
     <div class="with-sidebar">
       <div>
         <a href="/" class="logo-link button text-only">Chris Mounsey-Logothetis</a>
       </div>
-
-      <div class="u: text-step--1 w-500 | c: contact">
-        <a href="mailto:cwlogo@pm.me" class=" c: button link"> <span class="u: visually-hidden">Email:</span> cwlogo@pm.me</a>
-        <a href="https://www.linkedin.com/in/christopher-logothetis" class="c: button link">
-          <span class="visually-hidden">LinkedIn:</span>
-          <i class="fab fa-linkedin" aria-hidden="true"></i>
-        </a>
-        <a href="https://github.com/CW-Logothetis" class="c: button link">
-          <span class="visually-hidden">GitHub:</span>
-          <i class="fab fa-github" aria-hidden="true"></i>
-        </a>
-      </div>
+      <ContactLinks />
     </div>
   </div>
 
@@ -68,12 +55,6 @@ navBar.svelte is the traditional navbar - with a <nav> like - for other page lay
       flex-grow: 5;
       justify-content: flex-end;
     }
-  }
-
-  .contact {
-    display: inline-flex;
-    align-items: center;
-    column-gap: 2rem;
   }
 
   /* Styles for links */
