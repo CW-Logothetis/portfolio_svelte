@@ -215,22 +215,17 @@
 
   .enlarge {
     transition: transform 0.1s ease, background-color 0.5s ease;
+    padding-block: 2rem;
   }
 
   .enlargeCurrentRole {
     background-color: rgba(0, 0, 0, 0.68);
     color: var(--light);
-    padding-block: 2rem;
   }
 
   @media (min-width: 900px) {
     .enlarge {
-      padding: 2rem;
-      border-radius: 20px;
-    }
-
-    .enlargeCurrentRole {
-      padding: 2rem;
+      padding-inline: 2rem;
       border-radius: 20px;
     }
   }
