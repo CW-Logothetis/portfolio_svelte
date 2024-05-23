@@ -1,7 +1,7 @@
 <script>
   import { goto } from "$app/navigation";
   import { fade, fly } from "svelte/transition";
-  import { projectsText } from "$lib/pageText/homePage/projects";
+  import { blogsText, projectsText } from "$lib/pageText/homePage/projects";
   import ButtonsMacOS from "$lib/components/UI/ButtonsMacOS.svelte";
   import ContactLinks from "../header/ContactLinks.svelte";
 
@@ -134,9 +134,35 @@
 <!-- next gen images won't work in IE, so use url() then image-set(url())
      https://developer.mozilla.org/en-US/docs/Web/CSS/image/image-set -->
     <div class="e: projects">
-        <h2>Projects & Posts</h2>
+        <h2 class="u: text-step-2">Projects</h2>
         <div class="u: mbs-step--2 | e: flex-grid">
             {#each projectsText.projects as project (project)}
+                <div
+                    on:mouseover|stopPropagation={() => handleMouseOver(project)}
+                    on:mouseout={handleMouseOut}
+                    on:focus={() => handleMouseOver(project)}
+                    on:blur={handleMouseOut}
+                    on:click={() => navigateToProject(project)}
+                    on:keyup={(event) => handleKeyUp(event, project)}
+                    class="e: card bg {project.bg}"
+                    style="
+                        background-image: url({project.thumbnail_fallback});
+                        background-image: image-set(url({project.thumbnail_next_gen}));
+                    "
+                    aria-label={`Details about ${project.title}`}
+                    role="button"
+                    tabindex="0"
+                >
+                    <article class="u: bg-background-secondary | e: card__text {project.card_bg}">
+                        <div class="u: text-step--1">{project.title}</div>
+                    </article>
+                </div>
+            {/each}
+        </div>
+
+        <h2 class="u: mbs-step-5 text-step-2">Blog Posts</h2>
+        <div class="u: mbs-step--2 | e: flex-grid">
+            {#each blogsText.projects as project (project)}
                 <div
                     on:mouseover|stopPropagation={() => handleMouseOver(project)}
                     on:mouseout={handleMouseOut}
@@ -311,12 +337,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 4% 2%;
+    margin: 2%;
     padding: var(--step-0);
     border-radius: var(--radius-l);
     border: solid 3px grey;
     transition: transform .4s;
-    height: 250px;
+    height: 210px;
     width: 200px;
     cursor: pointer;
     background-size: cover;

@@ -40,6 +40,44 @@ export let posts = [
     },
     {
         name: 'Blog',
+        blog_post_title: 'Designs for an LLM Negotiator',
+        post_seo_title: 'a new user flow using an LLM to show user\'s issues in draft contracts that they can raise with the other party.',
+        post_language: 'en',
+        slug: 'llm-contract-negotiation',
+        author: 'CW',
+        tags: ['LLM', 'Svelte', 'Figma'],
+        meta_description:
+          'a new user flow using an LLM to show user\'s issues in draft contracts that they can raise with the other party.',
+        published_date: '2024-05-23 12:01:18',
+        last_modified_date: '2024-05-23T08:02:43.193Z',
+        featured_image_url: '$lib/enhanced_img/prompt_comparison/prompt_comparison_history.png?enhanced',
+        image01: '',
+        status: 'PUBLISHED',
+        archived: false,
+        post_body: `
+            <picture>
+              <source 
+                sizes="(max-width: 1019px) 100vw, 1019px"
+                srcset="
+                        /home_page/llm_negotiator/issue_card_SQUOOSH_veoech_c_scale,w_460.webp 460w,
+                        /home_page/llm_negotiator/issue_card_SQUOOSH_veoech_c_scale,w_693.webp 693w,
+                        /home_page/llm_negotiator/issue_card_SQUOOSH_veoech_c_scale,w_827.webp 827w,
+                        /home_page/llm_negotiator/issue_card_SQUOOSH_veoech_c_scale,w_971.webp 971w,
+                        /home_page/llm_negotiator/issue_card_SQUOOSH_veoech_c_scale,w_1019.webp 1019w"
+                type="image/webp"
+                />
+              <img loading="lazy" height="570" width="1019" src="/home_page/llm_negotiator/issue_card_SQUOOSH.png" alt="Screenshot of Silktide accessibility Chrome Extension showing statistics for how many people have varying forms of colour-blindness."/>
+            </picture>
+            <p>Here's a <a href="https://www.cognitivplus.com/blog/llm_negotiator-ai">post</a> I recently wrote on our company blog about our upcoming Contract Negotiator feature.</p>
+            <p>I've been given the task of working with the CEO to design a way for users to be notified about issues in a contract. I made wireframes in Figma then a SvelteKit front end.</p>
+            <p>I also added a SvelteKit back end to contract two Mistral models, so that we could get a feel for the process.</p>
+            <p>But in production it will connect to our own fine-tuned model and token pricing will be adjusted.</p>
+            <p>One challenge was a collision pattern for the issue cards. They should hover next to the relevant bit of text, but if there's an overlap (aka a collision), they move down.</p>
+            <p>You can read the full post on the company blog <a href="https://www.cognitivplus.com/blog/prompt-comparison">here</a>.</p>
+        `
+    },
+    {
+        name: 'Blog',
         blog_post_title: '...on buttons and accessibility',
         post_seo_title: 'Designing Accessible buttons for navigation',
         post_language: 'en',

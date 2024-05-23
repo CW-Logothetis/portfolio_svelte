@@ -55,6 +55,14 @@ const projectsText = {
       bg: "cognitiv",
       card_bg: "project_bg"
     },
+  ]
+};
+
+const blogsText = {
+
+  heading: "Blog",
+  intro: "Posts about work or personal projects.",
+  projects: [
     {
       thumbnail_fallback: "/home_page/buttons/all_buttons_thumbnail_squoosh.png",
       thumbnail_next_gen: "/home_page/buttons/all_buttons_thumbnail_squoosh.webp",
@@ -82,7 +90,7 @@ const projectsText = {
       picture: {
         sizes: "(max-width: 1040px) 100vw, 1040px",
         srcset: "/home_page/prompt-comp/prompt_history_w_460.webp 460w," +
-                "/home_page/prompt-comp/prompt_history_w_1040.webp 1040w,",
+          "/home_page/prompt-comp/prompt_history_w_1040.webp 1040w,",
         type: "image/webp",
         height: "548",
         width: "1040",
@@ -96,7 +104,29 @@ const projectsText = {
       bg: "theatres",
       card_bg: "blog_bg"
     },
+    {
+      thumbnail_fallback: "/home_page/llm_negotiator/issue_card_THUMBNAIL.png",
+      thumbnail_next_gen: "/home_page/llm_negotiator/issue_card_THUMBNAIL.webp",
+      picture: {
+        sizes: "(max-width: 1019px) 100vw, 1019px",
+        srcset:
+                "/home_page/llm_negotiator/issue_card_SQUOOSH_veoech_c_scale,w_460.webp 460w," +
+                "/home_page/llm_negotiator/issue_card_SQUOOSH_veoech_c_scale,w_693.webp 693w," +
+                "/home_page/llm_negotiator/issue_card_SQUOOSH_veoech_c_scale,w_827.webp 827w,",
+        type: "image/webp",
+        height: "570",
+        width: "1019",
+        fallback_img: "/home_page/llm_negotiator/issue_card_SQUOOSH.png",
+        alt: "screenshot of a blog post about designing a contract negotiation tool with an LLM."
+      },
+      title: "Designs for an LLM Negotiator",
+      description: "a new user flow using an LLM to show user's issues in draft contracts that they can raise with the other party.",
+      stack: "SvelteKit | LLM | Figma",
+      url: "../blog/llm-contract-negotiation",
+      bg: "theatres",
+      card_bg: "blog_bg"
+    },
   ]
-};
+}
 
-export { projectsText };
+export { blogsText, projectsText };
