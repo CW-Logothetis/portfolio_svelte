@@ -83,7 +83,7 @@
             {#if projectHover}
                 <div class="c: bg {projectHover.bg} | e: project-info ">
                     <div class="e: project-image-container">
-                        <!-- `{#key}` block forces Svelte to recreate the `<enhanced_img>` if `projectHover.image` changes
+                        <!-- `{#key}` block forces Svelte to recreate the `<img>` if `projectHover.image` changes
                               i.e. it's a completely new element and thus triggers the fade transition.-->
                         <!-- Without the #key, the image will only fade in when projectHover is first set to true,
                              and not when projectHover.image changes if user hovers over another card.-->
@@ -340,7 +340,6 @@
   }
 
   .card__text {
-    background: linear-gradient(220deg, rgba(61, 48, 143, 1) 0%, rgba(37, 75, 221, 1) 100%);
     border-radius: 10px;
     padding: 7%;
     color: white;
