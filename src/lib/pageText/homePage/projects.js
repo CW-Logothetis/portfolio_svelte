@@ -34,27 +34,6 @@ const projectsText = {
       card_bg: "project_bg"
     },
     {
-      thumbnail_fallback: "/home_page/buttons/all_buttons_thumbnail_squoosh.png",
-      thumbnail_next_gen: "/home_page/buttons/all_buttons_thumbnail_squoosh.webp",
-      picture: {
-        sizes: "(max-width: 1122px) 100vw, 1122px",
-        srcset: "/home_page/buttons/all_buttons_squoosh_flxrc5_c_scale,w_200.webp 200w, " +
-                "/home_page/buttons/all_buttons_squoosh_flxrc5_c_scale,w_750.webp 750w, " +
-                "/home_page/buttons/all_buttons_squoosh_flxrc5_c_scale,w_1122.webp 1122w",
-        type: "image/webp",
-        height: "786",
-        width: "1122",
-        fallback_img: "/home_page/buttons/all_buttons_squoosh.png",
-        alt: "screenshot of a blog post about accessible links and links that are styled as buttons."
-      },
-      title: "...on buttons",
-      description: "Best practice for accessible navigation 'buttons'.",
-      stack: "a11y",
-      url: "../blog/a11y-navigation-buttons",
-      bg: "theatres",
-      card_bg: "blog_bg"
-    },
-    {
       thumbnail_fallback: "/home_page/flashcards/flashcards_thumbnail_squoosh.png",
       thumbnail_next_gen: "/home_page/flashcards/flashcards_thumbnail_squoosh.webp",
       picture: {
@@ -76,14 +55,47 @@ const projectsText = {
       bg: "cognitiv",
       card_bg: "project_bg"
     },
-    // {
-    //   image: "/theatres-landscape.png",
-    //   title: "Ancient Theatres",
-    //   description: "Mobile-first web design, with Vanilla JS components.",
-    //   stack: "Vanilla JS & CSS",
-    //   url: "../ancient-theatres",
-    //   bg: "theatres"
-    // }
+    {
+      thumbnail_fallback: "/home_page/buttons/all_buttons_thumbnail_squoosh.png",
+      thumbnail_next_gen: "/home_page/buttons/all_buttons_thumbnail_squoosh.webp",
+      picture: {
+        sizes: "(max-width: 1122px) 100vw, 1122px",
+        srcset: "/home_page/buttons/all_buttons_squoosh_flxrc5_c_scale,w_200.webp 200w, " +
+          "/home_page/buttons/all_buttons_squoosh_flxrc5_c_scale,w_750.webp 750w, " +
+          "/home_page/buttons/all_buttons_squoosh_flxrc5_c_scale,w_1122.webp 1122w",
+        type: "image/webp",
+        height: "786",
+        width: "1122",
+        fallback_img: "/home_page/buttons/all_buttons_squoosh.png",
+        alt: "screenshot of a blog post about accessible links and links that are styled as buttons."
+      },
+      title: "...on buttons",
+      description: "Best practice for accessible navigation 'buttons'.",
+      stack: "a11y",
+      url: "../blog/a11y-navigation-buttons",
+      bg: "theatres",
+      card_bg: "blog_bg"
+    },
+    {
+      thumbnail_fallback: "/home_page/prompt-comp/prompt_history_SQUOOSH.png",
+      thumbnail_next_gen: "/home_page/prompt-comp/prompt_history.webp",
+      picture: {
+        sizes: "(max-width: 1040px) 100vw, 1040px",
+        srcset: "/home_page/prompt-comp/prompt_history_w_460.webp 460w," +
+                "/home_page/prompt-comp/prompt_history_w_1040.webp 1040w,",
+        type: "image/webp",
+        height: "548",
+        width: "1040",
+        fallback_img: "/home_page/prompt-comp/prompt_history_SQUOOSH.png",
+        alt: "screenshot of a blog post about building a prompt comparison tool."
+      },
+      title: "Building a Prompt Comparison Tool",
+      description: "a SvelteKit tool to evaluate large language models (LLMs) for contract issue identification and other functionalities at Cognitiv+",
+      stack: "SvelteKit | LLM",
+      url: "../blog/prompt-comparison-tool",
+      bg: "theatres",
+      card_bg: "blog_bg"
+    },
   ]
 };
 

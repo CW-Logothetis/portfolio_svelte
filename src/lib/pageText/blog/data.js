@@ -1,6 +1,45 @@
 export let posts = [
     {
         name: 'Blog',
+        blog_post_title: 'Building a Prompt Comparison tool',
+        post_seo_title: 'Building an internal Prompt Comparison tool with SvelteKit',
+        post_language: 'en',
+        slug: 'prompt-comparison-tool',
+        author: 'CW',
+        tags: ['LLM', 'Svelte'],
+        meta_description:
+          'a SvelteKit tool to evaluate large language models (LLMs) for contract issue identification and other functionalities at Cognitiv+',
+        published_date: '2024-05-22 12:01:18',
+        last_modified_date: '2024-05-22T08:02:43.193Z',
+        featured_image_url: '$lib/enhanced_img/prompt_comparison/prompt_comparison_history.png?enhanced',
+        image01: '',
+        status: 'PUBLISHED',
+        archived: false,
+        post_body: `
+            <picture>
+              <source 
+                sizes=""
+                srcset="
+                    /blog_images/prompt_comparison/prompt_comparison_history.png"
+                type="image/webp"
+                />
+              <img loading="lazy" height="548" width="1040" src="/blog_images/prompt_comparison/prompt_comparison_history.png" alt="Screenshot of Silktide accessibility Chrome Extension showing statistics for how many people have varying forms of colour-blindness."/>
+            </picture>
+            <p>Here's a <a href="https://www.cognitivplus.com/blog/prompt-comparison">post</a> I recently wrote on our company blog about our internal prompt comparison tool.</p>
+            <p>In summary, I've been given the task of designing and building a new tool using SvelteKit to evaluate the performance of large language models (LLMs).</p>
+            <p>The first iteration of tool uses human evaluation to judge the reasoning and accuracy of the LLM. Basically, "how good a lawyer is this LLM?".</p>
+            <p>We need to test different models with "mega-prompts" that include extensive checklists, guidelines, and examples. As an old world guide, the prompts could be two or three sheets of A4. And we want to test each prompt with different parameters on different models. Then we want to iterate on the prompt to compare results.</p>
+            <p>Our CEO and I, both ex-lawyers, have started human evaluations to categorize results. Using a simple score of -2 to 2, we can then filter good prompts by model or parameter and compare their results to see if the iteration is better or worse, and in time these can be fed back to our ML team.</p>
+            <p>I built the tool with SvelteKit, which is what we use for our production web app. The front-end has two pages: a prompt page and a history page. The back end is responsible for managing the API endpoints that interact with various LLMs. At the moment, we're running it locally and exporting to CSV, but we've a couple of improvements in the pipeline.</p>
+            <ul>
+            <li><strong>Evaluation Suite:</strong> A comprehensive evaluation process involving test responses, secondary LLM reviews, and LLM-generated scores, with less frequent human oversight to ensure accuracy.</li>
+            <li><strong>Side-by-side comparison:</strong> Being able to open up two or three previous prompt results from the same prompt, but maybe with different models and/or parameters, to judge which gave the best result. This will be especially helpful when we have our fine-tuned model ready; to compare it to the original LLM, and to compare it to previous versions of itself.</li>
+            </ul>
+            <p>You can read the full post on the company blog <a href="https://www.cognitivplus.com/blog/prompt-comparison">here</a>.</p>
+        `
+    },
+    {
+        name: 'Blog',
         blog_post_title: '...on buttons and accessibility',
         post_seo_title: 'Designing Accessible buttons for navigation',
         post_language: 'en',
@@ -11,6 +50,10 @@ export let posts = [
           'Designing accessible buttons involves looking at colour schemes, interaction states and ARIA labelling. Small choices in button design can increase accessibility and improve user experience for a diverse audience.',
         published_date: '2024-04-24 12:01:18',
         last_modified_date: '2024-04-24T08:02:43.193Z',
+        featured_image_url: '$lib/enhanced_img/text/featured_images/risks_of_bidding.jpg?enhanced',
+        image01: '',
+        status: 'PUBLISHED',
+        archived: false,
         post_body: `
 <section>
     <h2>Introduction</h2>
@@ -281,13 +324,9 @@ export let posts = [
 
 <section>
     <h2>Summary</h2>
-    <p>There’s a lot of nuance even in the design of anchor buttons, and it underscores the work needed for inclusive web development.</p> 
+    <p>There’s a lot of nuance even in the sign of anchor buttons, and it underscores the work needed for inclusive web development.</p> 
     <p>I’d be surprised if everything here is 100% a11y best practice because it's no simple matter. But at least by double-checking colour usage, interaction states and ARIA labeling we can try to improve the user experience for everyone.</p>
 </section>      
-        `,
-        featured_image_url: '$lib/enhanced_img/text/featured_images/risks_of_bidding.jpg?enhanced',
-        image01: '',
-        status: 'PUBLISHED',
-        archived: false
+        `
     }
 ];
