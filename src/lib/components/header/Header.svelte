@@ -8,7 +8,7 @@
   import ContactLinks from "./ContactLinks.svelte";
 </script>
 
-  <div class="e: header" transition:fade>
+  <div class="e: header" transition:fade|global>
   <div
     class="l: center | u: text-step--1"
   >
