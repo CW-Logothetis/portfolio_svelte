@@ -55,6 +55,14 @@ const projectsText = {
       bg: "cognitiv",
       card_bg: "project_bg"
     },
+  ]
+};
+
+const blogsText = {
+
+  heading: "Blog",
+  intro: "Posts about work or personal projects.",
+  projects: [
     {
       thumbnail_fallback: "/home_page/buttons/all_buttons_thumbnail_squoosh.png",
       thumbnail_next_gen: "/home_page/buttons/all_buttons_thumbnail_squoosh.webp",
@@ -82,7 +90,7 @@ const projectsText = {
       picture: {
         sizes: "(max-width: 1040px) 100vw, 1040px",
         srcset: "/home_page/prompt-comp/prompt_history_w_460.webp 460w," +
-                "/home_page/prompt-comp/prompt_history_w_1040.webp 1040w,",
+          "/home_page/prompt-comp/prompt_history_w_1040.webp 1040w,",
         type: "image/webp",
         height: "548",
         width: "1040",
@@ -97,6 +105,6 @@ const projectsText = {
       card_bg: "blog_bg"
     },
   ]
-};
+}
 
-export { projectsText };
+export { blogsText, projectsText };
