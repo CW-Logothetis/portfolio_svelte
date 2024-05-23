@@ -96,7 +96,7 @@
                                 />
                                 <img
                                     class="e: project-image"
-                                    in:fade="{{ duration: 200 }}"
+                                    in:fade|global="{{ duration: 200 }}"
                                     loading="lazy"
                                     height={projectHover.picture.height}
                                     width={projectHover.picture.width}
@@ -120,7 +120,7 @@
             {:else}
                 <header class="l: stack | u: pi-step-1"
                      style="--block: 0; --space: var(--step-2); font-size: var(--step-0)"
-                     in:fly="{{ y: -40, duration: 2000 }}">
+                     in:fly|global="{{ y: -40, duration: 2000 }}">
                     <h1>Chris Mounsey-Logothetis</h1>
                     <div style="margin-block-start: 0">Front-end developer</div>
                     <ContactLinks />
