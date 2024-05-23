@@ -74,10 +74,12 @@
     </header>
 
     <div class="l: center flow" style="--center-max-inline-size: 80ch">
-        <div class="l: stack" style="--block: 0rem; --space: 0rem" id="blog_content">
+        <div class="l: stack" style="--block: 1rem; --space: 1rem" id="blog_content">
             {@html post_body}
         </div>
     </div>
+
+    <footer style="min-height: 100px"></footer>
 </article>
 
 <style lang="scss">
