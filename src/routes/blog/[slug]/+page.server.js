@@ -12,7 +12,7 @@ export function load({params}) {
     const prev = (post !== posts.length - 1) ? posts[index + 1]: undefined;
     const next = (post !== 0) ? posts[index - 1]: undefined;
 
-    if (!post) throw error(404);
+    if (!post) error(404);
     
     return {post, prev, next};
 }
