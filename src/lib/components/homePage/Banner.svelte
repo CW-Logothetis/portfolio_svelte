@@ -108,9 +108,11 @@
                     </div>
                     <div class="l: stack | e: project-title-description" style="--block: 0.5rem; --space: 0">
                         <h3 class="u: text-step-1">{projectHover.title}</h3>
-                        <p>{projectHover.description}</p>
-                        <p class="u: text-step--1">{projectHover.stack}</p>
-                        <a href="{projectHover.url}" class="u: in-size-fit | c: button link">Read the post &gt;</a>
+                        <p class="u: text-step-0">{projectHover.description}</p>
+                        <div style="display: flex; align-items: center; justify-content: space-between">
+                            <p class="u: text-step--1">{projectHover.stack}</p>
+                            <a href="{projectHover.url}" class="u: in-size-fit | c: button link">Read the post &gt;</a>
+                        </div>
                     </div>
                 </div>
 
@@ -312,7 +314,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 40%; /* Set the height of the title and description container re: the screen div */
+    height: 60%; /* Set the height of the title and description container re: the screen div */
     padding: 1rem;
   }
 

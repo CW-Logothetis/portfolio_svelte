@@ -5,10 +5,10 @@
     --step--2: clamp(0.7rem, 0.7rem + 0.05vw, 0.72rem);
 
     /* Step -1: 13.33px → 14.40px */
-    --step--1: clamp(0.8331rem, 0.8099rem + 0.1163vw, 0.9rem);
+    --step--1: clamp(0.8331rem, 0.7099rem + 0.05vw, 0.9rem);
 
     /* Step 0: 16.00px → 18.00px */
-    --step-0: clamp(1rem, 0.9565rem + 0.2174vw, 1.125rem);
+    --step-0: clamp(0.8rem, 0.8565rem + 0.2174vw, 1.125rem);
 
     /* Step 1: 19.20px → 22.50px */
     --step-1: clamp(1.2rem, 1.1283rem + 0.3587vw, 1.4063rem);
