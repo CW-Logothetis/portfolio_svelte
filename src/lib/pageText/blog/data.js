@@ -69,11 +69,13 @@ export let posts = [
               <img loading="lazy" height="570" width="1019" src="/home_page/llm_negotiator/issue_card_SQUOOSH.png" alt="Screenshot of Silktide accessibility Chrome Extension showing statistics for how many people have varying forms of colour-blindness."/>
             </picture>
             <p>Here's a <a href="https://www.cognitivplus.com/blog/llm_negotiator-ai">post</a> I recently wrote on our company blog about our upcoming Contract Negotiator feature.</p>
-            <p>I've been given the task of working with the CEO to design a way for users to be notified about issues in a contract. I made wireframes in Figma then a SvelteKit front end.</p>
-            <p>I also added a SvelteKit back end to contract two Mistral models, so that we could get a feel for the process.</p>
-            <p>But in production it will connect to our own fine-tuned model and token pricing will be adjusted.</p>
-            <p>One challenge was a collision pattern for the issue cards. They should hover next to the relevant bit of text, but if there's an overlap (aka a collision), they move down.</p>
-            <p>You can read the full post on the company blog <a href="https://www.cognitivplus.com/blog/prompt-comparison">here</a>.</p>
+            <p>I've been given the task of working with the CEO to design a way for users to be notified about issues in a contract. I made wireframes in Figma then a SvelteKit front end. I also added a SvelteKit back end to contract two Mistral models, so that we could get a feel for the process. But in production it will connect to our own fine-tuned model and token pricing will be adjusted.</p>
+            <h3>Front-end challenge - Collision</h3>
+            <p>One interesting change to our current app was a collision detection implementation for the issue cards.</p>
+            <p>In our production Review app, the insight cards all stack on top of each other, and if a user clicks one, the contract scrolls to the correct place. It's fine, it works, but we wanted to add cards at the right place, like comments in say Word or Google Docs. And then we'd give up and down arrows to move through the cards and scroll the page and the cards at the same time.</p>
+            <p>But what if there's a place in the contract with two issues together or close? Then the cards would overlap. Here, I used getBoundingClientRect in a map of the cards to move a card down, or move down a selection of cards if needs be.</p>
+            <p>Our back-end team first needs to ensure that the ID of the sentence or section that went to the LLM and generated that issue is then inserted into that issue. Then, in the front end, I match the IDs in the contract and the cards, ensuring that the tops of each element are level, unless there's an overlap.</p>
+            <p>You can read the full post about the upcoming feature on the company blog <a href="https://www.cognitivplus.com/blog/prompt-comparison">here</a>.</p>
         `
     },
     {
