@@ -31,7 +31,7 @@ const projectsText = {
       stack: "SvelteKit | GraphQL",
       url: "../projects/cognitiv-web-app",
       bg: "cognitiv",
-      card_bg: "project_bg"
+      card_bg: "blog_bg"
     },
     {
       thumbnail_fallback: "/home_page/flashcards/flashcards_thumbnail_squoosh.png",
@@ -53,7 +53,7 @@ const projectsText = {
       stack: "React Router",
       url: "../projects/method-minder",
       bg: "cognitiv",
-      card_bg: "project_bg"
+      card_bg: "blog_bg"
     },
   ]
 };
@@ -97,8 +97,8 @@ const blogsText = {
         fallback_img: "/home_page/prompt-comp/prompt_history_SQUOOSH.png",
         alt: "screenshot of a blog post about building a prompt comparison tool."
       },
-      title: "Building a Prompt Comparison Tool",
-      description: "a SvelteKit tool to evaluate large language models (LLMs) for contract issue identification and other functionalities at Cognitiv+",
+      title: "Prompt Evaluation",
+      description: "a SvelteKit tool to evaluate LLMs for contract issues",
       stack: "SvelteKit | LLM",
       url: "../blog/prompt-comparison-tool",
       bg: "theatres",
@@ -120,7 +120,7 @@ const blogsText = {
         alt: "screenshot of a blog post about designing a contract negotiation tool with an LLM."
       },
       title: "Designs for an LLM Negotiator",
-      description: "a new user flow using an LLM to show user's issues in draft contracts that they can raise with the other party.",
+      description: "using LLMs to help users negotiate draft contracts.",
       stack: "SvelteKit | LLM | Figma",
       url: "../blog/llm-contract-negotiation",
       bg: "theatres",
