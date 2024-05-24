@@ -83,11 +83,11 @@
             {#if projectHover}
                 <div class="c: bg {projectHover.bg} | e: project-info ">
                     <div class="e: project-image-container">
-                        <!-- `{#key}` block forces Svelte to recreate the `<img>` if `projectHover.image` changes
+                        <!-- `{#key}` block forces Svelte to recreate the `<img>` if `projectHover.picture` changes
                               i.e. it's a completely new element and thus triggers the fade transition.-->
                         <!-- Without the #key, the image will only fade in when projectHover is first set to true,
-                             and not when projectHover.image changes if user hovers over another card.-->
-                        {#key projectHover.image}
+                             and not when projectHover.picture changes if user hovers over another card.-->
+                        {#key projectHover.picture}
                             <picture>
                                 <source
                                     sizes={projectHover.picture.sizes}
@@ -96,7 +96,7 @@
                                 />
                                 <img
                                     class="e: project-image"
-                                    in:fade|global="{{ duration: 200 }}"
+                                    in:fade="{{ duration: 200 }}"
                                     loading="lazy"
                                     height={projectHover.picture.height}
                                     width={projectHover.picture.width}
@@ -139,6 +139,7 @@
         <h2 class="u: text-step-2">Projects</h2>
         <div class="u: mbs-step--2 | e: flex-grid">
             {#each projectsText.projects as project (project)}
+             <!-- TODO create proper resolution thumbnails -->
                 <div
                     on:mouseover|stopPropagation={() => handleMouseOver(project)}
                     on:mouseout={handleMouseOut}
@@ -147,16 +148,17 @@
                     on:click={() => navigateToProject(project)}
                     on:keyup={(event) => handleKeyUp(event, project)}
                     class="e: card bg {project.bg}"
+                   
                     style="
-                        background-image: url({project.thumbnail_fallback});
-                        background-image: image-set(url({project.thumbnail_next_gen}));
+                        <!-- background-image: url({project.thumbnail_fallback}); -->
+                        <!-- background-image: image-set(url({project.thumbnail_next_gen})); -->
                     "
                     aria-label={`Details about ${project.title}`}
                     role="button"
                     tabindex="0"
                 >
                     <article class="u: bg-background-secondary | e: card__text {project.card_bg}">
-                        <div class="u: text-step--1">{project.title}</div>
+                        <div class="u: text-step-0">{project.title}</div>
                     </article>
                 </div>
             {/each}
@@ -174,15 +176,15 @@
                     on:keyup={(event) => handleKeyUp(event, project)}
                     class="e: card bg {project.bg}"
                     style="
-                        background-image: url({project.thumbnail_fallback});
-                        background-image: image-set(url({project.thumbnail_next_gen}));
+                        <!-- background-image: url({project.thumbnail_fallback}); -->
+                        <!-- background-image: image-set(url({project.thumbnail_next_gen})); -->
                     "
                     aria-label={`Details about ${project.title}`}
                     role="button"
                     tabindex="0"
                 >
                     <article class="u: bg-background-secondary | e: card__text {project.card_bg}">
-                        <div class="u: text-step--1">{project.title}</div>
+                        <div class="u: text-step-0">{project.title}</div>
                     </article>
                 </div>
             {/each}
@@ -202,7 +204,7 @@
   }
 
   .blog_bg {
-    background: linear-gradient(220deg, rgb(47, 52, 42) 0%, rgb(21, 21, 23) 100%);
+    background: linear-gradient(220deg, rgb(82, 62, 129) 0%, rgb(21, 21, 23) 100%);
   }
 
   .cognitiv {
@@ -314,7 +316,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 60%; /* Set the height of the title and description container re: the screen div */
+    align-self: center;
+    height: 40%; /* Set the height of the title and description container re: the screen div */
+    width: clamp(70%, 90%, 90ch);
     padding: 1rem;
   }
 
