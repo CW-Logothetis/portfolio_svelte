@@ -17,14 +17,14 @@
         ></button>
         <button
             aria-label="minimize"
-            disabled="{!projectHover}"
+            disabled=true
             class="e: traffic-light traffic-light-minimize"
             id="minimize"
             on:click={() => clearProjectHover()}
         ></button>
         <button
             aria-label="toggle full screen"
-            disabled="{!projectHover}"
+            disabled=true
             class="e: traffic-light traffic-light-maximize"
             id="maximize"
             on:click={() => toggleMaximize()}
