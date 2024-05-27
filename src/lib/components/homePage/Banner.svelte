@@ -122,7 +122,7 @@
                      style="--block: 0; --space: var(--step-2); font-size: var(--step-0)"
                      in:fly|global="{{ y: -40, duration: 2000 }}">
                     <h1>Chris Mounsey-Logothetis</h1>
-                    <div style="margin-block-start: 0">Front-end developer</div>
+                    <div class="text-step-1" style="margin-block-start: 0">Front-end developer</div>
                     <ContactLinks />
                     <nav>
                         <a href="/#about" class="u: in-size-fit | c: button solid">About</a>
@@ -261,10 +261,10 @@
     border-radius: 16px;
     padding-block-start: 24px;
     min-inline-size: 350px;
-    inline-size: 32vw;
+    inline-size: 45vw;
     max-inline-size: 100vw;
     min-block-size: calc(350px / 1.1);
-    block-size: calc(32vw / 1.1);
+    block-size: calc(45vw / 1.1);
     max-block-size: calc(100vw / 1.1);
     position: relative;
   }
@@ -282,7 +282,7 @@
     // default styles from every-layout
     flex-basis: 0;
     flex-grow: 999;
-    min-inline-size: 55%;
+    min-inline-size: 45%;
     // my custom styles
     display: flex;
     flex-direction: column;
@@ -319,6 +319,7 @@
     align-self: center;
     height: 40%; /* Set the height of the title and description container re: the screen div */
     width: clamp(70%, 90%, 90ch);
+    margin-block: 0.5rem;
     padding: 1rem;
   }
 
